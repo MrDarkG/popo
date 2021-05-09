@@ -3253,6 +3253,17 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ['parts'],
+  data: function data() {
+    return {
+      svg_parts: this.parts,
+      isChanging: false
+    };
+  },
+  computed: {
+    event: function event() {
+      return this.isChanging ? 'null' : 'click';
+    }
+  },
   mounted: function mounted() {
     var _this = this;
 
@@ -3262,9 +3273,23 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     animation: function animation() {
+      this.isChanging = true;
       var duration = 5000;
-      /*ARMS*/
+      this.armsAnimation(duration);
+      this.eyeBrowAnimation(duration);
+      /*NOSE*/
 
+      (0,animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_0__.default)({
+        targets: '#nose',
+        translateY: [0, -0.5, 0],
+        duration: duration - 5000
+      });
+      this.eyesAnimation(duration);
+      this.isChanging = false;
+      return false;
+    },
+    armsAnimation: function armsAnimation(duration) {
+      /*ARMS*/
       (0,animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_0__.default)({
         targets: '#left-hand',
         translateY: [0, 0, 0, 0],
@@ -3280,8 +3305,34 @@ __webpack_require__.r(__webpack_exports__);
         rotate: [0, -25, 0, 0],
         duration: duration
       });
+    },
+    eyeBrowAnimation: function eyeBrowAnimation(duration) {
       /*EYEBROWS*/
-
+      (0,animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_0__.default)({
+        targets: '#left-eyebrow',
+        translateY: [0, 2, 0],
+        translateX: [0, 2, 0],
+        duration: duration - 1000
+      });
+      (0,animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_0__.default)({
+        targets: '#right-eyebrow',
+        translateY: [0, 2, 0],
+        translateX: [0, -2, 0],
+        duration: duration - 1000
+      });
+      (0,animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_0__.default)({
+        targets: '#left-cheek',
+        fill: ['#ffc8ac', '#fca39a', '#ffc8ac'],
+        duration: duration
+      });
+      (0,animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_0__.default)({
+        targets: '#right-cheek',
+        fill: ['#ffc8ac', '#fca39a', '#ffc8ac'],
+        duration: duration
+      });
+    },
+    eyesAnimation: function eyesAnimation(duration) {
+      /*EYES*/
       (0,animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_0__.default)({
         targets: '#left-eye',
         translateY: [0, 5, 0],
@@ -3296,18 +3347,31 @@ __webpack_require__.r(__webpack_exports__);
         scale: [1, 0.9, 1],
         duration: duration - 1000
       });
-      /*CHEEKS*/
-
       setTimeout(function () {
+        /*EYESGUGA*/
         (0,animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_0__.default)({
-          targets: '#left-cheek',
-          fill: ['#ffc8ac', '#fca39a', '#ffc8ac'],
-          duration: duration
+          targets: '#left-eye-guga',
+          // translateY: [0,5,0],
+          translateX: [0, 7, -2, 2],
+          duration: duration - 1000
         });
         (0,animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_0__.default)({
-          targets: '#right-cheek',
-          fill: ['#ffc8ac', '#fca39a', '#ffc8ac'],
-          duration: duration
+          targets: '#right-eye-guga',
+          // translateY: [0,5,0],
+          translateX: [0, 7, -2, 2],
+          duration: duration - 1000
+        });
+        /*EYES*/
+
+        (0,animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_0__.default)({
+          targets: '#left-eye',
+          translateX: [0, 2, -2, 0],
+          duration: duration - 1000
+        });
+        (0,animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_0__.default)({
+          targets: '#right-eye',
+          translateX: [0, 2, -2, 0],
+          duration: duration - 1000
         });
       }, 1200);
     }
@@ -38998,11 +39062,12 @@ var render = function() {
           "div",
           {
             staticClass: "p-4",
-            on: {
-              click: function($event) {
+            on: _vm._d({}, [
+              _vm.event,
+              function($event) {
                 return _vm.animation()
               }
-            }
+            ])
           },
           [
             _c("i", {
@@ -39016,11 +39081,12 @@ var render = function() {
           "div",
           {
             staticClass: "p-4",
-            on: {
-              click: function($event) {
+            on: _vm._d({}, [
+              _vm.event,
+              function($event) {
                 return _vm.animation()
               }
-            }
+            ])
           },
           [
             _c("i", {
@@ -39034,11 +39100,12 @@ var render = function() {
           "div",
           {
             staticClass: "pl-4 pt-2",
-            on: {
-              click: function($event) {
+            on: _vm._d({}, [
+              _vm.event,
+              function($event) {
                 return _vm.animation()
               }
-            }
+            ])
           },
           [
             _c("i", {
@@ -39052,7 +39119,7 @@ var render = function() {
       _c(
         "svg",
         { attrs: { height: "185", width: "110" } },
-        _vm._l(_vm.parts, function(part) {
+        _vm._l(_vm.svg_parts, function(part) {
           return _c("g", { domProps: { innerHTML: _vm._s(part.content) } })
         }),
         0
@@ -39063,11 +39130,12 @@ var render = function() {
           "div",
           {
             staticClass: "p-4",
-            on: {
-              click: function($event) {
+            on: _vm._d({}, [
+              _vm.event,
+              function($event) {
                 return _vm.animation()
               }
-            }
+            ])
           },
           [
             _c("i", {
@@ -39081,11 +39149,12 @@ var render = function() {
           "div",
           {
             staticClass: "p-4",
-            on: {
-              click: function($event) {
+            on: _vm._d({}, [
+              _vm.event,
+              function($event) {
                 return _vm.animation()
               }
-            }
+            ])
           },
           [
             _c("i", {
@@ -39099,11 +39168,12 @@ var render = function() {
           "div",
           {
             staticClass: "pl-4 pt-2",
-            on: {
-              click: function($event) {
+            on: _vm._d({}, [
+              _vm.event,
+              function($event) {
                 return _vm.animation()
               }
-            }
+            ])
           },
           [
             _c("i", {
