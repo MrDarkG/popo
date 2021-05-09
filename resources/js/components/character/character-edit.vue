@@ -23,7 +23,7 @@
 				<i class="fa fa-arrow-left" aria-hidden="true"> </i>
 			</div>
 		</div>
-		<svg height="185" width="110">
+		<svg height="185" width="110" style="max-width: 110px;min-width: 110px;">
 			<g v-for="part in svg_parts" v-html="part.content">
 			</g>
 		</svg>
