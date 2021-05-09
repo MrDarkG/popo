@@ -3347,8 +3347,9 @@ __webpack_require__.r(__webpack_exports__);
         scale: [1, 0.9, 1],
         duration: duration - 1000
       });
+      /*EYESGUGA*/
+
       setTimeout(function () {
-        /*EYESGUGA*/
         (0,animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_0__.default)({
           targets: '#left-eye-guga',
           // translateY: [0,5,0],
@@ -3373,7 +3374,7 @@ __webpack_require__.r(__webpack_exports__);
           translateX: [0, 2, -2, 0],
           duration: duration - 1000
         });
-      }, 1200);
+      }, 4000);
     }
   }
 });

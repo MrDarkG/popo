@@ -78,7 +78,7 @@ export default{
 			})
 			this.eyesAnimation(duration)
 			this.isChanging = false
-			
+
 			return false
 		},
 		armsAnimation(duration){
@@ -140,8 +140,8 @@ export default{
 		  		scale: [1,0.9,1],
 		  		duration: duration-1000
 			})
-			setTimeout(()=>{
-				/*EYESGUGA*/
+			/*EYESGUGA*/
+			setTimeout(() => {
 				anime({
 			  		targets: '#left-eye-guga',
 			  		// translateY: [0,5,0],
@@ -165,7 +165,7 @@ export default{
 			  		translateX: [0,2,-2,0],
 			  		duration: duration-1000
 				})
-			},1200)
+			}, 4000)
 		},
 	},
 };
