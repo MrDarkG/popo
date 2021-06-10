@@ -11,9 +11,14 @@
     <link rel="shortcut icon" href="/start/assets/media/logos/favicon.ico" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
     <link href="/start/assets/plugins/custom/leaflet/leaflet.bundle.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <link href="/start/assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
     <link href="/start/assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
-    
+     <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('/assets/css/svg.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <!--end::Head-->
 <!--begin::Body-->
@@ -33,7 +38,9 @@
                 @include("inc.userdashboard.header")
                 <!--end::Header-->
                 <!--begin::Main-->
-                @yield("content")
+                <div id="app">
+                    @yield("content")
+                </div>
                 <!--end::Main-->
                 <!--begin::Footer-->
                 @include("inc.userdashboard.footer")
@@ -84,6 +91,8 @@
     <noscript>
             <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FS8GGP" height="0" width="0" style="display:none;visibility:hidden"></iframe>
         </noscript>
+    <script src="{{ asset('js/app.js') }}" defer></script>
+
     <!--End::Google Tag Manager (noscript) -->
 </body>
 <!--end::Body-->

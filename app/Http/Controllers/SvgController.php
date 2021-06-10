@@ -18,4 +18,12 @@ class SvgController extends Controller
     		'char_parts' => $character_parts,
     	]);
     }
+    public function userArea()
+    {
+        $character_parts = Character_part::where('gender_id',2)->with('category')->get();
+        
+        return view("userdashboard.index",[
+            'char_parts' => $character_parts
+        ]);
+    }
 }

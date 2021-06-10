@@ -267,8 +267,12 @@
                                 
                                 
                                 <div class="pt-9">
-                                    
                                     <div class="row">
+                                        <character-edit
+                                            :parts="{{ json_encode($char_parts) }}"
+                                        ></character-edit>
+                                    </div>
+                                   {{--  <div class="row">
                                         <div class="col me-n2 mb-5">
                                             <button type="button" class="btn btn-outline btn-bg-light btn-color-gray-600 btn-active-light-primary border-dashed border-active border-primary px-6 py-7 text-start w-100 min-w-150px">
                                                     
@@ -370,7 +374,7 @@
                                                     <span class="text-gray-800 fw-bolder fs-6 d-block pt-6">Reports</span>
                                                 </button>
                                         </div>
-                                    </div>
+                                    </div> --}}
                                     
                                 </div>
                                 

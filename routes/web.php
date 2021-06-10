@@ -21,6 +21,4 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get("user-area",function(){
-    return view("userdashboard.index");
-});
+Route::get("user-area", [App\Http\Controllers\SvgController::class, 'userArea']);
