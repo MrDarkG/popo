@@ -25,6 +25,7 @@
         "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
+        "@fortawesome/fontawesome-free": "^5.15.3",
         "animejs": "^3.2.1",
         "startbootstrap-sb-admin-2": "^4.1.4"
     }
