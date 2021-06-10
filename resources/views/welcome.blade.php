@@ -38,32 +38,7 @@
     <!-- Preloader Ends -->
 
     <!--Header Area-->
-    <header class="site-menu">
-        <div class="top-bar">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-12 col-sm-12 col-md-6">
-                        <div class="top-bar-left">
-                            <p>Well Come to <span>Day Care</span>, A Trusted & Modern Day Care Center
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-12 col-md-6">
-                        <div class="top-bar-right">
-                            <ul class="social-custom list-inline">
-                                <li class="list-inline-item clock text-muted"><i class="fa fa-clock-o"></i> Mon to Sat - 8 a.m to 9 p.m
-                                </li>
-                                <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li class="list-inline-item"><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+    
     <!--Header Area Ends-->
 
     <!--Navbar Area-->
@@ -80,14 +55,14 @@
                         
                     </li>
                     <li>
-                        <a href="about.html"><img src="assets/img/nav/about_nav.png" class="img-fluid"
+                        <a href="#about"><img src="assets/img/nav/about_nav.png" class="img-fluid"
                                 alt="About">ჩვენ შესახებ</a>
                     </li>
                     <li>
-                        <a href="services.html"><img src="assets/img/nav/air_nav.png" class="img-fluid" alt="Services">სერვისები</a>
+                        <a href="#events"><img src="assets/img/nav/air_nav.png" class="img-fluid" alt="Services">ივენთები</a>
                     </li>
                     <li>
-                        <a href="class.html"> <img src="assets/img/nav/programs_nav.png" class="img-fluid"
+                        <a href="#offer"> <img src="assets/img/nav/programs_nav.png" class="img-fluid"
                                 alt="Programs">შეთავაზებები</a>
                     </li>
                     <!-- <li>
@@ -151,11 +126,11 @@
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                     <!--Banner Content-->
                     <div id="banner-content">
-                        <h5>We Care Your Baby</h5>
-                        <h1>Best Play <span>Areas For Kids</span></h1>
+                        <h5>ჩვენ გიყვარს ბავშვები</h5>
+                        <h1><b>საუკეთესო ადგილი <span>ბავშვებისთვის.</span></b></h1>
                         <!--Banner Button-->
                         <div id="banner-btn">
-                            <a class="btn btn-general btn-banner smooth-scroll" href="#about" title="Read More" role="button">Read More</a>
+                            <a class="btn btn-general btn-banner smooth-scroll" href="#about" title="Read More" role="button">გაიგე მეტი</a>
                         </div>
                     </div>
                     <!--Banner Content-->
@@ -173,8 +148,8 @@
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
                     <div class="horizontal-heading">
-                        <h6>ABOUT US</h6>
-                        <h2>Welcome to Baby Care Center <br> And Kindergarten</h2>
+                        <h6>ჩვენ შესახებ</h6>
+                        <h2>მოგესალმებით ბავშვთა სასწავლო<br> და გასართობ პორტალში, Popo.ge</h2>
                     </div>
                 </div>
             </div>
@@ -205,23 +180,21 @@
                 <!--Lower Right Side-->
                 <div class="col-12 col-sm-12 col-md-5 col-lg-5">
                     <div class="about-para">
-                        <p>Lorem ipsum dolor sit amet, consectetur adcing elit Lorem ipsum dolor sit amet, consectetur adcing elit Lorem ipsum dolor sit amet, consectetur adip iscing elit psum dolor sit amet. Aenean consectetur fringilla mi in mollis. Etiam
-                            eleifend sollicitudin dignissim.</p>
+                        <p>ჩვენი პლატფორმა მიზნად ისახავას დაეხმაროს ბავშვებს სწავლაში. მისი დახმარებით ბავშვებს შეუძლიათ ისწავლონ სკოლის საგნები და არა მარტო თამაშით. პორტალზე ამჟამად უკვე არსებობს კურსები რომელიც დაგვეხმარება შევისწავლოთ</p>
                     </div>
                     <!--About List-->
                     <div class="about-list">
                         <ul>
-                            <li><i class="fa fa-check-circle "></i> Highly secured and friendly environment</li>
-                            <li><i class="fa fa-check-circle "></i> Outdoor and Indoor games for kids</li>
-                            <li><i class="fa fa-check-circle "></i> Very professional and qualified teacher</li>
-                            <li><i class="fa fa-check-circle "></i> Drawing and music lessons for kids</li>
-                            <li><i class="fa fa-check-circle "></i> Proper food and accommodation facilities</li>
+                            <li><i class="fa fa-check-circle "></i> მათემატიკა</li>
+                            <li><i class="fa fa-check-circle "></i> ქართული</li>
+                            <li><i class="fa fa-check-circle "></i> ინგლისური</li>
+                            <li><i class="fa fa-check-circle "></i> ბუნება</li>
+                            <li><i class="fa fa-check-circle "></i> ხელოვნება</li>
                         </ul>
                     </div>
 
                     <div id="about-btn">
-                        <a class="btn btn-general btn-about smooth-scroll" href="about.html" title="Discover More" role="button">Discover
-                            More</a>
+                        <a class="btn btn-general btn-about smooth-scroll" href="about.html" title="Discover More" role="button">მეტის ნახვა</a>
                     </div>
                 </div>
                 <!--Lower Right Side Ends-->
@@ -261,8 +234,8 @@
                 <div class="row">
                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
                         <div class="horizontal-heading light">
-                            <h6>OUR OFFER</h6>
-                            <h2>Our Best Offers for <br> Your Kids</h2>
+                            <h6>შეთავაზებები</h6>
+                            <h2>პოპულარული კურსები<br> თქვენი ბავშვებისთვის</h2>
                         </div>
                     </div>
                 </div>
@@ -272,37 +245,32 @@
             <!-- Lower Part -->
             <div class="row">
 
-                <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4">
                     <div class="offer-items learning-program text-center ">
                         <img src="assets/img/offer/offer_LP_img.png" class="img-fluid" alt="Learning Program">
-                        <h6>Learning Program</h6>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, culpa qui officiis animi.</p>
+                        <h6>ინგლისური ენის კურსი</h6>
+                        <p>მოცემული კურსის ფარგლებში თქვენი ბავშვი ივარჯიშებს მოსმენის დავალებებში, სფიქინგში და სხვა, პროგრამით გათვლილ, დავალებებში</p>
                     </div>
                 </div>
 
-                <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4">
                     <div class="offer-items expert-teacher text-center">
                         <img src="assets/img/offer/offer_ET_img.png" class="img-fluid" alt="Expert Teachers">
-                        <h6>Expert Teachers</h6>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, culpa qui officiis animi.</p>
+                        <h6>მათემატიკა</h6>
+                        <p>მოცემული კურსის ფარგლებში თქვენი ბავშვს ექნება საშუალება ისწავლოს თვლა, მათემატიკური ოპერაციები, წილადები და ათწილადები. მასალა გასდანაწილებულია ასაკის მიხედვით</p>
                     </div>
                 </div>
 
-                <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4">
                     <div class="offer-items large-playground text-center">
                         <img src="assets/img/offer/offer_LPLay_img.png" class="img-fluid" alt="Large Playground">
-                        <h6>Large Playground</h6>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, culpa qui officiis animi.</p>
+                        <h6>ბუნება</h6>
+                        <p> კურსის მიმდინარეობისას თქვენს ბავშვს ექნება საშუალება ინტერაქტიულ რეჟიმში გაეცნონ სხვადასხვა ცხოველებს, მცენარეებს, ფიზიკური მოვლენებსა და სხვა მრავალს. საშუალება ექნებათ ნახონ ანიმაციები.
+                        </p>
                     </div>
                 </div>
 
-                <div class="col-12 col-sm-12 col-md-6 col-lg-3">
-                    <div class="offer-items full-day text-center">
-                        <img src="assets/img/offer/offer_FDP_img.png" class="img-fluid" alt="Full Day Program">
-                        <h6>Full Day Program</h6>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, culpa qui officiis animi.</p>
-                    </div>
-                </div>
+                
 
             </div>
             <!-- Lower Part Ends -->
@@ -340,7 +308,7 @@
                         </a>
                         <div class="classes-items-content">
 
-                            <h6> <a href="class-details.html">ისტორია</a></h6>
+                            <h6> <a href="class-details.html">ისტორია ( 5-6 კლასი)</a></h6>
 
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, culpa qui officiis animi assumenda.</p>
                         </div>
@@ -722,8 +690,8 @@
                         </div>
                         <div class="team-members-content text-center">
                             <a href="teacher-details1.html">
-                                <h6>ზებრა</h6>
-                                <p>ტორიკა</p>
+                                <h6>ტორიკაშვილი საბა</h6>
+                                <p>პროგრამისტი</p>
                             </a>
                         </div>
                     </div>
@@ -742,8 +710,8 @@
                         </div>
                         <div class="team-members-content text-center">
                             <a href="teacher-details1.html">
-                                <h6>მე</h6>
-                                <p>Chief Adviser</p>
+                                <h6>ბატიაშვილი ვალერი</h6>
+                                <p>პროგრამისტი</p>
                             </a>
                         </div>
                     </div>
@@ -762,8 +730,8 @@
                         </div>
                         <div class="team-members-content text-center">
                             <a href="teacher-details1.html">
-                                <h6>მუტელი</h6>
-                                <p>სანდრო</p>
+                                <h6>გურასპაშვილი სანდრო</h6>
+                                <p>დიზაინერი</p>
                             </a>
                         </div>
                     </div>
@@ -931,122 +899,7 @@
     <!--Stats Section Ends-->
 
     <!--Blog Section-->
-    <section id="blog" class="section-wrapper">
-        <div class="container">
-            <!-- upper part -->
-            <div id="blog_upper">
-                <div class="row">
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
-                        <div class="horizontal-heading">
-                            <h6>RECENT BLOG</h6>
-                            <h2>Our Recent Blog</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- upper part Ends -->
-            <!-- Lower Part -->
-            <div class="row">
-                <div class="col-12 col-sm-12 col-md-6 col-lg-4 wow fadeInLeft animated">
-                    <div class="blog-items blog1 box-shadow">
-                        <div class="blog-items-img">
-                            <a href="blog-single.html">
-                                <img src="assets/img/blog/1.png" class="img-fluid" alt="Dental Care">
-                                <div class="overlay"></div>
-                            </a>
-                        </div>
-                        <div class="blog-items-content">
-                            <div class="date-time">
-                                <h6>23</h6>
-                                <p>Jan</p>
-                            </div>
-
-                            <h6><a href="blog-single.html">Early Childhood Strategy for the Development</a> </h6>
-
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, culpa.</p>
-
-                            <div class="blog-footer justify-content-between">
-                                <div class="blog-acc">
-                                    <a href="#">
-                                        <img src="assets/img/blog/avater.png" alt="blog-avatar">
-                                        <p><b>John Doe</b></p>
-                                    </a>
-                                </div>
-                                <a href="#!">
-                                    <p>Business</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-12 col-md-6 col-lg-4 wow fadeInLeft animated" data-wow-delay="200ms">
-                    <div class="blog-items blog2 box-shadow">
-                        <div class="blog-items-img">
-                            <a href="blog-single.html">
-                                <img src="assets/img/blog/2.png" class="img-fluid" alt="Dental Care">
-                                <div class="overlay"></div>
-                            </a>
-                        </div>
-                        <div class="blog-items-content">
-                            <div class="date-time dt1">
-                                <h6>23</h6>
-                                <p>Jan</p>
-                            </div>
-
-                            <h6><a href="blog-single.html">Kindergarten strategy for all child can help to survive</a></h6>
-
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, culpa.</p>
-
-                            <div class="blog-footer justify-content-between">
-                                <div class="blog-acc">
-                                    <a href="">
-                                        <img src="assets/img/blog/avater.png" alt="blog-avatar">
-                                        <p><b>John Doe</b></p>
-                                    </a>
-                                </div>
-                                <a href="#!">
-                                    <p>Business</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-12 col-md-6 col-lg-4 wow fadeInLeft animated" data-wow-delay="400ms">
-                    <div class="blog-items blog3 box-shadow">
-                        <div class="blog-items-img">
-                            <a href="blog-single.html">
-                                <img src="assets/img/blog/3.png" class="img-fluid" alt="Dental Care">
-                                <div class="overlay"></div>
-                            </a>
-
-                        </div>
-                        <div class="blog-items-content">
-                            <div class="date-time dt2">
-                                <h6>23</h6>
-                                <p>Jan</p>
-                            </div>
-                            <h6> <a href="blog-single.html">Kindergarten strategy for all child can help to survive</a></h6>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus,culpa.
-                            </p>
-
-                            <div class="blog-footer justify-content-between">
-                                <div class="blog-acc">
-                                    <a href="#!">
-                                        <img src="assets/img/blog/avater.png" alt="blog-avatar">
-                                        <p><b>John Doe</b></p>
-                                    </a>
-                                </div>
-                                <a href="#!">
-                                    <p>Business</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Lower Part Ends -->
-        </div>
-    </section>
+    
     <!--Blog Section Ends-->
 
     <!--Footer Section-->
