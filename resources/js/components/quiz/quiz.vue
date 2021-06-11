@@ -14,7 +14,8 @@
 				</div>
 				
 				<div class="col-md-6 " v-for="ans in answers" :style="`color:red;${answers.length==4?'height:50%':'height:100%'}`">
-					<div class="question-container" @click="giveans(ans.id)">
+					<div class="question-container" @click="ans.is_visible=false">
+						<!-- giveans(ans.id) -->
 						{{ ans.answer }} - {{ ans.is_visible }} 
 					</div>
 				</div>

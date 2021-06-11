@@ -3419,6 +3419,7 @@ var _this = undefined;
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ["tasks"],
   data: function data() {
@@ -39463,7 +39464,7 @@ var render = function() {
                         staticClass: "question-container",
                         on: {
                           click: function($event) {
-                            return _vm.giveans(ans.id)
+                            ans.is_visible = false
                           }
                         }
                       },
