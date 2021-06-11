@@ -18,7 +18,8 @@
 				
 				<div class="col-md-6 " v-for="ans in answers" :style="`color:red;${answers.length>2?'height:50%':'height:100%'}`">
 					<div class="question-container" @click="giveans(ans.id)">
-						{{ ans.answer }} 
+						<!-- {{ ans.answer }}  -->
+						{{ ans }}
 					</div>
 				</div>
 				
@@ -61,14 +62,15 @@
     			}, 100);
 			},
 			showAnswers(){
-				this.answers.push(this.tasks[this.tasks_encounter].answers[this.ansencounter])
-				this.answer_show_delay=this.tasks[this.tasks_encounter].answers[this.ansencounter].sound_duration
-				this.$refs.audio.src=this.tasks[this.tasks_encounter].answers[this.ansencounter].sound
-				this.$refs.audio.play();
-				this.interval=setInterval(()=>{
-					this.ansencounter+=1
-				},this.answer_show_delay*1000)
-
+				if(this.tasks[this.tasks_encounter].answers[this.ansencounter] !== undefined){
+					this.answers.push(this.tasks[this.tasks_encounter].answers[this.ansencounter])
+					this.answer_show_delay=this.tasks[this.tasks_encounter].answers[this.ansencounter].sound_duration
+					this.$refs.audio.src=this.tasks[this.tasks_encounter].answers[this.ansencounter].sound
+					this.$refs.audio.play();
+					this.interval=setInterval(()=>{
+						this.ansencounter+=1
+					},this.answer_show_delay*1000)
+				}
 			},
 			playnext(){
 				this.show_question=0
@@ -80,7 +82,7 @@
 	    		// this.answers=this.tasks[this.tasks_encounter].answers
 				this.setVisibilityToAnswers()
 
-	    		setTimeout(()=>{ this.showquestion();this.showAnswers(); }, this.delay*1000);
+	    		setTimeout(()=>{ this.showquestion();this.showAnswers(); }, 1*1000);
 				// 
 			},
 			giveans(x){
@@ -97,9 +99,11 @@
 		},
 		watch:{
 			ansencounter:function(val){
-				console.log(this.ansencounter,this.tasks_encounter)
+				// console.log(this.ansencounter,this.tasks_encounter)
 				clearInterval(this.interval)
-				this.showAnswers()
+				if(this.ansencounter < this.answers.length+1){
+					this.showAnswers()
+				}
 			}
 		},
 		mounted(){

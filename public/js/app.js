@@ -3422,6 +3422,7 @@ var _this = undefined;
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ["tasks"],
   data: function data() {
@@ -3459,13 +3460,15 @@ var _this = undefined;
     showAnswers: function showAnswers() {
       var _this3 = this;
 
-      this.answers.push(this.tasks[this.tasks_encounter].answers[this.ansencounter]);
-      this.answer_show_delay = this.tasks[this.tasks_encounter].answers[this.ansencounter].sound_duration;
-      this.$refs.audio.src = this.tasks[this.tasks_encounter].answers[this.ansencounter].sound;
-      this.$refs.audio.play();
-      this.interval = setInterval(function () {
-        _this3.ansencounter += 1;
-      }, this.answer_show_delay * 1000);
+      if (this.tasks[this.tasks_encounter].answers[this.ansencounter] !== undefined) {
+        this.answers.push(this.tasks[this.tasks_encounter].answers[this.ansencounter]);
+        this.answer_show_delay = this.tasks[this.tasks_encounter].answers[this.ansencounter].sound_duration;
+        this.$refs.audio.src = this.tasks[this.tasks_encounter].answers[this.ansencounter].sound;
+        this.$refs.audio.play();
+        this.interval = setInterval(function () {
+          _this3.ansencounter += 1;
+        }, this.answer_show_delay * 1000);
+      }
     },
     playnext: function playnext() {
       var _this4 = this;
@@ -3481,7 +3484,7 @@ var _this = undefined;
         _this4.showquestion();
 
         _this4.showAnswers();
-      }, this.delay * 1000); // 
+      }, 1 * 1000); // 
     },
     giveans: function giveans(x) {
       this.tasks_encounter += 1;
@@ -3497,9 +3500,12 @@ var _this = undefined;
   },
   watch: {
     ansencounter: function ansencounter(val) {
-      console.log(this.ansencounter, this.tasks_encounter);
+      // console.log(this.ansencounter,this.tasks_encounter)
       clearInterval(this.interval);
-      this.showAnswers();
+
+      if (this.ansencounter < this.answers.length + 1) {
+        this.showAnswers();
+      }
     }
   },
   mounted: function mounted() {
@@ -39482,11 +39488,7 @@ var render = function() {
                           }
                         }
                       },
-                      [
-                        _vm._v(
-                          "\n\t\t\t\t\t" + _vm._s(ans.answer) + " \n\t\t\t\t"
-                        )
-                      ]
+                      [_vm._v("\n\t\t\t\t\t" + _vm._s(ans) + "\n\t\t\t\t")]
                     )
                   ]
                 )
