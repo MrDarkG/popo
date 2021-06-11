@@ -3465,7 +3465,7 @@ var _this = undefined;
       this.$refs.audio.play();
       this.interval = setInterval(function () {
         _this3.ansencounter += 1;
-      }, this.answer_show_delay * 2000);
+      }, this.answer_show_delay * 1000);
     },
     playnext: function playnext() {
       var _this4 = this;
@@ -3481,20 +3481,23 @@ var _this = undefined;
         _this4.showquestion();
 
         _this4.showAnswers();
-      }, this.delay * 1000);
-      this.tasks_encounter += 1;
+      }, this.delay * 1000); // 
     },
     giveans: function giveans(x) {
+      this.tasks_encounter += 1;
+      this.answers = [];
+      this.ansencounter = 0;
       this.playnext();
     },
     setVisibilityToAnswers: function setVisibilityToAnswers() {
-      for (var i = 0; i < this.answers.length; i++) {
-        this.answers[i].is_visible = false;
-      }
+      /*for (let i = 0; i < this.answers.length; i++) {
+      	this.answers[i].is_visible = false
+      }*/
     }
   },
   watch: {
     ansencounter: function ansencounter(val) {
+      console.log(this.ansencounter, this.tasks_encounter);
       clearInterval(this.interval);
       this.showAnswers();
     }

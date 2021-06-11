@@ -67,7 +67,7 @@
 				this.$refs.audio.play();
 				this.interval=setInterval(()=>{
 					this.ansencounter+=1
-				},this.answer_show_delay*2000)
+				},this.answer_show_delay*1000)
 
 			},
 			playnext(){
@@ -81,19 +81,23 @@
 				this.setVisibilityToAnswers()
 
 	    		setTimeout(()=>{ this.showquestion();this.showAnswers(); }, this.delay*1000);
-				this.tasks_encounter+=1;
+				// 
 			},
 			giveans(x){
+    			this.tasks_encounter+=1;
+				this.answers=[];
+				this.ansencounter=0;
 				this.playnext()
 			},
 			setVisibilityToAnswers(){
-				for (let i = 0; i < this.answers.length; i++) {
+				/*for (let i = 0; i < this.answers.length; i++) {
 					this.answers[i].is_visible = false
-				}
+				}*/
 			},
 		},
 		watch:{
 			ansencounter:function(val){
+				console.log(this.ansencounter,this.tasks_encounter)
 				clearInterval(this.interval)
 				this.showAnswers()
 			}
