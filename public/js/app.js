@@ -3473,18 +3473,23 @@ var _this = undefined;
     playnext: function playnext() {
       var _this4 = this;
 
-      this.show_question = 0;
-      this.$refs.videoRef.src = this.tasks[this.tasks_encounter].source;
-      this.$refs.videoRef.play();
-      this.delay = this.tasks[this.tasks_encounter].time;
-      this.question = this.tasks[this.tasks_encounter].question; // this.answers=this.tasks[this.tasks_encounter].answers
+      if (this.tasks.length > this.tasks_encounter) {
+        this.show_question = 0;
+        this.$refs.videoRef.src = this.tasks[this.tasks_encounter].source;
+        this.$refs.videoRef.play();
+        this.delay = this.tasks[this.tasks_encounter].time;
+        this.question = this.tasks[this.tasks_encounter].question; // this.answers=this.tasks[this.tasks_encounter].answers
 
-      this.setVisibilityToAnswers();
-      setTimeout(function () {
-        _this4.showquestion();
+        this.setVisibilityToAnswers();
+        setTimeout(function () {
+          _this4.showquestion();
 
-        _this4.showAnswers();
-      }, this.delay * 1000); // 
+          _this4.showAnswers();
+        }, this.delay * 1000);
+      } else {
+        alert(1);
+      } // 
+
     },
     giveans: function giveans(x) {
       this.tasks_encounter += 1;

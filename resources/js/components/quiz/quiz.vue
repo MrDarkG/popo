@@ -73,16 +73,22 @@
 				}
 			},
 			playnext(){
-				this.show_question=0
-				this.$refs.videoRef.src = this.tasks[this.tasks_encounter].source;
+				if (this.tasks.length>this.tasks_encounter) {
 
-	    		this.$refs.videoRef.play();
-	    		this.delay=this.tasks[this.tasks_encounter].time
-	    		this.question=this.tasks[this.tasks_encounter].question
-	    		// this.answers=this.tasks[this.tasks_encounter].answers
-				this.setVisibilityToAnswers()
+					this.show_question=0
+					this.$refs.videoRef.src = this.tasks[this.tasks_encounter].source;
 
-	    		setTimeout(()=>{ this.showquestion();this.showAnswers(); }, this.delay*1000);
+		    		this.$refs.videoRef.play();
+		    		this.delay=this.tasks[this.tasks_encounter].time
+		    		this.question=this.tasks[this.tasks_encounter].question
+		    		// this.answers=this.tasks[this.tasks_encounter].answers
+					this.setVisibilityToAnswers()
+
+		    		setTimeout(()=>{ this.showquestion();this.showAnswers(); }, this.delay*1000);
+				}
+				else{
+					alert(1)
+				}
 				// 
 			},
 			giveans(x){
