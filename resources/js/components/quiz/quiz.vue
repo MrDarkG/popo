@@ -12,9 +12,10 @@
 					</div>
 
 				</div>
-				<div class="col-md-6 " v-for="ans in answers "  :style="`color:red;${answers.length==4?'height:50%':'height:100%'}`">
+				
+				<div class="col-md-6 " v-for="ans in answers" :style="`color:red;${answers.length==4?'height:50%':'height:100%'}`">
 					<div class="question-container" @click="giveans(ans.id)">
-						{{ ans.answer }} 
+						{{ ans.answer }} - {{ ans.is_visible }} 
 					</div>
 				</div>
 				
@@ -45,29 +46,39 @@
     			setTimeout(()=>{ 
     				this.padding=this.$refs.questionRef.clientHeight+20
     			}, 100);
-
-				
+			},
+			showAnswers(){
+				for (let i = 0; i < this.answers.length;i++) {
+					setTimeout(()=>{
+						this.answers[i].is_visible = true
+	    				// this.question=this.tasks[0].tasks[0].tasks[this.tasks_encounter].sound
+					},(i === 0)?500:2500)
+				}
 			},
 			playnext(){
 				this.show_question=0
 				this.$refs.videoRef.src = this.tasks[0].tasks[0].tasks[this.tasks_encounter].source;
 
-				
 	    		this.$refs.videoRef.play();
 	    		this.delay=this.tasks[0].tasks[0].tasks[this.tasks_encounter].time
 	    		this.question=this.tasks[0].tasks[0].tasks[this.tasks_encounter].question
 	    		this.answers=this.tasks[0].tasks[0].tasks[this.tasks_encounter].answers
-	    		setTimeout(()=>{ this.showquestion(); }, this.delay*1000);
+				this.setVisibilityToAnswers()
+
+	    		setTimeout(()=>{ this.showquestion();this.showAnswers(); }, this.delay*1000);
 				this.tasks_encounter+=1;
 			},
 			giveans(x){
 				this.playnext()
-			}
-
+			},
+			setVisibilityToAnswers(){
+				for (let i = 0; i < this.answers.length; i++) {
+					this.answers[i].is_visible = false
+				}
+			},
 		},
 		mounted(){
 			this.playnext()
-		}
-
+		},
 	};
 </script>
