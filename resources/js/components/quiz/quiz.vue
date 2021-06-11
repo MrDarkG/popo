@@ -18,8 +18,8 @@
 				
 				<div class="col-md-6 " v-for="ans in answers" :style="`color:red;${answers.length>2?'height:50%':'height:100%'}`">
 					<div class="question-container" @click="giveans(ans.id)">
-						<!-- {{ ans.answer }}  -->
-						{{ ans }}
+						{{ ans.answer }} 
+						<!-- {{ ans }} -->
 					</div>
 				</div>
 				
@@ -82,7 +82,7 @@
 	    		// this.answers=this.tasks[this.tasks_encounter].answers
 				this.setVisibilityToAnswers()
 
-	    		setTimeout(()=>{ this.showquestion();this.showAnswers(); }, 1*1000);
+	    		setTimeout(()=>{ this.showquestion();this.showAnswers(); }, this.delay*1000);
 				// 
 			},
 			giveans(x){
@@ -101,7 +101,7 @@
 			ansencounter:function(val){
 				// console.log(this.ansencounter,this.tasks_encounter)
 				clearInterval(this.interval)
-				if(this.ansencounter < this.answers.length+1){
+				if(this.ansencounter < 4 && this.ansencounter>0){
 					this.showAnswers()
 				}
 			}

@@ -3484,7 +3484,7 @@ var _this = undefined;
         _this4.showquestion();
 
         _this4.showAnswers();
-      }, 1 * 1000); // 
+      }, this.delay * 1000); // 
     },
     giveans: function giveans(x) {
       this.tasks_encounter += 1;
@@ -3503,7 +3503,7 @@ var _this = undefined;
       // console.log(this.ansencounter,this.tasks_encounter)
       clearInterval(this.interval);
 
-      if (this.ansencounter < this.answers.length + 1) {
+      if (this.ansencounter < 4 && this.ansencounter > 0) {
         this.showAnswers();
       }
     }
@@ -39488,7 +39488,11 @@ var render = function() {
                           }
                         }
                       },
-                      [_vm._v("\n\t\t\t\t\t" + _vm._s(ans) + "\n\t\t\t\t")]
+                      [
+                        _vm._v(
+                          "\n\t\t\t\t\t" + _vm._s(ans.answer) + " \n\t\t\t\t\t"
+                        )
+                      ]
                     )
                   ]
                 )
