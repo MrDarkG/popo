@@ -3454,15 +3454,13 @@ var _this = undefined;
     showAnswers: function showAnswers() {
       var _this3 = this;
 
-      var _loop = function _loop(i) {
-        setTimeout(function () {
-          _this3.answers[i].is_visible = true; // this.question=this.tasks[0].tasks[0].tasks[this.tasks_encounter].sound
-        }, i === 0 ? 500 : 2500);
-      };
+      setInterval(function () {
+        // this.tasks[i].answers[j].is_visible = true
+        _this3.answers.push(_this3.tasks[_this3.tasks_encounter].answers[j]); // this.question=this.tasks[0].tasks[0].tasks[this.tasks_encounter].sound
 
-      for (var i = 0; i < this.answers.length; i++) {
-        _loop(i);
-      }
+
+        _this3.setInterval();
+      }, 3000);
     },
     playnext: function playnext() {
       var _this4 = this;
@@ -3471,14 +3469,14 @@ var _this = undefined;
       this.$refs.videoRef.src = this.tasks[this.tasks_encounter].source;
       this.$refs.videoRef.play();
       this.delay = this.tasks[this.tasks_encounter].time;
-      this.question = this.tasks[this.tasks_encounter].question;
-      this.answers = this.tasks[this.tasks_encounter].answers;
+      this.question = this.tasks[this.tasks_encounter].question; // this.answers=this.tasks[this.tasks_encounter].answers
+
       this.setVisibilityToAnswers();
       setTimeout(function () {
         _this4.showquestion();
 
         _this4.showAnswers();
-      }, this.delay * 1000);
+      }, 1 * 1000);
       this.tasks_encounter += 1;
     },
     giveans: function giveans(x) {

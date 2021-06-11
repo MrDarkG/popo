@@ -56,12 +56,12 @@
     			}, 100);
 			},
 			showAnswers(){
-				for (let i = 0; i < this.answers.length;i++) {
-					setTimeout(()=>{
-						this.answers[i].is_visible = true
+					setInterval(()=>{
+						// this.tasks[i].answers[j].is_visible = true
+						this.answers.push(this.tasks[this.tasks_encounter].answers[j])
 	    				// this.question=this.tasks[0].tasks[0].tasks[this.tasks_encounter].sound
-					},(i === 0)?500:2500)
-				}
+	    				this.setInterval()
+					},3000)
 			},
 			playnext(){
 				this.show_question=0
@@ -70,10 +70,10 @@
 	    		this.$refs.videoRef.play();
 	    		this.delay=this.tasks[this.tasks_encounter].time
 	    		this.question=this.tasks[this.tasks_encounter].question
-	    		this.answers=this.tasks[this.tasks_encounter].answers
+	    		// this.answers=this.tasks[this.tasks_encounter].answers
 				this.setVisibilityToAnswers()
 
-	    		setTimeout(()=>{ this.showquestion();this.showAnswers(); }, this.delay*1000);
+	    		setTimeout(()=>{ this.showquestion();this.showAnswers(); }, 1*1000);
 				this.tasks_encounter+=1;
 			},
 			giveans(x){
