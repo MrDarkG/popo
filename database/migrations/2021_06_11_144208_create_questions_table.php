@@ -19,6 +19,7 @@ class CreateQuestionsTable extends Migration
             $table->integer("time")->description("time in seconds; after that time questions should appear");
             $table->integer("point");
             $table->string("sound");
+            $table->integer("sound_time")->description("sound duration in secends");
             $table->string("question");
             $table->integer("task_id");
             $table->timestamps();
