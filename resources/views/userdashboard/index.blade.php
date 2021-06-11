@@ -236,34 +236,6 @@
                             
                             <div class="card-body">
                                 
-                                <div class="d-flex bg-light-primary card-rounded flex-grow-1">
-                                    
-                                    <div class="py-10 ps-7">
-                                        
-                                        <div class="">
-                                            <span class="text-primary d-block mb-n1">Your Storage</span>
-                                            <span class="font-weight-light fs-1 text-gray-800">GB 
-                                                <span class="fw-bolder fs-1 text-gray-800">7,562.00</span></span>
-                                        </div>
-                                        
-                                        <a href="#" class="btn btn-primary btn-sm fw-bolder fs-6 ps-4 mt-6" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app">Boost 
-                                            
-                                            <span class="svg-icon svg-icon-3 me-0">
-                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                        <polygon points="0 0 24 0 24 24 0 24" />
-                                                        <rect fill="#000000" opacity="0.5" transform="translate(11.646447, 12.853553) rotate(-315.000000) translate(-11.646447, -12.853553)" x="10.6464466" y="5.85355339" width="2" height="14" rx="1" />
-                                                        <path d="M8.1109127,8.90380592 C7.55862795,8.90380592 7.1109127,8.45609067 7.1109127,7.90380592 C7.1109127,7.35152117 7.55862795,6.90380592 8.1109127,6.90380592 L16.5961941,6.90380592 C17.1315855,6.90380592 17.5719943,7.32548256 17.5952502,7.8603687 L17.9488036,15.9920967 C17.9727933,16.5438602 17.5449482,17.0106003 16.9931847,17.0345901 C16.4414212,17.0585798 15.974681,16.6307346 15.9506913,16.0789711 L15.6387276,8.90380592 L8.1109127,8.90380592 Z" fill="#000000" fill-rule="nonzero" />
-                                                    </g>
-                                                </svg>
-                                            </span>
-                                            </a>
-                                    </div>
-                                    
-                                    
-                                    <div class="position-relative bgi-no-repeat bgi-size-contain bgi-position-y-bottom bgi-position-x-end mt-6 flex-grow-1" style="background-image:url('/start/assets/media/misc/illustration-1.png')"></div>
-                                    
-                                </div>
                                 
                                 
                                 <div class="pt-9">
@@ -555,4 +527,18 @@
         </div>
         
     </div>
+@endsection
+@section("js")
+<script src="/start/assets/plugins/global/plugins.bundle.js"></script>
+    <script src="/start/assets/js/scripts.bundle.js"></script>
+    <!--end::Global Javascript Bundle-->
+    <!--begin::Page Vendors Javascript(used by this page)-->
+    <script src="/start/assets/plugins/custom/leaflet/leaflet.bundle.js"></script>
+    <!--end::Page Vendors Javascript-->
+    <!--begin::Page Custom Javascript(used by this page)-->
+    <script src="/start/assets/js/custom/widgets.js"></script>
+    <script src="/start/assets/js/custom/modals/create-app.js"></script>
+    <script src="/start/assets/js/custom/modals/select-location.js"></script>
+    <script src="/start/assets/js/custom/apps/chat/chat.js"></script>
+    <script src="/start/assets/js/custom/modals/users-search.js"></script>
 @endsection

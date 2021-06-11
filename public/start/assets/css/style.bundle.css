@@ -48034,3 +48034,37 @@ body {
         right: 436px
     }
 }
+.videoplayer{
+    width: 100%;
+}
+.quiz-container{
+    position: relative;
+
+}
+.quiz-content{
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    padding-bottom: 70px;
+    opacity: 0.8;
+}
+.question-container{
+    background-color: #5710b2;
+    color: white;
+    border-radius: 12px;
+    padding: 14px;
+    display: grid;
+    align-items: center;
+    height: 100%;
+    font-size: 28px;
+    justify-content: center;
+    cursor: pointer;
+}
+.quiz-content .col-md-6{
+    margin-top: 8px;
+    height: 100%;
+}
+#question .question-container{
+    padding: 12px;
+}

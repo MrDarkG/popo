@@ -12,7 +12,7 @@
 				ქვედა
 			</div>
 		</div>
-		<div>
+		<div class="d-flex flex-column align-items-center">
 			<div class="p-4" @[event]="animation()">
 				<i class="fa fa-arrow-left" aria-hidden="true"></i>
 			</div>
@@ -27,7 +27,7 @@
 			<g v-for="part in svg_parts" v-html="part.content">
 			</g>
 		</svg>
-		<div>
+		<div class="d-flex flex-column align-items-center">
 			<div class="p-4" @[event]="animation()">
 				<i class="fa fa-arrow-right" aria-hidden="true"></i>
 			</div>
