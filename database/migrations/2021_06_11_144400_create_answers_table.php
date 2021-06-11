@@ -18,6 +18,8 @@ class CreateAnswersTable extends Migration
             $table->integer("question_id");
             $table->tinyInteger("is_correct");
             $table->string("answer");
+            $table->string("sound");
+            $table->integer("sound_duration")->description("sound duration in secends");
             $table->text("description");
             $table->integer("timedelay")->description("time for wait after answer");
             $table->timestamps();

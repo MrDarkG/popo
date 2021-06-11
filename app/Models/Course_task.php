@@ -15,6 +15,6 @@ class Course_task extends Model
     ];
     public function tasks()
     {
-        return $this->hasMany(Question::class,"task_id","task_id")->with(["answers:question_id,id,answer,description,timedelay"]);
+        return $this->hasMany(Question::class,"task_id","task_id")->with(["answers:question_id,id,answer,description,timedelay,sound,sound_duration"]);
     }
 }
