@@ -13,10 +13,9 @@
 
 				</div>
 				
-				<div class="col-md-6 " v-for="ans in answers" :style="`color:red;${answers.length==4?'height:50%':'height:100%'}`">
-					<div class="question-container" @click="ans.is_visible=false">
-						<!-- giveans(ans.id) -->
-						{{ ans.answer }} - {{ ans.is_visible }} 
+				<div class="col-md-6 " v-for="ans in answers" :style="`color:red;${answers.length>2?'height:50%':'height:100%'}`">
+					<div class="question-container" @click="giveans(ans.id)">
+						{{ ans.answer }} 
 					</div>
 				</div>
 				
@@ -37,7 +36,10 @@
 				show_question:0,
 				question:"rame kirtxva",
 				answers:[],
-				padding:0
+				padding:0,
+				answer_show_delay:0,
+				interval:"",
+				ansencounter:0
 
 			}
 		},
@@ -56,12 +58,12 @@
     			}, 100);
 			},
 			showAnswers(){
-					setInterval(()=>{
-						// this.tasks[i].answers[j].is_visible = true
-						this.answers.push(this.tasks[this.tasks_encounter].answers[j])
-	    				// this.question=this.tasks[0].tasks[0].tasks[this.tasks_encounter].sound
-	    				this.setInterval()
-					},3000)
+				this.answers.push(this.tasks[this.tasks_encounter].answers[this.ansencounter])
+				this.answer_show_delay=this.tasks[this.tasks_encounter].answers[this.ansencounter].sound_duration
+				this.interval=setInterval(()=>{
+					this.ansencounter+=1
+				},this.answer_show_delay*2000)
+
 			},
 			playnext(){
 				this.show_question=0
@@ -84,6 +86,12 @@
 					this.answers[i].is_visible = false
 				}
 			},
+		},
+		watch:{
+			ansencounter:function(val){
+				clearInterval(this.interval)
+				this.showAnswers()
+			}
 		},
 		mounted(){
 			this.playnext()

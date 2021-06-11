@@ -3419,7 +3419,6 @@ var _this = undefined;
 //
 //
 //
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ["tasks"],
   data: function data() {
@@ -3432,7 +3431,10 @@ var _this = undefined;
       show_question: 0,
       question: "rame kirtxva",
       answers: [],
-      padding: 0
+      padding: 0,
+      answer_show_delay: 0,
+      interval: "",
+      ansencounter: 0
     };
   },
   computed: {
@@ -3454,13 +3456,11 @@ var _this = undefined;
     showAnswers: function showAnswers() {
       var _this3 = this;
 
-      setInterval(function () {
-        // this.tasks[i].answers[j].is_visible = true
-        _this3.answers.push(_this3.tasks[_this3.tasks_encounter].answers[j]); // this.question=this.tasks[0].tasks[0].tasks[this.tasks_encounter].sound
-
-
-        _this3.setInterval();
-      }, 3000);
+      this.answers.push(this.tasks[this.tasks_encounter].answers[this.ansencounter]);
+      this.answer_show_delay = this.tasks[this.tasks_encounter].answers[this.ansencounter].sound_duration;
+      this.interval = setInterval(function () {
+        _this3.ansencounter += 1;
+      }, this.answer_show_delay * 2000);
     },
     playnext: function playnext() {
       var _this4 = this;
@@ -3486,6 +3486,12 @@ var _this = undefined;
       for (var i = 0; i < this.answers.length; i++) {
         this.answers[i].is_visible = false;
       }
+    }
+  },
+  watch: {
+    ansencounter: function ansencounter(val) {
+      clearInterval(this.interval);
+      this.showAnswers();
     }
   },
   mounted: function mounted() {
@@ -39453,7 +39459,7 @@ var render = function() {
                     staticClass: "col-md-6 ",
                     style:
                       "color:red;" +
-                      (_vm.answers.length == 4 ? "height:50%" : "height:100%")
+                      (_vm.answers.length > 2 ? "height:50%" : "height:100%")
                   },
                   [
                     _c(
@@ -39462,17 +39468,13 @@ var render = function() {
                         staticClass: "question-container",
                         on: {
                           click: function($event) {
-                            ans.is_visible = false
+                            return _vm.giveans(ans.id)
                           }
                         }
                       },
                       [
                         _vm._v(
-                          "\n\t\t\t\t\t" +
-                            _vm._s(ans.answer) +
-                            " - " +
-                            _vm._s(ans.is_visible) +
-                            " \n\t\t\t\t"
+                          "\n\t\t\t\t\t" + _vm._s(ans.answer) + " \n\t\t\t\t"
                         )
                       ]
                     )
