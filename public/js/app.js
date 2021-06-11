@@ -3392,6 +3392,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+var _this = undefined;
+
 //
 //
 //
@@ -3432,21 +3434,28 @@ __webpack_require__.r(__webpack_exports__);
       padding: 0
     };
   },
+  computed: {
+    items: function items() {
+      return _this.items.filter(function (item) {
+        return item.price < 100;
+      });
+    }
+  },
   methods: {
     showquestion: function showquestion() {
-      var _this = this;
+      var _this2 = this;
 
       this.show_question = 1;
       setTimeout(function () {
-        _this.padding = _this.$refs.questionRef.clientHeight + 20;
+        _this2.padding = _this2.$refs.questionRef.clientHeight + 20;
       }, 100);
     },
     showAnswers: function showAnswers() {
-      var _this2 = this;
+      var _this3 = this;
 
       var _loop = function _loop(i) {
         setTimeout(function () {
-          _this2.answers[i].is_visible = true; // this.question=this.tasks[0].tasks[0].tasks[this.tasks_encounter].sound
+          _this3.answers[i].is_visible = true; // this.question=this.tasks[0].tasks[0].tasks[this.tasks_encounter].sound
         }, i === 0 ? 500 : 2500);
       };
 
@@ -3455,19 +3464,19 @@ __webpack_require__.r(__webpack_exports__);
       }
     },
     playnext: function playnext() {
-      var _this3 = this;
+      var _this4 = this;
 
       this.show_question = 0;
-      this.$refs.videoRef.src = this.tasks[0].tasks[0].tasks[this.tasks_encounter].source;
+      this.$refs.videoRef.src = this.tasks[this.tasks_encounter].source;
       this.$refs.videoRef.play();
-      this.delay = this.tasks[0].tasks[0].tasks[this.tasks_encounter].time;
-      this.question = this.tasks[0].tasks[0].tasks[this.tasks_encounter].question;
-      this.answers = this.tasks[0].tasks[0].tasks[this.tasks_encounter].answers;
+      this.delay = this.tasks[this.tasks_encounter].time;
+      this.question = this.tasks[this.tasks_encounter].question;
+      this.answers = this.tasks[this.tasks_encounter].answers;
       this.setVisibilityToAnswers();
       setTimeout(function () {
-        _this3.showquestion();
+        _this4.showquestion();
 
-        _this3.showAnswers();
+        _this4.showAnswers();
       }, this.delay * 1000);
       this.tasks_encounter += 1;
     },

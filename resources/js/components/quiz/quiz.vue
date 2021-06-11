@@ -40,6 +40,13 @@
 
 			}
 		},
+		computed: {
+		  items: () => {
+		    return this.items.filter(function (item) {
+		      return item.price < 100
+		    })
+		  }
+		},
 		methods:{
 			showquestion(){
 				this.show_question=1
@@ -57,12 +64,12 @@
 			},
 			playnext(){
 				this.show_question=0
-				this.$refs.videoRef.src = this.tasks[0].tasks[0].tasks[this.tasks_encounter].source;
+				this.$refs.videoRef.src = this.tasks[this.tasks_encounter].source;
 
 	    		this.$refs.videoRef.play();
-	    		this.delay=this.tasks[0].tasks[0].tasks[this.tasks_encounter].time
-	    		this.question=this.tasks[0].tasks[0].tasks[this.tasks_encounter].question
-	    		this.answers=this.tasks[0].tasks[0].tasks[this.tasks_encounter].answers
+	    		this.delay=this.tasks[this.tasks_encounter].time
+	    		this.question=this.tasks[this.tasks_encounter].question
+	    		this.answers=this.tasks[this.tasks_encounter].answers
 				this.setVisibilityToAnswers()
 
 	    		setTimeout(()=>{ this.showquestion();this.showAnswers(); }, this.delay*1000);
