@@ -12,13 +12,14 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
     <link href="/start/assets/plugins/custom/leaflet/leaflet.bundle.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+    @yield("css")
     <link href="/start/assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
     <link href="/start/assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
      <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('/assets/css/svg.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
 </head>
 <!--end::Head-->
 <!--begin::Body-->
@@ -69,28 +70,13 @@
             </span>
         <!--end::Svg Icon-->
     </div>
-    <!--end::Scrolltop-->
-    <!--end::Main-->
-    <!--begin::Javascript-->
-    <!--begin::Global Javascript Bundle(used by all pages)-->
-    <script src="/start/assets/plugins/global/plugins.bundle.js"></script>
-    <script src="/start/assets/js/scripts.bundle.js"></script>
-    <!--end::Global Javascript Bundle-->
-    <!--begin::Page Vendors Javascript(used by this page)-->
-    <script src="/start/assets/plugins/custom/leaflet/leaflet.bundle.js"></script>
-    <!--end::Page Vendors Javascript-->
-    <!--begin::Page Custom Javascript(used by this page)-->
-    <script src="/start/assets/js/custom/widgets.js"></script>
-    <script src="/start/assets/js/custom/modals/create-app.js"></script>
-    <script src="/start/assets/js/custom/modals/select-location.js"></script>
-    <script src="/start/assets/js/custom/apps/chat/chat.js"></script>
-    <script src="/start/assets/js/custom/modals/users-search.js"></script>
-    <!--end::Page Custom Javascript-->
-    <!--end::Javascript-->
-    <!--Begin::Google Tag Manager (noscript) -->
+    
+    
+    @yield("js")
+    
     <noscript>
-            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FS8GGP" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-        </noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FS8GGP" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!--End::Google Tag Manager (noscript) -->
