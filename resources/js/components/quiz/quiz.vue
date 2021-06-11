@@ -1,5 +1,8 @@
 <template>
 	<div class="container">
+		<audio ref="audio">
+			
+		</audio>
 		<div class="quiz-container">
 			
 			<video class="videoplayer" autoplay="1" ref="videoRef">
@@ -60,6 +63,8 @@
 			showAnswers(){
 				this.answers.push(this.tasks[this.tasks_encounter].answers[this.ansencounter])
 				this.answer_show_delay=this.tasks[this.tasks_encounter].answers[this.ansencounter].sound_duration
+				this.$refs.audio.src=this.tasks[this.tasks_encounter].answers[this.ansencounter].sound
+				this.$refs.audio.play();
 				this.interval=setInterval(()=>{
 					this.ansencounter+=1
 				},this.answer_show_delay*2000)
@@ -75,7 +80,7 @@
 	    		// this.answers=this.tasks[this.tasks_encounter].answers
 				this.setVisibilityToAnswers()
 
-	    		setTimeout(()=>{ this.showquestion();this.showAnswers(); }, 1*1000);
+	    		setTimeout(()=>{ this.showquestion();this.showAnswers(); }, this.delay*1000);
 				this.tasks_encounter+=1;
 			},
 			giveans(x){

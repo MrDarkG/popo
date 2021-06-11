@@ -3419,6 +3419,9 @@ var _this = undefined;
 //
 //
 //
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ["tasks"],
   data: function data() {
@@ -3458,6 +3461,8 @@ var _this = undefined;
 
       this.answers.push(this.tasks[this.tasks_encounter].answers[this.ansencounter]);
       this.answer_show_delay = this.tasks[this.tasks_encounter].answers[this.ansencounter].sound_duration;
+      this.$refs.audio.src = this.tasks[this.tasks_encounter].answers[this.ansencounter].sound;
+      this.$refs.audio.play();
       this.interval = setInterval(function () {
         _this3.ansencounter += 1;
       }, this.answer_show_delay * 2000);
@@ -3476,7 +3481,7 @@ var _this = undefined;
         _this4.showquestion();
 
         _this4.showAnswers();
-      }, 1 * 1000);
+      }, this.delay * 1000);
       this.tasks_encounter += 1;
     },
     giveans: function giveans(x) {
@@ -39422,6 +39427,8 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
+    _c("audio", { ref: "audio" }),
+    _vm._v(" "),
     _c("div", { staticClass: "quiz-container" }, [
       _c("video", {
         ref: "videoRef",
