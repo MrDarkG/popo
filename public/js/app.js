@@ -3416,6 +3416,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ["tasks"],
   data: function data() {
@@ -3440,8 +3441,21 @@ __webpack_require__.r(__webpack_exports__);
         _this.padding = _this.$refs.questionRef.clientHeight + 20;
       }, 100);
     },
-    playnext: function playnext() {
+    showAnswers: function showAnswers() {
       var _this2 = this;
+
+      var _loop = function _loop(i) {
+        setTimeout(function () {
+          _this2.answers[i].is_visible = true; // this.question=this.tasks[0].tasks[0].tasks[this.tasks_encounter].sound
+        }, i === 0 ? 500 : 2500);
+      };
+
+      for (var i = 0; i < this.answers.length; i++) {
+        _loop(i);
+      }
+    },
+    playnext: function playnext() {
+      var _this3 = this;
 
       this.show_question = 0;
       this.$refs.videoRef.src = this.tasks[0].tasks[0].tasks[this.tasks_encounter].source;
@@ -3449,13 +3463,21 @@ __webpack_require__.r(__webpack_exports__);
       this.delay = this.tasks[0].tasks[0].tasks[this.tasks_encounter].time;
       this.question = this.tasks[0].tasks[0].tasks[this.tasks_encounter].question;
       this.answers = this.tasks[0].tasks[0].tasks[this.tasks_encounter].answers;
+      this.setVisibilityToAnswers();
       setTimeout(function () {
-        _this2.showquestion();
+        _this3.showquestion();
+
+        _this3.showAnswers();
       }, this.delay * 1000);
       this.tasks_encounter += 1;
     },
     giveans: function giveans(x) {
       this.playnext();
+    },
+    setVisibilityToAnswers: function setVisibilityToAnswers() {
+      for (var i = 0; i < this.answers.length; i++) {
+        this.answers[i].is_visible = false;
+      }
     }
   },
   mounted: function mounted() {
@@ -39438,7 +39460,11 @@ var render = function() {
                       },
                       [
                         _vm._v(
-                          "\n\t\t\t\t\t" + _vm._s(ans.answer) + " \n\t\t\t\t"
+                          "\n\t\t\t\t\t" +
+                            _vm._s(ans.answer) +
+                            " - " +
+                            _vm._s(ans.is_visible) +
+                            " \n\t\t\t\t"
                         )
                       ]
                     )
