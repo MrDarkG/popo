@@ -18,8 +18,8 @@
 				
 				<div class="col-md-6 " v-for="ans in answers" :style="`color:red;${answers.length>2?'height:50%':'height:100%'}`">
 					<div class="question-container" @click="giveans(ans.id)">
-						<!-- {{ ans.answer }}  -->
-						{{ ans }}
+						{{ ans.answer }} 
+						<!-- {{ ans }} -->
 					</div>
 				</div>
 				
@@ -72,16 +72,22 @@
 				}
 			},
 			playnext(){
-				this.show_question=0
-				this.$refs.videoRef.src = this.tasks[this.tasks_encounter].source;
+				if (this.tasks.length>this.tasks_encounter) {
 
-	    		this.$refs.videoRef.play();
-	    		this.delay=this.tasks[this.tasks_encounter].time
-	    		this.question=this.tasks[this.tasks_encounter].question
-	    		// this.answers=this.tasks[this.tasks_encounter].answers
-				this.setVisibilityToAnswers()
+					this.show_question=0
+					this.$refs.videoRef.src = this.tasks[this.tasks_encounter].source;
 
-	    		setTimeout(()=>{ this.showquestion();this.showAnswers(); }, 1*1000);
+		    		this.$refs.videoRef.play();
+		    		this.delay=this.tasks[this.tasks_encounter].time
+		    		this.question=this.tasks[this.tasks_encounter].question
+		    		// this.answers=this.tasks[this.tasks_encounter].answers
+					this.setVisibilityToAnswers()
+
+		    		setTimeout(()=>{ this.showquestion();this.showAnswers(); }, this.delay*1000);
+				}
+				else{
+					alert(1)
+				}
 				// 
 			},
 			giveans(x){
@@ -100,7 +106,7 @@
 			ansencounter:function(val){
 				// console.log(this.ansencounter,this.tasks_encounter)
 				clearInterval(this.interval)
-				if(this.ansencounter < this.answers.length+1){
+				if(this.ansencounter < 4 && this.ansencounter>0){
 					this.showAnswers()
 				}
 			}
