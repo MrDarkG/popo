@@ -44,7 +44,6 @@
 				answer_show_delay:0,
 				interval:"",
 				ansencounter:0
-
 			}
 		},
 		computed: {
