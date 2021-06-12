@@ -5,6 +5,12 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Socialite;
+use Hash;
+use Str;
+use Auth;
+use Carbon\Carbon;
+use App\Models\User;
 
 class LoginController extends Controller
 {
@@ -27,6 +33,9 @@ class LoginController extends Controller
      * @var string
      */
     protected $redirectTo = RouteServiceProvider::HOME;
+    // protected $redirectTo = RouteServiceProvider::HOME ;    
+    protected $maxAttempts= 3;
+    protected $decayMinutes= 2;
 
     /**
      * Create a new controller instance.
@@ -36,5 +45,50 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+    public function google()
+    {
+        return Socialite::driver("google")->redirect();
+    }
+    public function google_redirect()
+    {
+        $user=Socialite::driver("google")->stateless()->user();
+        $user=User::firstOrCreate([
+            "email"=>$user->email
+        ],[
+            "email"=>$user->email,
+            "name"=>$user->name?$user->name:$user->nickname,
+            "company"=>"0",
+            "password"=>Hash::make(Str::random(24)),
+            "email_verified_at"=>Carbon::now()
+        ]);
+        Auth::login($user,true);
+        return redirect()->route("home");
+        
+    }
+
+
+    public function facebook()
+    {
+        return Socialite::driver("facebook")->redirect();
+    }
+    public function facebookRedirect()
+    {
+        $user= Socialite::driver("facebook")->stateless()->user();
+        
+
+        $user=User::firstOrCreate([
+            "email"=>$user->email
+        ],[
+            "email"=>$user->email,
+            "name"=>$user->name?$user->name:$user->nickname,
+            "password"=>Hash::make(Str::random(24)),
+            "company"=>"0",
+        ]);
+        Auth::login($user,true);
+        
+        return redirect()->route("home");
+        
+        
     }
 }

@@ -52,22 +52,22 @@
 </form>
     
     <div class="socialite-container">
-        <div class="socialite-icon fb">
+        <a class="socialite-icon fb" href="/sign-in/facebook">
             <div class="img-div">
                 <img src="{{ asset('/icons/facebook.png') }}">
             </div>
             <div class="text-div">
                 Facebook-ით შესვლა
             </div>
-        </div>
-        <div class="socialite-icon google">
+        </a>
+        <a  href="/sign-in/google" class="socialite-icon google text-de">
             <div class="img-div">
                 <img src="{{ asset('/icons/search.png') }}">
             </div>
             <div class="text-div">
                 Google-ით შესვლა
             </div>
-        </div>
+        </a>
     </div>
  <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
     <script type="text/javascript" src="{{ asset('/js/login.js') }}"></script>

@@ -31,3 +31,10 @@ Route::get("offers", function(){
 
 
 Route::get("/play/quiz/{id}",[App\Http\Controllers\QuizController::class,"index"]);
+
+
+Route::get("/sign-in/google",[App\Http\Controllers\Auth\LoginController::class,"google"]);
+Route::get("/sign-in/google/redirect", [App\Http\Controllers\Auth\LoginController::class,"google_redirect"]);
+
+Route::get("/sign-in/facebook",[App\Http\Controllers\Auth\LoginController::class, 'facebook']);
+Route::get("/sign-in/facebook/redirect",[App\Http\Controllers\Auth\LoginController::class, 'facebookRedirect']);
