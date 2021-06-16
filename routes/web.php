@@ -30,7 +30,7 @@ Route::get("offers", function(){
 });
 
 
-Route::get("/play/quiz/{id}",[App\Http\Controllers\QuizController::class,"index"]);
+Route::get("/play/quiz/{id}",[App\Http\Controllers\QuizController::class,"index"])->name("play");
 
 
 Route::get("/sign-in/google",[App\Http\Controllers\Auth\LoginController::class,"google"]);
