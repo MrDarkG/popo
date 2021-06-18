@@ -3598,7 +3598,7 @@ var _this = undefined;
             this.task[i].answers[j].is_selected = false;
 
             if (this.task[i].answers[j].id === answer_id) {
-              var audio = new Audio(this.task[i].answers[j].sound);
+              var audio = new Audio(this.task[i].answers[j].description);
               audio.play();
               this.task[i].answers[j].is_selected = true;
             }
