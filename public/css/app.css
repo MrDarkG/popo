@@ -5017,14 +5017,6 @@ a.badge-dark:focus, a.badge-dark.focus {
   border-radius: 0;
 }
 
-.alert {
-  position: relative;
-  padding: 0.75rem 1.25rem;
-  margin-bottom: 1rem;
-  border: 1px solid transparent;
-  border-radius: 0.35rem;
-}
-
 .alert-heading {
   color: inherit;
 }
@@ -5114,20 +5106,6 @@ a.badge-dark:focus, a.badge-dark.focus {
 
 .alert-warning .alert-link {
   color: #574516;
-}
-
-.alert-danger {
-  color: #78261f;
-  background-color: #fadbd8;
-  border-color: #f8ccc8;
-}
-
-.alert-danger hr {
-  border-top-color: #f5b7b1;
-}
-
-.alert-danger .alert-link {
-  color: #4f1915;
 }
 
 .alert-light {
@@ -16106,11 +16084,15 @@ a.badge-dark:focus, a.badge-dark.focus {
 }
 
 .alert {
+  text-align: center;
   position: relative;
   padding: 0.75rem 1.25rem;
   margin-bottom: 1rem;
+  margin-top: 80px;
   border: 1px solid transparent;
-  border-radius: 0.25rem;
+  border-radius: 0.35rem;
+  color: white;
+  border-radius: 30%;
 }
 
 .alert-heading {
@@ -16194,15 +16176,10 @@ a.badge-dark:focus, a.badge-dark.focus {
 }
 
 .alert-danger {
-  color: #761b18;
+  color: white;
   background-color: #f9d6d5;
   border-color: #f7c6c5;
-}
-.alert-danger hr {
-  border-top-color: #f4b0af;
-}
-.alert-danger .alert-link {
-  color: #4c110f;
+  border-radius: 30%;
 }
 
 .alert-light {
@@ -21283,4 +21260,19 @@ h3 {
     color: inherit;
     border-color: #dee2e6;
   }
+}
+
+ul.no-bullets {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
+}
+
+.li-error {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 10px;
+  height: 30px;
+  background-color: #2e3440;
+  border-radius: 5px 20px 5px;
 }

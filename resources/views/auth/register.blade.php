@@ -5,17 +5,18 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <title></title>
-  <link rel="stylesheet" type="text/css" href="/register.css">
+    <title>რეგისტრაცია</title>
+    <link rel="stylesheet" type="text/css" href="/register.css">
+    <link rel="stylesheet" type="text/css" href="/css/app.css">
 </head>
 <body>
 
 <div class="middle">
   @if ($errors->any())
-      <div class="alert alert-danger">
-          <ul>
+      <div class="alert">
+          <ul class="no-bullets">
               @foreach ($errors->all() as $error)
-                  <li>{{ $error }}</li>
+                  <li class="li-error">{{ $error }}</li>
               @endforeach
           </ul>
       </div>
@@ -84,7 +85,7 @@
       @csrf
       <label>
         <div class="fa fa-phone"></div>
-        <input class="name  @error('email') is-invalid @enderror" type="text" autocomplete="on" placeholder="სახელი" name="name" value="{{ old('name') }}" />
+        <input class="form-control name" type="text" autocomplete="on" placeholder="სახელი" name="name" value="{{ old('name') }}" />
       </label>
       <label>
         <div class="fa fa-phone"></div>
@@ -93,11 +94,11 @@
 
       <label>
         <div class="fa fa-commenting"></div>
-        <input class="password @error('password') is-invalid @enderror" type="password" autocomplete="off" placeholder="პაროლი" name="password" />
-        <button class="password-button">ჩვენება</button>
+        <input id="passwordText" class="password @error('password') is-invalid @enderror" type="password" autocomplete="off" placeholder="პაროლი" name="password" />
+        <button type="button" id="showpassword" class="password-button">ჩვენება</button>
       </label>
-      <button class="login-button">რეგისტრაცია</button>
-    </form method="POST" action="{{ route('register') }}">
+      <button type="submit" class="login-button">რეგისტრაცია</button>
+    </form>
     
   </div>
 </div>
