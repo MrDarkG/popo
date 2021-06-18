@@ -27365,7 +27365,7 @@ fieldset:disabled .btn {
 
 .text-hover-white:hover .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .text-hover-white:hover .svg-icon svg:hover [fill]:not(.permanent):not(g) {
@@ -27419,7 +27419,7 @@ fieldset:disabled .btn {
 
 .text-active-white.active .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .text-active-white.active .svg-icon svg:hover [fill]:not(.permanent):not(g) {
@@ -27512,7 +27512,7 @@ fieldset:disabled .btn {
 
 .text-hover-inverse-primary:hover .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .text-hover-inverse-primary:hover .svg-icon svg:hover [fill]:not(.permanent):not(g) {
@@ -27566,7 +27566,7 @@ fieldset:disabled .btn {
 
 .text-active-inverse-primary.active .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .text-active-inverse-primary.active .svg-icon svg:hover [fill]:not(.permanent):not(g) {
@@ -27864,7 +27864,7 @@ fieldset:disabled .btn {
 
 .text-hover-inverse-success:hover .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .text-hover-inverse-success:hover .svg-icon svg:hover [fill]:not(.permanent):not(g) {
@@ -27918,7 +27918,7 @@ fieldset:disabled .btn {
 
 .text-active-inverse-success.active .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .text-active-inverse-success.active .svg-icon svg:hover [fill]:not(.permanent):not(g) {
@@ -27984,7 +27984,7 @@ fieldset:disabled .btn {
 
 .text-hover-inverse-info:hover .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .text-hover-inverse-info:hover .svg-icon svg:hover [fill]:not(.permanent):not(g) {
@@ -28038,7 +28038,7 @@ fieldset:disabled .btn {
 
 .text-active-inverse-info.active .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .text-active-inverse-info.active .svg-icon svg:hover [fill]:not(.permanent):not(g) {
@@ -28104,7 +28104,7 @@ fieldset:disabled .btn {
 
 .text-hover-inverse-warning:hover .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .text-hover-inverse-warning:hover .svg-icon svg:hover [fill]:not(.permanent):not(g) {
@@ -28158,7 +28158,7 @@ fieldset:disabled .btn {
 
 .text-active-inverse-warning.active .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .text-active-inverse-warning.active .svg-icon svg:hover [fill]:not(.permanent):not(g) {
@@ -28224,7 +28224,7 @@ fieldset:disabled .btn {
 
 .text-hover-inverse-danger:hover .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .text-hover-inverse-danger:hover .svg-icon svg:hover [fill]:not(.permanent):not(g) {
@@ -28278,7 +28278,7 @@ fieldset:disabled .btn {
 
 .text-active-inverse-danger.active .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .text-active-inverse-danger.active .svg-icon svg:hover [fill]:not(.permanent):not(g) {
@@ -28344,7 +28344,7 @@ fieldset:disabled .btn {
 
 .text-hover-inverse-dark:hover .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .text-hover-inverse-dark:hover .svg-icon svg:hover [fill]:not(.permanent):not(g) {
@@ -28398,7 +28398,7 @@ fieldset:disabled .btn {
 
 .text-active-inverse-dark.active .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .text-active-inverse-dark.active .svg-icon svg:hover [fill]:not(.permanent):not(g) {
@@ -29903,7 +29903,7 @@ a:hover {
 
 .page-item.active .page-link .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .page-item.active .page-link .svg-icon svg:hover [fill]:not(.permanent):not(g) {
@@ -31098,7 +31098,7 @@ a:hover {
 
 .menu-white .menu-item .menu-link .menu-icon .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .menu-white .menu-item .menu-link .menu-icon .svg-icon svg:hover [fill]:not(.permanent):not(g) {
@@ -31130,7 +31130,7 @@ a:hover {
 
 .menu-icon-white .menu-item .menu-link .menu-icon .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .menu-icon-white .menu-item .menu-link .menu-icon .svg-icon svg:hover [fill]:not(.permanent):not(g) {
@@ -32580,7 +32580,7 @@ a:hover {
 .menu-hover-bg-primary .menu-item .menu-link:hover:not(.disabled):not(.active) .menu-icon .svg-icon svg [fill]:not(.permanent):not(g),
 .menu-hover-bg-primary .menu-item.hover>.menu-link:not(.disabled):not(.active) .menu-icon .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .menu-hover-bg-primary .menu-item .menu-link:hover:not(.disabled):not(.active) .menu-icon .svg-icon svg:hover [fill]:not(.permanent):not(g),
@@ -32621,7 +32621,7 @@ a:hover {
 .menu-show-bg-primary .menu-item.here>.menu-link .menu-icon .svg-icon svg [fill]:not(.permanent):not(g),
 .menu-show-bg-primary .menu-item.show>.menu-link .menu-icon .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .menu-show-bg-primary .menu-item.here>.menu-link .menu-icon .svg-icon svg:hover [fill]:not(.permanent):not(g),
@@ -32658,7 +32658,7 @@ a:hover {
 
 .menu-active-bg-primary .menu-item .menu-link.active .menu-icon .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .menu-active-bg-primary .menu-item .menu-link.active .menu-icon .svg-icon svg:hover [fill]:not(.permanent):not(g) {
@@ -32696,7 +32696,7 @@ a:hover {
 .menu-state-bg-primary .menu-item .menu-link:hover:not(.disabled):not(.active) .menu-icon .svg-icon svg [fill]:not(.permanent):not(g),
 .menu-state-bg-primary .menu-item.hover>.menu-link:not(.disabled):not(.active) .menu-icon .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .menu-state-bg-primary .menu-item .menu-link:hover:not(.disabled):not(.active) .menu-icon .svg-icon svg:hover [fill]:not(.permanent):not(g),
@@ -32737,7 +32737,7 @@ a:hover {
 .menu-state-bg-primary .menu-item.here>.menu-link .menu-icon .svg-icon svg [fill]:not(.permanent):not(g),
 .menu-state-bg-primary .menu-item.show>.menu-link .menu-icon .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .menu-state-bg-primary .menu-item.here>.menu-link .menu-icon .svg-icon svg:hover [fill]:not(.permanent):not(g),
@@ -32774,7 +32774,7 @@ a:hover {
 
 .menu-state-bg-primary .menu-item .menu-link.active .menu-icon .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .menu-state-bg-primary .menu-item .menu-link.active .menu-icon .svg-icon svg:hover [fill]:not(.permanent):not(g) {
@@ -34168,7 +34168,7 @@ a:hover {
 
 .btn.btn-primary .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .btn.btn-primary .svg-icon svg:hover [fill]:not(.permanent):not(g) {
@@ -34212,7 +34212,7 @@ a:hover {
 .btn.btn-primary:hover:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g),
 .show>.btn.btn-primary .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .btn-check:active+.btn.btn-primary .svg-icon svg:hover [fill]:not(.permanent):not(g),
@@ -34293,7 +34293,7 @@ a:hover {
 .btn.btn-light-primary:hover:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g),
 .show>.btn.btn-light-primary .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .btn-check:active+.btn.btn-light-primary .svg-icon svg:hover [fill]:not(.permanent):not(g),
@@ -34356,7 +34356,7 @@ a:hover {
 .btn.btn-active-primary:hover:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g),
 .show>.btn.btn-active-primary .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .btn-check:active+.btn.btn-active-primary .svg-icon svg:hover [fill]:not(.permanent):not(g),
@@ -34599,7 +34599,7 @@ a:hover {
 
 .btn.btn-success .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .btn.btn-success .svg-icon svg:hover [fill]:not(.permanent):not(g) {
@@ -34643,7 +34643,7 @@ a:hover {
 .btn.btn-success:hover:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g),
 .show>.btn.btn-success .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .btn-check:active+.btn.btn-success .svg-icon svg:hover [fill]:not(.permanent):not(g),
@@ -34724,7 +34724,7 @@ a:hover {
 .btn.btn-light-success:hover:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g),
 .show>.btn.btn-light-success .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .btn-check:active+.btn.btn-light-success .svg-icon svg:hover [fill]:not(.permanent):not(g),
@@ -34787,7 +34787,7 @@ a:hover {
 .btn.btn-active-success:hover:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g),
 .show>.btn.btn-active-success .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .btn-check:active+.btn.btn-active-success .svg-icon svg:hover [fill]:not(.permanent):not(g),
@@ -34886,7 +34886,7 @@ a:hover {
 
 .btn.btn-info .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .btn.btn-info .svg-icon svg:hover [fill]:not(.permanent):not(g) {
@@ -34930,7 +34930,7 @@ a:hover {
 .btn.btn-info:hover:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g),
 .show>.btn.btn-info .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .btn-check:active+.btn.btn-info .svg-icon svg:hover [fill]:not(.permanent):not(g),
@@ -35011,7 +35011,7 @@ a:hover {
 .btn.btn-light-info:hover:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g),
 .show>.btn.btn-light-info .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .btn-check:active+.btn.btn-light-info .svg-icon svg:hover [fill]:not(.permanent):not(g),
@@ -35074,7 +35074,7 @@ a:hover {
 .btn.btn-active-info:hover:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g),
 .show>.btn.btn-active-info .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .btn-check:active+.btn.btn-active-info .svg-icon svg:hover [fill]:not(.permanent):not(g),
@@ -35173,7 +35173,7 @@ a:hover {
 
 .btn.btn-warning .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .btn.btn-warning .svg-icon svg:hover [fill]:not(.permanent):not(g) {
@@ -35217,7 +35217,7 @@ a:hover {
 .btn.btn-warning:hover:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g),
 .show>.btn.btn-warning .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .btn-check:active+.btn.btn-warning .svg-icon svg:hover [fill]:not(.permanent):not(g),
@@ -35298,7 +35298,7 @@ a:hover {
 .btn.btn-light-warning:hover:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g),
 .show>.btn.btn-light-warning .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .btn-check:active+.btn.btn-light-warning .svg-icon svg:hover [fill]:not(.permanent):not(g),
@@ -35361,7 +35361,7 @@ a:hover {
 .btn.btn-active-warning:hover:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g),
 .show>.btn.btn-active-warning .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .btn-check:active+.btn.btn-active-warning .svg-icon svg:hover [fill]:not(.permanent):not(g),
@@ -35460,7 +35460,7 @@ a:hover {
 
 .btn.btn-danger .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .btn.btn-danger .svg-icon svg:hover [fill]:not(.permanent):not(g) {
@@ -35504,7 +35504,7 @@ a:hover {
 .btn.btn-danger:hover:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g),
 .show>.btn.btn-danger .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .btn-check:active+.btn.btn-danger .svg-icon svg:hover [fill]:not(.permanent):not(g),
@@ -35585,7 +35585,7 @@ a:hover {
 .btn.btn-light-danger:hover:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g),
 .show>.btn.btn-light-danger .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .btn-check:active+.btn.btn-light-danger .svg-icon svg:hover [fill]:not(.permanent):not(g),
@@ -35648,7 +35648,7 @@ a:hover {
 .btn.btn-active-danger:hover:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g),
 .show>.btn.btn-active-danger .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .btn-check:active+.btn.btn-active-danger .svg-icon svg:hover [fill]:not(.permanent):not(g),
@@ -35747,7 +35747,7 @@ a:hover {
 
 .btn.btn-dark .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .btn.btn-dark .svg-icon svg:hover [fill]:not(.permanent):not(g) {
@@ -35791,7 +35791,7 @@ a:hover {
 .btn.btn-dark:hover:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g),
 .show>.btn.btn-dark .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .btn-check:active+.btn.btn-dark .svg-icon svg:hover [fill]:not(.permanent):not(g),
@@ -35872,7 +35872,7 @@ a:hover {
 .btn.btn-light-dark:hover:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g),
 .show>.btn.btn-light-dark .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .btn-check:active+.btn.btn-light-dark .svg-icon svg:hover [fill]:not(.permanent):not(g),
@@ -35935,7 +35935,7 @@ a:hover {
 .btn.btn-active-dark:hover:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g),
 .show>.btn.btn-active-dark .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .btn-check:active+.btn.btn-active-dark .svg-icon svg:hover [fill]:not(.permanent):not(g),
@@ -36032,7 +36032,7 @@ a:hover {
 
 .btn.btn-color-white .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .btn.btn-color-white .svg-icon svg:hover [fill]:not(.permanent):not(g) {
@@ -36074,7 +36074,6 @@ a:hover {
 .btn.btn-active-color-white:hover:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g),
 .show>.btn.btn-active-color-white .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
 }
 
 .btn-check:active+.btn.btn-active-color-white .svg-icon svg:hover [fill]:not(.permanent):not(g),
@@ -36105,7 +36104,7 @@ a:hover {
 
 .btn.btn-icon-white .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .btn.btn-icon-white .svg-icon svg:hover [fill]:not(.permanent):not(g) {
@@ -36136,7 +36135,7 @@ a:hover {
 .btn.btn-active-icon-white:hover:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g),
 .show>.btn.btn-active-icon-white .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .btn-check:active+.btn.btn-active-icon-white .svg-icon svg:hover [fill]:not(.permanent):not(g),
@@ -38960,7 +38959,7 @@ a:hover {
 
 .btn.btn-facebook .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .btn.btn-facebook .svg-icon svg:hover [fill]:not(.permanent):not(g) {
@@ -39039,7 +39038,7 @@ a:hover {
 .btn.btn-light-facebook:hover:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g),
 .show>.btn.btn-light-facebook .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .btn-check:active+.btn.btn-light-facebook .svg-icon svg:hover [fill]:not(.permanent):not(g),
@@ -39076,7 +39075,7 @@ a:hover {
 
 .btn.btn-google .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .btn.btn-google .svg-icon svg:hover [fill]:not(.permanent):not(g) {
@@ -39155,7 +39154,7 @@ a:hover {
 .btn.btn-light-google:hover:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g),
 .show>.btn.btn-light-google .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .btn-check:active+.btn.btn-light-google .svg-icon svg:hover [fill]:not(.permanent):not(g),
@@ -39192,7 +39191,7 @@ a:hover {
 
 .btn.btn-twitter .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .btn.btn-twitter .svg-icon svg:hover [fill]:not(.permanent):not(g) {
@@ -39271,7 +39270,7 @@ a:hover {
 .btn.btn-light-twitter:hover:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g),
 .show>.btn.btn-light-twitter .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .btn-check:active+.btn.btn-light-twitter .svg-icon svg:hover [fill]:not(.permanent):not(g),
@@ -39308,7 +39307,7 @@ a:hover {
 
 .btn.btn-instagram .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .btn.btn-instagram .svg-icon svg:hover [fill]:not(.permanent):not(g) {
@@ -39387,7 +39386,7 @@ a:hover {
 .btn.btn-light-instagram:hover:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g),
 .show>.btn.btn-light-instagram .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .btn-check:active+.btn.btn-light-instagram .svg-icon svg:hover [fill]:not(.permanent):not(g),
@@ -39424,7 +39423,7 @@ a:hover {
 
 .btn.btn-youtube .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .btn.btn-youtube .svg-icon svg:hover [fill]:not(.permanent):not(g) {
@@ -39503,7 +39502,7 @@ a:hover {
 .btn.btn-light-youtube:hover:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g),
 .show>.btn.btn-light-youtube .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .btn-check:active+.btn.btn-light-youtube .svg-icon svg:hover [fill]:not(.permanent):not(g),
@@ -39540,7 +39539,7 @@ a:hover {
 
 .btn.btn-linkedin .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .btn.btn-linkedin .svg-icon svg:hover [fill]:not(.permanent):not(g) {
@@ -39619,7 +39618,7 @@ a:hover {
 .btn.btn-light-linkedin:hover:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g),
 .show>.btn.btn-light-linkedin .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .btn-check:active+.btn.btn-light-linkedin .svg-icon svg:hover [fill]:not(.permanent):not(g),
@@ -45182,7 +45181,7 @@ code:not([class*=language-]) {
 
 .scrolltop .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .scrolltop .svg-icon svg:hover [fill]:not(.permanent):not(g) {
@@ -45200,7 +45199,7 @@ code:not([class*=language-]) {
 
 .scrolltop:hover .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .scrolltop:hover .svg-icon svg:hover [fill]:not(.permanent):not(g) {
@@ -45247,7 +45246,7 @@ code:not([class*=language-]) {
 
 .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #a1a5b7
+    /*fill: #a1a5b7*/
 }
 
 .svg-icon svg:hover [fill]:not(.permanent):not(g) {
@@ -45256,7 +45255,7 @@ code:not([class*=language-]) {
 
 .svg-icon.svg-icon-white svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .svg-icon.svg-icon-white svg:hover [fill]:not(.permanent):not(g) {
@@ -47812,7 +47811,7 @@ body {
 .btn-check:checked+.aside .aside-primary .btn-custom .svg-icon svg [fill]:not(.permanent):not(g),
 .show>.aside .aside-primary .btn-custom .svg-icon svg [fill]:not(.permanent):not(g) {
     transition: fill .3s ease;
-    fill: #fff
+    
 }
 
 .aside .aside-primary .btn-custom.active .svg-icon svg:hover [fill]:not(.permanent):not(g),

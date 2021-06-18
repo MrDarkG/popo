@@ -6,7 +6,8 @@
 
 let usernameInput = document.querySelector('.username');
 let passwordInput = document.querySelector('.password');
-let showPasswordButton = document.querySelector('.password-button');
+let passwortToText = document.getElementById('passwordText');
+let showPasswordButton = document.getElementById('showpassword');
 let face = document.querySelector('.face');
 
 passwordInput.addEventListener('focus', event => {
@@ -38,21 +39,37 @@ usernameInput.addEventListener('blur', event => {
   face.style.setProperty('--rotate-head', '0deg');
 });
 
-usernameInput.addEventListener('input', _.throttle(event => {
-  let length = Math.min(event.target.value.length - 16, 19);
+// usernameInput.addEventListener('input', _.throttle(event => {
+//   let length = Math.min(event.target.value.length - 16, 19);
 
-  face.style.setProperty('--rotate-head', `${-length}deg`);
-}, 100));
+//   face.style.setProperty('--rotate-head', `${-length}deg`);
+// }, 100));
+
+document.addEventListener("DOMContentLoaded", function() {
+    var elements = document.getElementsByTagName("INPUT");
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].oninvalid = function(e) {
+            e.target.setCustomValidity("");
+            if (!e.target.validity.valid) {
+                e.target.setCustomValidity("This field cannot be left blank");
+            }
+        };
+        elements[i].oninput = function(e) {
+            e.target.setCustomValidity("");
+        };
+    }
+})
 
 showPasswordButton.addEventListener('click', event => {
+  console.log(1)
   if (passwordInput.type === 'text') {
-    passwordInput.type = 'password';
+    passwortToText.type = 'password';
     document.querySelectorAll('.hand').forEach(hand => {
       hand.classList.remove('peek');
       hand.classList.add('hide');
     });
   } else {
-    passwordInput.type = 'text';
+    passwortToText.type = 'text';
     document.querySelectorAll('.hand').forEach(hand => {
       hand.classList.remove('hide');
       hand.classList.add('peek');

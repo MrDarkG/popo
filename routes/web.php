@@ -24,13 +24,18 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get("user-area", [App\Http\Controllers\SvgController::class, 'userArea']);
-Route::get("offers", function(){
-    return view("userdashboard.offers");
+
+Route::middleware(["auth"])->group(function(){
+
+    Route::get("user-area", [App\Http\Controllers\SvgController::class, 'userArea'])->name("user_index");
+    Route::get("offers", [App\Http\Controllers\SvgController::class, 'offers']);
+    Route::post("/store/kids/data",[App\Http\Controllers\SvgController::class,"storekidsdata"])->name("storekidsdata");
+    Route::post("/buy/course",[App\Http\Controllers\SvgController::class,"storecourse"])->name("buycourse");
+    Route::post("/answer/question",[App\Http\Controllers\SvgController::class,"StoreAnswer"])->name("answerquestin");
 });
 
 
-Route::get("/play/quiz/{id}",[App\Http\Controllers\QuizController::class,"index"]);
+Route::get("/play/quiz/{id}",[App\Http\Controllers\QuizController::class,"index"])->name("play");
 
 
 Route::get("/sign-in/google",[App\Http\Controllers\Auth\LoginController::class,"google"]);

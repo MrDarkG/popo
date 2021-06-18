@@ -15,7 +15,7 @@ class Courses extends Model
         "recomended_age",
         "wallpaper",
         "icon",
-        "price",
+        "price"
         
     ];
 
@@ -23,4 +23,5 @@ class Courses extends Model
     {
         return $this->hasMany(Course_task::class,"course_id","id")->with(["tasks"]);
     }
+    
 }

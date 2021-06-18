@@ -4,7 +4,7 @@
 body {
   width: 100vw;
   height: 100vh;
-  background-color: #e0e0e0;
+  background-color: #cc3367 !important;
   overflow: hidden;
   font-size: 12px;
 }
@@ -32,7 +32,7 @@ body {
   border-radius: 12px;
   transform: translate(-50%, -50%);
   overflow: hidden;
-  background-image: linear-gradient(to top right, #4371f9, #6785cd);
+  background-image: linear-gradient(to top right, #952b4f, #cc3367)
 }
 @media screen and (max-height: 500px) {
   .center {
@@ -201,7 +201,7 @@ body {
   border: 2px solid #243946;
   border-bottom: none;
   border-top: none;
-  background-color: #5179e8;
+  background-color: #cc3367;
 }
 .center .hands .finger .nail {
   position: absolute;
@@ -211,7 +211,7 @@ body {
   height: 18px;
   border-radius: 50%;
   border: 2px solid #243946;
-  background-color: #233c79;
+  background-color: #243946;
   z-index: -1;
 }
 .center .hands .finger:nth-child(1),
