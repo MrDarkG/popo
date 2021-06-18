@@ -11,7 +11,15 @@
 <body>
 
 <div class="middle">
-  
+  @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
   <div class="center">
     <div class="ear ear--left"></div>
     <div class="ear ear--right"></div>
@@ -72,7 +80,8 @@
         </div>
       </div>
     </div>
-    <div class="login">
+    <form method="POST" action="{{ route('register') }}" class="login">
+      @csrf
       <label>
         <div class="fa fa-phone"></div>
         <input class="name" type="text" autocomplete="on" placeholder="სახელი"/>
@@ -88,7 +97,7 @@
         <button class="password-button">ჩვენება</button>
       </label>
       <button class="login-button">რეგისტრაცია</button>
-    </div>
+    </form method="POST" action="{{ route('register') }}">
     
   </div>
 </div>
