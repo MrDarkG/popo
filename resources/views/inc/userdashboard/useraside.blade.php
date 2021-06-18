@@ -15,90 +15,50 @@
                             <!--begin::Nav-->
                             <ul class="nav flex-column">
                                 <!--begin::Item-->
-                                <li class="nav-item mb-1" title="Features">
+                                <li class="nav-item mb-1" title="მთავარი გვერდი">
                                     <a href="#" class="nav-link h-40px w-40px h-lg-50px w-lg-50px btn btn-custom btn-icon btn-color-white active" data-bs-toggle="tab" data-bs-target="#kt_aside_tab_1" role="tab">
                                         <!--begin::Svg Icon | path: icons/duotone/Layout/Layout-4-blocks.svg-->
                                         <span class="svg-icon svg-icon-2 svg-icon-lg-1">
-                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                        <rect x="0" y="0" width="24" height="24" />
-                                                        <rect fill="#000000" x="4" y="4" width="7" height="7" rx="1.5" />
-                                                        <path d="M5.5,13 L9.5,13 C10.3284271,13 11,13.6715729 11,14.5 L11,18.5 C11,19.3284271 10.3284271,20 9.5,20 L5.5,20 C4.67157288,20 4,19.3284271 4,18.5 L4,14.5 C4,13.6715729 4.67157288,13 5.5,13 Z M14.5,4 L18.5,4 C19.3284271,4 20,4.67157288 20,5.5 L20,9.5 C20,10.3284271 19.3284271,11 18.5,11 L14.5,11 C13.6715729,11 13,10.3284271 13,9.5 L13,5.5 C13,4.67157288 13.6715729,4 14.5,4 Z M14.5,13 L18.5,13 C19.3284271,13 20,13.6715729 20,14.5 L20,18.5 C20,19.3284271 19.3284271,20 18.5,20 L14.5,20 C13.6715729,20 13,19.3284271 13,18.5 L13,14.5 C13,13.6715729 13.6715729,13 14.5,13 Z" fill="#000000" opacity="0.3" />
-                                                    </g>
+                                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                     viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                                <path style="fill:#F8B64C;" d="M256,86.4c51.2,0,98.133,21.333,132.267,54.4l49.067-49.067
+                                                    C391.467,45.867,327.467,17.067,256,17.067c-70.4,0-134.4,28.8-181.333,74.667l49.067,49.067C157.867,106.667,204.8,86.4,256,86.4z"
+                                                    />
+                                                <path style="fill:#54C0EB;" d="M123.733,140.8L74.667,91.733C28.8,138.667,0,202.667,0,273.067s28.8,134.4,74.667,181.333
+                                                    l49.067-49.067c-34.133-34.133-54.4-81.067-54.4-132.267C69.333,221.867,89.6,174.933,123.733,140.8z"/>
+                                                <path style="fill:#F1543F;" d="M437.333,91.733L388.267,140.8c34.133,34.133,54.4,81.067,54.4,132.267s-21.333,98.133-54.4,132.267
+                                                    l49.067,49.067C483.2,408.533,512,344.533,512,273.067C512,202.667,483.2,138.667,437.333,91.733z"/>
+                                                <path style="fill:#FFD15C;" d="M388.267,140.8l-46.933,46.933c-22.4-21.333-52.267-35.2-85.333-35.2s-64,13.867-85.333,35.2l0,0
+                                                    L123.733,140.8C157.867,106.667,204.8,86.4,256,86.4S354.133,106.667,388.267,140.8z"/>
+                                                <path style="fill:#84DBFF;" d="M170.667,358.4l-46.933,46.933c-34.133-34.133-54.4-81.067-54.4-132.267s21.333-98.133,54.4-132.267
+                                                    l46.933,46.933c-21.333,21.333-35.2,52.267-35.2,85.333C134.4,306.133,148.267,337.067,170.667,358.4z"/>
+                                                <path style="fill:#FF7058;" d="M442.667,273.067c0,51.2-21.333,98.133-54.4,132.267L341.333,358.4
+                                                    c21.333-22.4,35.2-52.267,35.2-85.333s-13.867-64-35.2-85.333l46.933-46.933C422.4,174.933,442.667,221.867,442.667,273.067z"/>
+                                                <path style="fill:#40596B;" d="M420.267,171.733L281.6,277.333c-2.133,12.8-12.8,21.333-25.6,21.333
+                                                    c-14.933,0-26.667-11.733-26.667-26.667s11.733-26.667,26.667-26.667c3.2,0,5.333,0,8.533,1.067L420.267,171.733z"/>
+                                                <path style="fill:#CDD6E0;" d="M347.733,494.933H164.267c-22.4,0-40.533-18.133-40.533-40.533l0,0
+                                                    c0-22.4,18.133-40.533,40.533-40.533h182.4c22.4,0,40.533,18.133,40.533,40.533l0,0C388.267,476.8,370.133,494.933,347.733,494.933z
+                                                    "/>
+                                                <circle style="fill:#FFFFFF;" cx="256" cy="273.07" r="10.667"/>
+
                                                 </svg>
+
                                             </span>
                                         <!--end::Svg Icon-->
                                     </a>
                                 </li>
                                 <!--end::Item-->
                                 <!--begin::Item-->
-                                <li class="nav-item mb-1" title="Members">
-                                    <a href="#" class="nav-link h-40px w-40px h-lg-50px w-lg-50px btn btn-custom btn-icon btn-color-white" data-bs-toggle="tab" data-bs-target="#kt_aside_tab_2" role="tab">
-                                        <!--begin::Svg Icon | path: icons/duotone/Communication/Group.svg-->
-                                        <span class="svg-icon svg-icon-2 svg-icon-lg-1">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                                    <path d="M18,14 C16.3431458,14 15,12.6568542 15,11 C15,9.34314575 16.3431458,8 18,8 C19.6568542,8 21,9.34314575 21,11 C21,12.6568542 19.6568542,14 18,14 Z M9,11 C6.790861,11 5,9.209139 5,7 C5,4.790861 6.790861,3 9,3 C11.209139,3 13,4.790861 13,7 C13,9.209139 11.209139,11 9,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" />
-                                                    <path d="M17.6011961,15.0006174 C21.0077043,15.0378534 23.7891749,16.7601418 23.9984937,20.4 C24.0069246,20.5466056 23.9984937,21 23.4559499,21 L19.6,21 C19.6,18.7490654 18.8562935,16.6718327 17.6011961,15.0006174 Z M0.00065168429,20.1992055 C0.388258525,15.4265159 4.26191235,13 8.98334134,13 C13.7712164,13 17.7048837,15.2931929 17.9979143,20.2 C18.0095879,20.3954741 17.9979143,21 17.2466999,21 C13.541124,21 8.03472472,21 0.727502227,21 C0.476712155,21 -0.0204617505,20.45918 0.00065168429,20.1992055 Z" fill="#000000" fill-rule="nonzero" />
-                                                </svg>
-                                            </span>
-                                        <!--end::Svg Icon-->
-                                    </a>
-                                </li>
-                                <!--end::Item-->
-                                <!--begin::Item-->
-                                <li class="nav-item mb-1" title="Latest Reports">
+                                <li class="nav-item mb-1" title="კურსები">
                                     <a href="#" class="nav-link h-40px w-40px h-lg-50px w-lg-50px btn btn-custom btn-icon btn-color-white" data-bs-toggle="tab" data-bs-target="#kt_aside_tab_3" role="tab">
-                                        <!--begin::Svg Icon | path: icons/duotone/Media/Equalizer.svg-->
                                         <span class="svg-icon svg-icon-2 svg-icon-lg-1">
-                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                        <rect x="0" y="0" width="24" height="24" />
-                                                        <rect fill="#000000" opacity="0.3" x="13" y="4" width="3" height="16" rx="1.5" />
-                                                        <rect fill="#000000" x="8" y="9" width="3" height="11" rx="1.5" />
-                                                        <rect fill="#000000" x="18" y="11" width="3" height="9" rx="1.5" />
-                                                        <rect fill="#000000" x="3" y="13" width="3" height="7" rx="1.5" />
-                                                    </g>
-                                                </svg>
-                                            </span>
+                                                    
+                                            <svg enable-background="new 0 0 60 58" height="512" viewBox="0 0 60 58" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m35 45v-1h-10v1c0 4.422-1.578 8-6 8v2h22v-2c-4.422 0-6-3.578-6-8z" fill="#e7eced"/><path d="m51 1h-42-4.999c-1.657 0-3.001 1.344-3.001 3.001v33.999h8 15 12 15 8v-33.999c0-1.657-1.344-3.001-3.001-3.001z" fill="#e7eced"/><path d="m5 5h50v32h-50z" fill="#ebba16"/><path d="m55.999 45h-51.998c-1.657 0-3.001-1.344-3.001-3.001v-4.999h58v4.999c0 1.657-1.344 3.001-3.001 3.001z" fill="#afb6bb"/><path d="m43 57h-26c-1.105 0-2-.895-2-2 0-1.105.895-2 2-2h26c1.105 0 2 .895 2 2 0 1.105-.895 2-2 2z" fill="#afb6bb"/><path d="m30 25-12-5.647v7.647l12 6 12-6v-7.647z" fill="#32597f"/><path d="m30 9-17 8 17 8 17-8z" fill="#366db6"/><g fill="#4d007e"><path d="m30 26c-.146 0-.291-.032-.426-.095l-17-8c-.35-.165-.574-.518-.574-.905s.224-.74.574-.905l17-8c.27-.127.582-.127.852 0l17 8c.35.165.574.518.574.905s-.224.74-.574.905l-17 8c-.135.063-.28.095-.426.095zm-14.651-9 14.651 6.895 14.651-6.895-14.651-6.895z"/><path d="m30 34c-.153 0-.307-.035-.447-.105l-12-6c-.339-.17-.553-.516-.553-.895v-7.647c0-.342.175-.661.464-.844.289-.184.652-.205.961-.061l11.575 5.447 11.574-5.447c.31-.145.673-.123.961.061.29.183.465.502.465.844v7.647c0 .379-.214.725-.553.895l-12 6c-.14.07-.294.105-.447.105zm-11-7.618 11 5.5 11-5.5v-5.453l-10.574 4.976c-.27.127-.582.127-.852 0l-10.574-4.976z"/><path d="m47 18h-17c-.552 0-1-.448-1-1s.448-1 1-1h17c.552 0 1 .448 1 1s-.448 1-1 1z"/><path d="m47 27c-.552 0-1-.448-1-1v-9c0-.552.448-1 1-1s1 .448 1 1v9c0 .552-.448 1-1 1z"/><path d="m30 20c-.552 0-1-.448-1-1v-4c0-.552.448-1 1-1s1 .448 1 1v4c0 .552-.448 1-1 1z"/><path d="m44.999 30c-.19 0-.383-.054-.554-.168-.459-.306-.583-.927-.277-1.387l2-3c.306-.46.926-.585 1.387-.277.459.306.583.927.277 1.387l-2 3c-.193.289-.51.445-.833.445z"/><path d="m49.001 30c-.323 0-.64-.156-.833-.445l-2-3c-.306-.459-.182-1.081.277-1.387.459-.308 1.08-.183 1.387.277l2 3c.306.459.182 1.081-.277 1.387-.171.114-.364.168-.554.168z"/><path d="m30 29c-.552 0-1-.448-1-1v-3c0-.552.448-1 1-1s1 .448 1 1v3c0 .552-.448 1-1 1z"/><path d="m59 38h-58c-.552 0-1-.448-1-1v-32.999c0-2.206 1.795-4.001 4.001-4.001h51.998c2.206 0 4.001 1.795 4.001 4.001v32.999c0 .552-.448 1-1 1zm-57-2h56v-31.999c0-1.104-.897-2.001-2.001-2.001h-51.998c-1.104 0-2.001.897-2.001 2.001z"/><path d="m55.999 46h-51.998c-2.206 0-4.001-1.795-4.001-4.001v-4.999c0-.552.448-1 1-1h58c.552 0 1 .448 1 1v4.999c0 2.206-1.795 4.001-4.001 4.001zm-53.999-8v3.999c0 1.104.897 2.001 2.001 2.001h51.998c1.104 0 2.001-.897 2.001-2.001v-3.999z"/><path d="m33 42h-6c-.552 0-1-.448-1-1s.448-1 1-1h6c.552 0 1 .448 1 1s-.448 1-1 1z"/><path d="m55 38h-50c-.552 0-1-.448-1-1v-32c0-.552.448-1 1-1h50c.552 0 1 .448 1 1v32c0 .552-.448 1-1 1zm-49-2h48v-30h-48z"/><path d="m43 58h-26c-1.654 0-3-1.346-3-3s1.346-3 3-3h26c1.654 0 3 1.346 3 3s-1.346 3-3 3zm-26-4c-.551 0-1 .449-1 1s.449 1 1 1h26c.551 0 1-.449 1-1s-.449-1-1-1z"/><path d="m41 54h-22c-.552 0-1-.448-1-1s.448-1 1-1c3.318 0 5-2.355 5-7 0-.552.448-1 1-1h10c.552 0 1 .448 1 1 0 4.645 1.682 7 5 7 .552 0 1 .448 1 1s-.448 1-1 1zm-17.129-2h12.259c-1.232-1.364-1.957-3.395-2.102-6h-8.055c-.146 2.605-.87 4.636-2.102 6z"/></g></svg>
+                                        </span> 
                                         <!--end::Svg Icon-->
                                     </a>
                                 </li>
-                                <!--end::Item-->
-                                <!--begin::Item-->
-                                <li class="nav-item mb-1" title="Project Management">
-                                    <a href="#" class="nav-link h-40px w-40px h-lg-50px w-lg-50px btn btn-custom btn-icon btn-color-white" data-bs-toggle="tab" data-bs-target="#kt_aside_tab_2" role="tab">
-                                        <!--begin::Svg Icon | path: icons/duotone/General/Shield-check.svg-->
-                                        <span class="svg-icon svg-icon-2 svg-icon-lg-1">
-                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                        <rect x="0" y="0" width="24" height="24" />
-                                                        <path d="M4,4 L11.6314229,2.5691082 C11.8750185,2.52343403 12.1249815,2.52343403 12.3685771,2.5691082 L20,4 L20,13.2830094 C20,16.2173861 18.4883464,18.9447835 16,20.5 L12.5299989,22.6687507 C12.2057287,22.8714196 11.7942713,22.8714196 11.4700011,22.6687507 L8,20.5 C5.51165358,18.9447835 4,16.2173861 4,13.2830094 L4,4 Z" fill="#000000" opacity="0.3" />
-                                                        <path d="M11.1750002,14.75 C10.9354169,14.75 10.6958335,14.6541667 10.5041669,14.4625 L8.58750019,12.5458333 C8.20416686,12.1625 8.20416686,11.5875 8.58750019,11.2041667 C8.97083352,10.8208333 9.59375019,10.8208333 9.92916686,11.2041667 L11.1750002,12.45 L14.3375002,9.2875 C14.7208335,8.90416667 15.2958335,8.90416667 15.6791669,9.2875 C16.0625002,9.67083333 16.0625002,10.2458333 15.6791669,10.6291667 L11.8458335,14.4625 C11.6541669,14.6541667 11.4145835,14.75 11.1750002,14.75 Z" fill="#000000" />
-                                                    </g>
-                                                </svg>
-                                            </span>
-                                        <!--end::Svg Icon-->
-                                    </a>
-                                </li>
-                                <!--end::Item-->
-                                <!--begin::Item-->
-                                <li class="nav-item mb-1" title="User Management">
-                                    <a href="#" class="nav-link h-40px w-40px h-lg-50px w-lg-50px btn btn-custom btn-icon btn-color-white" data-bs-toggle="tab" data-bs-target="#kt_aside_tab_3" role="tab">
-                                        <!--begin::Svg Icon | path: icons/duotone/Home/Library.svg-->
-                                        <span class="svg-icon svg-icon-2 svg-icon-lg-1">
-                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                        <rect x="0" y="0" width="24" height="24" />
-                                                        <path d="M5,3 L6,3 C6.55228475,3 7,3.44771525 7,4 L7,20 C7,20.5522847 6.55228475,21 6,21 L5,21 C4.44771525,21 4,20.5522847 4,20 L4,4 C4,3.44771525 4.44771525,3 5,3 Z M10,3 L11,3 C11.5522847,3 12,3.44771525 12,4 L12,20 C12,20.5522847 11.5522847,21 11,21 L10,21 C9.44771525,21 9,20.5522847 9,20 L9,4 C9,3.44771525 9.44771525,3 10,3 Z" fill="#000000" />
-                                                        <rect fill="#000000" opacity="0.3" transform="translate(17.825568, 11.945519) rotate(-19.000000) translate(-17.825568, -11.945519)" x="16.3255682" y="2.94551858" width="3" height="18" rx="1" />
-                                                    </g>
-                                                </svg>
-                                            </span>
-                                        <!--end::Svg Icon-->
-                                    </a>
-                                </li>
-                                <!--end::Item-->
-                                <!--begin::Item-->
+                                
                                 <li class="nav-item mb-1" title="Finance &amp; Accounting">
                                     <a href="#" class="nav-link h-40px w-40px h-lg-50px w-lg-50px btn btn-custom btn-icon btn-color-white" data-bs-toggle="tab" data-bs-target="#kt_aside_tab_6" role="tab">
                                         <!--SVG file not found: icons/duotone/Files/File-plus.svg-->
@@ -119,15 +79,15 @@
                                     <!--begin::Svg Icon | path: icons/duotone/Communication/Dial-numbers.svg-->
                                     <span class="svg-icon svg-icon-2 svg-icon-lg-1">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                            <rect fill="#000000" opacity="0.3" x="4" y="4" width="4" height="4" rx="2" />
-                                            <rect fill="#000000" x="4" y="10" width="4" height="4" rx="2" />
-                                            <rect fill="#000000" x="10" y="4" width="4" height="4" rx="2" />
-                                            <rect fill="#000000" x="10" y="10" width="4" height="4" rx="2" />
-                                            <rect fill="#000000" x="16" y="4" width="4" height="4" rx="2" />
-                                            <rect fill="#000000" x="16" y="10" width="4" height="4" rx="2" />
-                                            <rect fill="#000000" x="4" y="16" width="4" height="4" rx="2" />
-                                            <rect fill="#000000" x="10" y="16" width="4" height="4" rx="2" />
-                                            <rect fill="#000000" x="16" y="16" width="4" height="4" rx="2" />
+                                            <rect fill="#fff" opacity="0.3" x="4" y="4" width="4" height="4" rx="2" />
+                                            <rect fill="#fff" x="4" y="10" width="4" height="4" rx="2" />
+                                            <rect fill="#fff" x="10" y="4" width="4" height="4" rx="2" />
+                                            <rect fill="#fff" x="10" y="10" width="4" height="4" rx="2" />
+                                            <rect fill="#fff" x="16" y="4" width="4" height="4" rx="2" />
+                                            <rect fill="#fff" x="16" y="10" width="4" height="4" rx="2" />
+                                            <rect fill="#fff" x="4" y="16" width="4" height="4" rx="2" />
+                                            <rect fill="#fff" x="10" y="16" width="4" height="4" rx="2" />
+                                            <rect fill="#fff" x="16" y="16" width="4" height="4" rx="2" />
                                         </svg>
                                     </span>
                                     <!--end::Svg Icon-->
