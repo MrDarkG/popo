@@ -68,6 +68,12 @@
                 Google-ით შესვლა
             </div>
         </a>
+        <br>
+        
+    </div>
+    <div style="margin-top:10px;">
+        
+        <a href="/register" style="color:white">ანგარიშის შექმნა</a>
     </div>
  <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
     <script type="text/javascript" src="{{ asset('/js/login.js') }}"></script>

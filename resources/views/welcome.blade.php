@@ -58,12 +58,13 @@
                         <a href="#about"><img src="assets/img/nav/about_nav.png" class="img-fluid"
                                 alt="About">ჩვენ შესახებ</a>
                     </li>
-                    <li>
-                        <a href="#events"><img src="assets/img/nav/air_nav.png" class="img-fluid" alt="Services">ივენთები</a>
-                    </li>
+                    
                     <li>
                         <a href="#offer"> <img src="assets/img/nav/programs_nav.png" class="img-fluid"
                                 alt="Programs">შეთავაზებები</a>
+                    </li>
+                    <li>
+                        <a href="/login"><img src="assets/img/nav/air_nav.png" class="img-fluid" alt="Services">შესვლა</a>
                     </li>
                     <!-- <li>
                         <a href="events.html"><img src="assets/img/nav/gallery_nav.png" class="img-fluid" alt="Events">Events</a>
@@ -372,198 +373,7 @@
             <!-- Lower Part Ends -->
         </div>
     </section>
-    <!-- Classes Section Ends -->
-
-    <!-- Call Us -->
-    <section id="call">
-        <div class="container">
-            <div class="row">
-                <!-- Call Content -->
-                <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
-                    <div class="call-content">
-                        <h2>Enjoy Your Holiday! Call Us</h2>
-                        <h2>+00 123 456 789</h2>
-                    </div>
-
-                    <div id="call-btn">
-                        <a class="btn btn-general btn-call" href="#!" title="Discover More" role="button">Discover
-                            More</a>
-                    </div>
-                </div>
-                <!-- Call Content Ends -->
-            </div>
-        </div>
-        <!--Call BG Image-->
-        <div id="call-bg-img">
-            <div class="call-bg-img1">
-                <img src="assets/img/holiday/call-bg-rocket.png" class="img-fluid" alt="Element 1">
-            </div>
-            <div class="call-bg-img2">
-                <img src="assets/img/holiday/call-bg-puff-fish.png" class="img-fluid" alt="Element 2">
-            </div>
-        </div>
-        <!--call BG Image Ends-->
-    </section>
-    <!-- Call Us Ends -->
-
-    <!--Things for Kids-->
-    <section id="activity" class="section-wrapper">
-        <div class="container">
-            <!--Upper Part-->
-            <div class="row">
-                <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
-                    <div class="horizontal-heading">
-                        <h6>THINGS FOR KIDS</h6>
-                        <h2>Kids Activity</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="activity-lower">
-                <div class="row">
-                    <!--Activity Left-->
-                    <div class="col-12 col-sm-6 col-md-6 col-lg-6">
-                        <!--Activity Left Tab 1-->
-                        <div class="left-activity">
-                            <h6>Creative Activity</h6>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut earum nihil fugiat! Animi molestias blanditiis!</p>
-                            <a href="#!">
-                                    Read More
-                                </a>
-                        </div>
-                        <!--Activity Left Tab 2-->
-                        <div class="left-activity">
-                            <h6 class="head-tab2">Creative Activity</h6>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut earum nihil fugiat! Animi molestias blanditiis!</p>
-                            <a href="#!">
-                                    Read More
-                                </a>
-                        </div>
-                    </div>
-                    <!--Activity Right-->
-                    <div class="col-12 col-sm-6 col-md-6 col-lg-6">
-                        <!--Activity Right Tab 1-->
-                        <div class="right-activity">
-                            <h6>Creative Activity</h6>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut earum nihil fugiat! Animi molestias blanditii!</p>
-                            <a href="#!">
-                                    Read More
-                                </a>
-                        </div>
-                        <!--Activity Right Tab 2-->
-                        <div class="right-activity">
-                            <h6>Creative Activity</h6>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut earum nihil fugiat! Animi molestias blanditiis!</p>
-                            <a href="#!">
-                                    Read More
-                                </a>
-                        </div>
-                    </div>
-                    <!--Middle Image-->
-                    <div class="activity-mid-image">
-                        <div class="activity-mid-tab">
-                            <img src="assets/img/kids-activity/kids_img.jpg" alt="Things for kids image">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-        </div>
-    </section>
-    <!--Things for Kids Ends-->
-
-    <!--Events Section-->
-    <section id="events" class="section-wrapper">
-        <div class="container">
-
-            <!-- upper part -->
-            <div id="events_upper">
-                <div class="row">
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
-                        <div class="horizontal-heading">
-                            <h6>OUR EVENTS</h6>
-                            <h2>Our Upcoming Events</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- upper part Ends -->
-
-            <!-- Lower Part -->
-            <div class="row">
-                <div class="col-12 col-sm-12 col-md-6 col-lg-4 wow fadeInLeft animated">
-                    <div class="events-items dental-care text-center  box-shadow">
-                        <a class="test-popup-link" href="assets/img/events/events-img1.jpg">
-                            <div class="events-items-img">
-                                <img src="assets/img/events/dental_event_img.jpg" class="img-fluid" alt="Dental Care">
-                                <div class="overlay">
-                                    <i class="fa fa-plus"></i>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="events-items-content">
-                            <h6><a href="event-details.html">Children Dental Care Event</a></h6>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, culpa qui officiis animi assumenda.</p>
-                        </div>
-                        <div class="items-footer justify-content-between">
-                            <p>Age <span>2 - 3 years</span> </p>
-                            <p>Date <span>10th April</span> </p>
-                            <p>Venue <span>London</span> </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-12 col-md-6 col-lg-4 wow fadeInLeft animated" data-wow-delay="200ms">
-                    <div class="events-items music-drawing text-center  box-shadow">
-                        <a class="test-popup-link" href="assets/img/events/events-img2.jpg">
-                            <div class="events-items-img">
-                                <img src="assets/img/events/dental_event_img.jpg" class="img-fluid" alt="Music and Drawing Workshop">
-                                <div class="overlay">
-                                    <i class="fa fa-plus"></i>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="events-items-content">
-                            <a href="event-details.html">
-                                <h6>Music & Drawing Workshop</h6>
-                            </a>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, culpa qui officiis animi assumenda.</p>
-                        </div>
-                        <div class="items-footer justify-content-between">
-                            <p>Age <span>2 - 3 years</span></p>
-                            <p>Date <span>10th April</span></p>
-                            <p>Venue <span>London</span></p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-12 col-md-6 col-lg-4 wow fadeInLeft animated" data-wow-delay="400ms">
-                    <div class="events-items health-consciousness text-center box-shadow">
-                        <a class="test-popup-link" href="assets/img/events/events-img3.jpg">
-                            <div class="events-items-img">
-                                <img src="assets/img/events/health_event_img.jpg" class="img-fluid" alt="Health Consciousness">
-                                <div class="overlay">
-                                    <i class="fa fa-plus"></i>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="events-items-content">
-                            <a href="event-details.html">
-                                <h6>Child Health Consciousness</h6>
-                            </a>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, culpa qui officiis animi assumenda.</p>
-                        </div>
-                        <div class="items-footer justify-content-between">
-                            <p>Age <span>2 - 3 years</span></p>
-                            <p>Date <span>10th April</span></p>
-                            <p>Venue <span>London</span></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Lower Part Ends -->
-        </div>
-    </section>
+    
     <!--Events Section Ends-->
 
     <!--Pricing Section-->
@@ -740,169 +550,7 @@
             <!--Lower Part Ends-->
         </div>
     </section>
-    <!--Team Section Ends-->
-
-    <!--Testimonials Section-->
-    <section id="testimonial" class="section-wrapper">
-        <div class="container">
-            <!--Upper Part-->
-            <div id="testimonial-upper">
-                <div class="row">
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
-                        <div class="horizontal-heading">
-                            <h6>TESTIMONIALS</h6>
-                            <h2>Parents Say About Us</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--Upper Part Ends-->
-            <!--Lower Part-->
-            <div id="testimonial-lower">
-                <div class="row">
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                        <div class="testimonial-slider-area owl-carousel owl-theme">
-                            <!--testimonial content 01-->
-                            <div class="testimonial-content box-shadow">
-                                <div class="testimonial-comment">
-                                    <i class="fa fa-quote-left"></i>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices Lorem Ipsum is simply dummy text.
-                                    </p>
-                                </div>
-                                <div class="testimonial-author">
-                                    <div class="testimonial-author-img">
-                                        <img src="assets/img/testimonial/avater.png" alt="avater" />
-                                    </div>
-                                    <div class="testimonial-author-name">
-                                        <h6>Dutch</h6>
-                                        <p class="text-muted">CEO, ABC Company</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--testimonial content 02-->
-                            <div class="testimonial-content  box-shadow">
-                                <div class="testimonial-comment">
-                                    <i class="fa fa-quote-left"></i>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices Lorem Ipsum is simply dummy text.
-                                    </p>
-                                </div>
-                                <div class="testimonial-author">
-                                    <div class="testimonial-author-img">
-                                        <img src="assets/img/testimonial/avater.png" alt="avater" />
-                                    </div>
-                                    <div class="testimonial-author-name">
-                                        <h6>Arthur</h6>
-                                        <p class="text-muted">CEO, ABC Company</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--testimonial content 03-->
-                            <div class="testimonial-content  box-shadow">
-                                <div class="testimonial-comment">
-                                    <i class="fa fa-quote-left"></i>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices Lorem Ipsum is simply dummy text.
-                                    </p>
-                                </div>
-                                <div class="testimonial-author">
-                                    <div class="testimonial-author-img">
-                                        <img src="assets/img/testimonial/avater.png" alt="avatar" />
-                                    </div>
-                                    <div class="testimonial-author-name">
-                                        <h6>James</h6>
-                                        <p class="text-muted">CEO, ABC Company</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--testimonial content 04-->
-                            <div class="testimonial-content  box-shadow">
-                                <div class="testimonial-comment">
-                                    <i class="fa fa-quote-left"></i>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices Lorem Ipsum is simply dummy text.
-                                    </p>
-                                </div>
-                                <div class="testimonial-author">
-                                    <div class="testimonial-author-img">
-                                        <img src="assets/img/testimonial/avater.png" alt="avatar" />
-                                    </div>
-                                    <div class="testimonial-author-name">
-                                        <h6>John</h6>
-                                        <p class="text-muted">CEO, ABC Company</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--Lower Part Ends-->
-        </div>
-    </section>
-    <!--Testimonials Section Ends-->
-
-    <!--Stats Section-->
-    <Section id="stats" class="section-wrapper">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-
-                    <!--Stat Contents-->
-                    <div class="stats-content">
-
-                        <!--Stats Items 01-->
-                        <div class="stats-item text-center">
-                            <img src="assets/img/stats/1.png" class="img-fluid" alt="stats img 01">
-                            <h5> <span class="counter"> 564</span> +</h5>
-                            <p class="text-muted">Children a Year</p>
-                        </div>
-
-                        <!--Stats Items 02-->
-                        <div class="stats-item text-center">
-                            <img src="assets/img/stats/2.png" class="img-fluid" alt="stats img 02">
-                            <h5> <span class="counter">55</span></h5>
-                            <p class="text-muted">Qualified Teacher</p>
-                        </div>
-
-                        <!--Stats Items 03-->
-                        <div class="stats-item text-center">
-                            <img src="assets/img/stats/3.png" class="img-fluid" alt="stats img 03">
-                            <h5> <span class="counter">15</span> +</h5>
-                            <p class="text-muted">Years of Experience</p>
-                        </div>
-
-                        <!--Stats Items 04-->
-                        <div class="stats-item text-center">
-                            <img src="assets/img/stats/4.png" class="img-fluid" alt="stats img 04">
-                            <h5> <span class="counter">13</span> m</h5>
-                            <p class="text-muted">From Twelve Month</p>
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <!--Stats BG Image-->
-        <div id="stats-bg-img">
-            <div class="stats-bg-img1">
-                <img src="assets/img/stats/stats-bg-element1.png" class="img-fluid" alt="Element 1">
-            </div>
-            <div class="stats-bg-img2">
-                <img src="assets/img/stats/stats-bg-element2.png" class="img-fluid" alt="Element 2">
-            </div>
-        </div>
-        <!--Stats BG Image Ends-->
-    </Section>
-    <!--Stats Section Ends-->
-
-    <!--Blog Section-->
     
-    <!--Blog Section Ends-->
-
-    <!--Footer Section-->
     <footer id="footer-top">
         <div class="section-wrapper">
             <div class="container">
@@ -966,19 +614,13 @@
                                 </div>
                                 <div class="contact-content4-body">
                                     <ul>
-                                        <li><i class="fa fa-map-marker"></i>1101, Your Street Adress, Your State, Your Conuntry
+                                        <li><i class="fa fa-map-marker"></i>Tbilisi, Georgia. E. maghalashvilis 8
                                         </li>
-                                        <li><a href="mailto:"><i class="fa fa-envelope-o"></i>yourmail@mail.com</a></li>
-                                        <li><a href="tel:+012-345-678"><i class="fa fa-phone"></i>+012-345-678</a></li>
+                                        <li><a href="mailto:"><i class="fa fa-envelope-o"></i>support@popo.ge</a></li>
+                                        <li><a href="tel:+012-345-678"><i class="fa fa-phone"></i>+995 555 715 689</a></li>
                                     </ul>
                                 </div>
-                                <div class="contact-content4-foot">
-                                    <ul>
-                                        <li><a href="#!"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#!"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#!"><i class="fa fa-linkedin"></i></a></li>
-                                    </ul>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -992,7 +634,7 @@
                     <div class="row">
                         <div class="col-12 col-sm-12 col-md-6 col-lg-6">
                             <div class="footer-main-left">
-                                <p><a href=""><span>And IT Themes</span></a> &#169;&nbsp;2020. All Rights Reserved</p>
+                                <p><a href=""><span>Copy rights by ქალბატონი ნინოს გუნდი</span></a> &#169;&nbsp;2020. All Rights Reserved</p>
                             </div>
                         </div>
                         <div class="col-12 col-sm-12 col-md-6 col-lg-6">

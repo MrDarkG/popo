@@ -98,9 +98,14 @@
         <button type="button" id="showpassword" class="password-button">ჩვენება</button>
       </label>
       <button type="submit" class="login-button">რეგისტრაცია</button>
+        <div style="margin-top:10px;text-align: center;">
+        
+            <a href="/login" style="color:white">უკვე გაქვთ ანგარიში?</a>
+        </div>
     </form>
     
   </div>
+
 </div>
 <script type="text/javascript" src="/register.js"></script>
 </body>
