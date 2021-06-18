@@ -204,7 +204,7 @@
 			},
 			giveans(answer_id){
 				this.answer_event = null
-				this.post('/answer/question',{
+				axios.post('/answer/question',{
 					answer_id:answer_id,
 				}).then((response)=>{
 					this.checkAnswer(answer_id)

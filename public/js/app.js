@@ -3625,7 +3625,7 @@ var _this = undefined;
       var _this7 = this;
 
       this.answer_event = null;
-      this.post('/answer/question', {
+      axios.post('/answer/question', {
         answer_id: answer_id
       }).then(function (response) {
         _this7.checkAnswer(answer_id);
