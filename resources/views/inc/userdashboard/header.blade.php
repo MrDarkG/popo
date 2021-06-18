@@ -31,11 +31,11 @@
                                     </span>
                                     <!--end::Svg Icon-->
                                 </button>
-                            <!--end::Aside Toggler-->
-                            <!--begin::Sidebar Toggler-->
-                            <!--end::Sidebar Toggler-->
+                            
                         </div>
-                        <!--end::Right-->
+                        <div class="d-flex align-items-center">
+                            {{ App\Services\UserServices::checkMyMoney()  }} ₾
+                        </div>
                     </div>
                     <!--end::Container-->
                 </div>

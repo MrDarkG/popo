@@ -15,7 +15,7 @@ class Courses extends Model
         "recomended_age",
         "wallpaper",
         "icon",
-        "price",
+        "price"
         
     ];
 
