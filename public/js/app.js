@@ -3420,13 +3420,11 @@ var _this = undefined;
 //
 //
 //
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ["tasks"],
   data: function data() {
     return {
+      answer_event: null,
       cours_encounter: 0,
       tasks_encounter: 0,
       question_encounter: 0,
@@ -3435,6 +3433,7 @@ var _this = undefined;
       show_question: 0,
       question: "rame kirtxva",
       answers: [],
+      task: [],
       padding: 0,
       answer_show_delay: 0,
       interval: "",
@@ -3449,58 +3448,192 @@ var _this = undefined;
     }
   },
   methods: {
-    showquestion: function showquestion() {
-      var _this2 = this;
+    setDefaultQuestionVisibility: function setDefaultQuestionVisibility() {
+      for (var i = 0; i < this.tasks.length; i++) {
+        var answers = [];
 
-      this.show_question = 1;
-      setTimeout(function () {
-        _this2.padding = _this2.$refs.questionRef.clientHeight + 20;
-      }, 100);
-    },
-    showAnswers: function showAnswers() {
-      var _this3 = this;
+        for (var j = 0; j < this.tasks[i].answers.length; j++) {
+          answers.push({
+            id: this.tasks[i].answers[j].id,
+            answer: this.tasks[i].answers[j].answer,
+            description: this.tasks[i].answers[j].description,
+            question_id: this.tasks[i].answers[j].question_id,
+            sound: this.tasks[i].answers[j].sound,
+            sound_duration: this.tasks[i].answers[j].sound_duration,
+            timedelay: this.tasks[i].answers[j].timedelay,
+            is_visible: false,
+            is_selected: false
+          });
+        }
 
-      if (this.tasks[this.tasks_encounter].answers[this.ansencounter] !== undefined) {
-        this.answers.push(this.tasks[this.tasks_encounter].answers[this.ansencounter]);
-        this.answer_show_delay = this.tasks[this.tasks_encounter].answers[this.ansencounter].sound_duration;
-        this.$refs.audio.src = this.tasks[this.tasks_encounter].answers[this.ansencounter].sound;
-        this.$refs.audio.play();
-        this.interval = setInterval(function () {
-          _this3.ansencounter += 1;
-        }, this.answer_show_delay * 1000);
+        this.task.push({
+          id: this.tasks[i].id,
+          point: this.tasks[i].point,
+          question: this.tasks[i].question,
+          sound: this.tasks[i].sound,
+          sound_time: this.tasks[i].sound_time,
+          source: this.tasks[i].source,
+          time: this.tasks[i].time,
+          answers: answers,
+          is_selected: false,
+          is_visible: false,
+          is_done: false
+        });
       }
     },
-    playnext: function playnext() {
+    showAnswers: function showAnswers() {
+      var _this2 = this;
+
+      setTimeout(function () {
+        var time = 0;
+
+        for (var i = 0; i < _this2.task.length; i++) {
+          for (var j = 0; j < _this2.task[i].answers.length; j++) {
+            _this2.task[i].answers[j].is_visible = false;
+
+            if (_this2.task[i].is_selected) {
+              time += j;
+
+              _this2.audioAnswerDelay(i, j, _this2.task[i].answers[j]);
+            }
+          }
+        }
+
+        setTimeout(function () {
+          _this2.answer_event = 'click';
+        }, time * 1000);
+      }, 3000);
+    },
+    setQuestion: function setQuestion() {
+      var _this3 = this;
+
+      var count = this.task.filter(function (task) {
+        return task.is_selected;
+      }).length;
+
+      if (count === 0) {
+        this.task[0].is_selected = true;
+        setTimeout(function () {
+          _this3.task[0].is_visible = true;
+        }, this.task[0].time * 1000);
+      } else {
+        for (var i = 0; i < this.task.length; i++) {
+          this.task[i].is_visible = false;
+
+          if (this.task[i].is_selected) {
+            this.task[i].is_selected = false;
+
+            if (this.task[i + 1] !== undefined) {
+              this.newQuestionDelay(this.task[i + 1].time, i);
+              break;
+            }
+          }
+        }
+      }
+    },
+    newQuestionDelay: function newQuestionDelay(delay, index) {
       var _this4 = this;
 
-      if (this.tasks.length > this.tasks_encounter) {
-        this.show_question = 0;
-        this.$refs.videoRef.src = this.tasks[this.tasks_encounter].source;
+      this.task[index + 1].is_selected = true;
+      setTimeout(function () {
+        _this4.task[index + 1].is_visible = true;
+      }, delay * 1000);
+    },
+    audioAnswerDelay: function audioAnswerDelay(question_index, answer_index, answer) {
+      var _this5 = this;
+
+      setTimeout(function () {
+        var audio = new Audio(answer.sound);
+        _this5.task[question_index].answers[answer_index].is_visible = true;
+        audio.play();
+      }, answer_index * 2000);
+    },
+    playnext: function playnext() {
+      var _this6 = this;
+
+      this.setQuestion();
+      var selected_task = this.task.filter(function (task) {
+        return task.is_selected;
+      })[0];
+
+      if (selected_task !== undefined) {
+        this.$refs.videoRef.src = selected_task.source;
         this.$refs.videoRef.play();
-        this.delay = this.tasks[this.tasks_encounter].time;
-        this.question = this.tasks[this.tasks_encounter].question; // this.answers=this.tasks[this.tasks_encounter].answers
-
-        this.setVisibilityToAnswers();
+        this.delay = selected_task.time;
+        this.question = selected_task.question;
+        this.answers = selected_task.answers;
         setTimeout(function () {
-          _this4.showquestion();
+          _this6.showAnswers();
 
-          _this4.showAnswers();
+          _this6.playSelectedQuestionSound(selected_task.id);
         }, this.delay * 1000);
       } else {
-        alert(1);
-      } // 
+        window.location.href = "/user-area";
+      }
+    },
+    setAnswersAsClickable: function setAnswersAsClickable(question_id) {
+      for (var i = 0; i < this.task.length; i++) {
+        if (this.task[i].id === question_id) {
+          for (var j = 0; j < this.task[i].answers.length; j++) {
+            this.task[i].answers[i].is_disabled = 'click';
+          }
+        }
+      }
+    },
+    playSelectedQuestionSound: function playSelectedQuestionSound(question_id) {
+      for (var i = 0; i < this.task.length; i++) {
+        this.task[i].is_visible = false;
 
+        if (this.task[i].id === question_id) {
+          this.task[i].is_visible = true;
+          var audio = new Audio(this.task[i].sound);
+          audio.play();
+        }
+      }
     },
-    giveans: function giveans(x) {
-      this.tasks_encounter += 1;
-      this.answers = [];
-      this.ansencounter = 0;
-      this.playnext();
+    checkAnswer: function checkAnswer(answer_id) {
+      for (var i = 0; i < this.task.length; i++) {
+        if (this.task[i].is_selected) {
+          for (var j = 0; j < this.task[i].answers.length; j++) {
+            this.task[i].answers[j].is_selected = false;
+
+            if (this.task[i].answers[j].id === answer_id) {
+              var audio = new Audio(this.task[i].answers[j].sound);
+              audio.play();
+              this.task[i].answers[j].is_selected = true;
+            }
+          }
+        }
+      }
     },
-    setVisibilityToAnswers: function setVisibilityToAnswers() {
-      /*for (let i = 0; i < this.answers.length; i++) {
-      	this.answers[i].is_visible = false
-      }*/
+    countSelectedAnswers: function countSelectedAnswers() {
+      var selected_answers = 0;
+
+      for (var i = 0; i < this.task[i].length; i++) {
+        if (this.task[i].is_selected) {
+          for (var j = 0; j < this.task[i].answers.length; j++) {
+            if (this.task[i].answers[j].is_selected) {
+              selected_answers += 1;
+            }
+          }
+        }
+      }
+
+      return selected_answers;
+    },
+    giveans: function giveans(answer_id) {
+      var _this7 = this;
+
+      this.answer_event = null;
+      this.post('/answer/question', {
+        answer_id: answer_id
+      }).then(function (response) {
+        _this7.checkAnswer(answer_id);
+
+        setTimeout(function () {
+          _this7.playnext();
+        }, 2500);
+      });
     }
   },
   watch: {
@@ -3512,6 +3645,9 @@ var _this = undefined;
         this.showAnswers();
       }
     }
+  },
+  created: function created() {
+    this.setDefaultQuestionVisibility();
   },
   mounted: function mounted() {
     this.playnext();
@@ -39441,72 +39577,90 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
-    _c("audio", { ref: "audio" }),
-    _vm._v(" "),
-    _c("div", { staticClass: "quiz-container" }, [
-      _c("video", {
-        ref: "videoRef",
-        staticClass: "videoplayer",
-        attrs: { autoplay: "1" }
-      }),
-      _vm._v(" "),
-      _vm.show_question == 1
-        ? _c(
-            "div",
-            {
-              staticClass:
-                "row m-0 justify-content-between align-content-stretch quiz-content",
-              style: { paddingBottom: _vm.padding + "px" }
-            },
-            [
-              _c(
+    _c(
+      "div",
+      { staticClass: "quiz-container" },
+      [
+        _c("video", {
+          ref: "videoRef",
+          staticClass: "videoplayer",
+          attrs: { autoplay: "1" }
+        }),
+        _vm._v(" "),
+        _vm._l(_vm.task, function(tsk, index) {
+          return tsk.is_selected && tsk.is_visible
+            ? _c(
                 "div",
                 {
-                  ref: "questionRef",
-                  staticClass: "col-md-12 ",
-                  attrs: { id: "question" }
+                  key: tsk.id,
+                  staticClass:
+                    "row m-0 justify-content-between align-content-stretch quiz-content",
+                  style: { paddingBottom: _vm.padding + "px" }
                 },
                 [
-                  _c("div", { staticClass: "question-container" }, [
-                    _vm._v("\n\t\t\t\t\t" + _vm._s(_vm.question) + "\n\t\t\t\t")
-                  ])
-                ]
-              ),
-              _vm._v(" "),
-              _vm._l(_vm.answers, function(ans) {
-                return _c(
-                  "div",
-                  {
-                    staticClass: "col-md-6 ",
-                    style:
-                      "color:red;" +
-                      (_vm.answers.length > 2 ? "height:50%" : "height:100%")
-                  },
-                  [
-                    _c(
-                      "div",
-                      {
-                        staticClass: "question-container",
-                        on: {
-                          click: function($event) {
-                            return _vm.giveans(ans.id)
-                          }
-                        }
-                      },
-                      [
+                  _c(
+                    "div",
+                    {
+                      ref: "questionRef." + tsk.id,
+                      refInFor: true,
+                      staticClass: "col-md-12 ",
+                      attrs: { id: "question" }
+                    },
+                    [
+                      _c("div", { staticClass: "question-container" }, [
                         _vm._v(
-                          "\n\t\t\t\t\t" + _vm._s(ans.answer) + " \n\t\t\t\t\t"
+                          "\n\t\t\t\t\t" + _vm._s(tsk.question) + "\n\t\t\t\t"
                         )
-                      ]
-                    )
-                  ]
-                )
-              })
-            ],
-            2
-          )
-        : _vm._e()
-    ])
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _vm._l(tsk.answers, function(ans, tsk_index) {
+                    return ans.is_visible
+                      ? _c(
+                          "div",
+                          {
+                            key: ans.answer,
+                            staticClass: "col-md-6 ",
+                            style:
+                              "color:red;" +
+                              (_vm.answers.length > 2
+                                ? "height:50%"
+                                : "height:100%")
+                          },
+                          [
+                            _c(
+                              "div",
+                              {
+                                staticClass: "question-container",
+                                on: _vm._d({}, [
+                                  _vm.answer_event,
+                                  function($event) {
+                                    return _vm.giveans(ans.id)
+                                  }
+                                ])
+                              },
+                              [
+                                _vm._v(
+                                  "\n\t\t\t\t\t" +
+                                    _vm._s(ans.answer) +
+                                    " \n\t\t\t\t"
+                                )
+                              ]
+                            )
+                          ]
+                        )
+                      : _vm._e()
+                  })
+                ],
+                2
+              )
+            : _vm._e()
+        }),
+        _vm._v("\n\t\t" + _vm._s(_vm.answer_event) + "\n\t")
+      ],
+      2
+    )
   ])
 }
 var staticRenderFns = []
