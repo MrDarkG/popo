@@ -180,7 +180,7 @@
 						for (let j = 0; j < this.task[i].answers.length; j++) {
 							this.task[i].answers[j].is_selected = false
 							if(this.task[i].answers[j].id === answer_id){
-								let audio = new Audio(this.task[i].answers[j].sound);
+								let audio = new Audio(this.task[i].answers[j].description);
 								audio.play();
 								this.task[i].answers[j].is_selected = true
 							}
