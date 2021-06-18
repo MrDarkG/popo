@@ -7,6 +7,10 @@ use App\Models\User;
 use App\Models\Kids;
 use App\Models\User_Courses;
 use App\Models\Courses;
+use App\Models\User_answer;
+use App\Models\Course_task;
+
+
 use DB;
 class UserServices 
 {
@@ -52,11 +56,28 @@ class UserServices
         	"course_id"=>$id
 		]);
 	}
+	
 	static public function haveibuyacourse($id)
     {
         return User_Courses::where([
         	["user_id",Auth::user()->id],
         	["course_id",$id]
         ])->count();
+    }
+
+	static public function myCourses()
+	{
+		return User::with(["courses"])->where("id",Auth::user()->id)->first();
+	}
+
+    static public function calculateStats()
+    {
+    	$mycourses_id=self::myCourses()->courses->pluck("id");
+    	return $task_id=Course_task::whereIn("course_id",$mycourses_id)->pluck("task_id");
+    	/*$answers=User_answer::
+    	with(["answers"])->
+    	where("user_id",Auth::user()->id)->get();
+    	return $answers;*/
+    	return $mycourses=self::myCourses();
     }
 }
