@@ -32,7 +32,9 @@ class SvgController extends Controller
     }
     public function userArea()
     {
-        $courses=User::with(["courses"])->where("id",Auth::user()->id)->first();
+        return UserServices::calculateStats();
+
+        $courses=UserServices::myCourses();
         $age=Age::get();
         $character_parts = Character_part::where('gender_id',2)->with('category')->get();
         $cat=Category::get();

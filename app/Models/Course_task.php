@@ -9,7 +9,6 @@ class Course_task extends Model
 {
     use HasFactory;
     protected $fillable=[
-
         "course_id",
         "task_id",
     ];
