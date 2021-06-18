@@ -31,6 +31,7 @@ Route::middleware(["auth"])->group(function(){
     Route::get("offers", [App\Http\Controllers\SvgController::class, 'offers']);
     Route::post("/store/kids/data",[App\Http\Controllers\SvgController::class,"storekidsdata"])->name("storekidsdata");
     Route::post("/buy/course",[App\Http\Controllers\SvgController::class,"storecourse"])->name("buycourse");
+    Route::post("/answer/question",[App\Http\Controllers\SvgController::class,"StoreAnswer"])->name("answerquestin");
 });
 
 
