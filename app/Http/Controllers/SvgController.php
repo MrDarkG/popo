@@ -32,7 +32,7 @@ class SvgController extends Controller
     }
     public function userArea()
     {
-        return UserServices::calculateStats();
+        $total_score=UserServices::calculateStats();
 
         $courses=UserServices::myCourses();
         $age=Age::get();
@@ -43,6 +43,7 @@ class SvgController extends Controller
             'courses' => $courses,
             "cats"=>$cat,
             "ages"=>$age,
+            "total_score"=>$total_score
         ]);
     }
     public function storekidsdata(StoreKidsRequest $request)
@@ -77,6 +78,6 @@ class SvgController extends Controller
             "user_id"=>Auth::user()->id,
             "answer_id"=>$request->input("answer_id")
         ]);
-        return QuizService::checkIfAnswerIsCorrect();
+        return QuizService::checkIfAnswerIsCorrect($request->input("answer_id"));
     }
 }

@@ -15,7 +15,11 @@ class Answers extends Model
         "description",
         "timedelay"
     ];
-     public function point()
+    public function user_answers()
+    {
+        return $this->hasOne(User_answer::class,"answer_id");
+    }
+    public function point()
     {
         return $this->hasOne(Question::class,"id","question_id");
     }

@@ -10,7 +10,7 @@
     <title>პოპო</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="assets/img/fav-icon/fav_icon.png">
+    <link rel="shortcut icon" href="/start/assets/media/logos/favicon.ico">
     <!-- Google Fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400&display=swap" rel="stylesheet">
@@ -45,7 +45,7 @@
     <nav class="navigation">
         <div class="nav-container">
             <div class="brand">
-                <a href=""><img src="assets/img/logo/logo.svg" alt=""  style="height: 60px"></a>
+                <a href=""><img src="assets/img/logo/logo.png" alt=""  style="height: 60px"></a>
             </div>
             <nav>
                 <div class="nav-mobile"><a id="navbar-toggle" href="#!"><span></span></a></div>

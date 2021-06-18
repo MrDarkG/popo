@@ -19,4 +19,9 @@ class Question extends Model
     {
         return $this->hasMany(Answers::class,"question_id");
     }
+
+    public function correctanswers()
+    {
+        return $this->hasOne(Answers::class,"question_id")->where("is_correct",1)->whereHas("user_answers");
+    }
 }

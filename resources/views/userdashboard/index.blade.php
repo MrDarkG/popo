@@ -48,7 +48,7 @@
                             </div>
                             <div class="card-body pt-12">
                                 <div class="d-flex flex-center position-relative bgi-no-repeat bgi-size-contain bgi-position-x-center bgi-position-y-center h-175px" style="background-image:url('/start/assets/media/svg/illustrations/bg-1.svg')">
-                                    <div class="fw-bolder fs-1 text-gray-800 position-absolute">8,345</div>
+                                    <div class="fw-bolder fs-1 text-gray-800 position-absolute">{{ $total_score }}</div>
                                     <canvas id="kt_stats_widget_1_chart"></canvas>
                                 </div>
                             </div>

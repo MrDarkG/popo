@@ -5,7 +5,9 @@ use Auth;
 use App\Models\Money;
 use App\Models\User;
 use App\Models\Kids;
+use App\Models\Question;
 use App\Models\User_Courses;
+
 use App\Models\Courses;
 use App\Models\User_answer;
 use App\Models\Course_task;
@@ -73,11 +75,9 @@ class UserServices
     static public function calculateStats()
     {
     	$mycourses_id=self::myCourses()->courses->pluck("id");
-    	return $task_id=Course_task::whereIn("course_id",$mycourses_id)->pluck("task_id");
-    	/*$answers=User_answer::
-    	with(["answers"])->
-    	where("user_id",Auth::user()->id)->get();
-    	return $answers;*/
-    	return $mycourses=self::myCourses();
+    	 $task_id=Course_task::whereIn("course_id",$mycourses_id)->pluck("task_id");
+    	$question=Question::whereIn("task_id",$task_id)->with(["correctanswers"])->get();
+    	return $question->whereNotNull("correctanswers")->sum("point");
+    	
     }
 }
