@@ -3430,7 +3430,7 @@ __webpack_require__.r(__webpack_exports__);
 
 Vue.use((vue_svg_gauge__WEBPACK_IMPORTED_MODULE_0___default()));
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ["score"],
+  props: ["score", "max_value"],
   data: function data() {
     return {
       radius: 80,
@@ -3489,20 +3489,25 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ["cats"],
   data: function data() {
     return {
       active: 0,
+      max_value: 100,
       score: 0
     };
   },
   methods: {
     retriveScore: function retriveScore() {
+      var _this = this;
+
       axios.post("/get/my/score", {
         course_id: this.active
-      }).than(function (data) {
-        console.log(data);
+      }).then(function (data) {
+        _this.score = parseInt(data.data.myscore);
+        _this.max_value = parseInt(data.data.max_score);
       });
     }
   },
@@ -39996,14 +40001,14 @@ var render = function() {
             "start-angle": -110,
             "end-angle": 110,
             value: _vm.score,
-            "separator-step": 20,
+            "separator-step": _vm.max_value / 5,
             min: 0,
-            max: 100,
+            max: _vm.max_value,
             "gauge-color": [
               { offset: 0, color: "#5710B2" },
               { offset: 100, color: "red" }
             ],
-            "scale-interval": 10,
+            "scale-interval": _vm.max_value / 10,
             "inner-radius": _vm.radius
           }
         },
@@ -40140,7 +40145,11 @@ var render = function() {
               staticClass: "tab-content flex-grow-0",
               staticStyle: { width: "400px" }
             },
-            [_c("custom-chart", { attrs: { score: _vm.score } })],
+            [
+              _c("custom-chart", {
+                attrs: { score: _vm.score, max_value: _vm.max_value }
+              })
+            ],
             1
           )
         ]

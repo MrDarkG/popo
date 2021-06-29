@@ -28,6 +28,7 @@
                 <div class="tab-content flex-grow-0" style="width:400px;">
                     <custom-chart
                         :score="score"
+                        :max_value="max_value"
                     >
                     </custom-chart>
                 </div>
@@ -43,6 +44,7 @@
         data(){
             return {
                 active:0,
+                max_value:100,
                 score:0
             }
         },
@@ -50,8 +52,9 @@
             retriveScore(){
                 axios.post("/get/my/score",{
                     course_id:this.active
-                }).than((data)=>{
-                    console.log(data)
+                }).then((data)=>{
+                    this.score=parseInt(data.data.myscore)
+                    this.max_value=parseInt(data.data.max_score)
                 })
             }
 
