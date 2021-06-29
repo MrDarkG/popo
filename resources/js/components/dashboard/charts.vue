@@ -47,11 +47,18 @@
             }
         },
         methods:{
+            retriveScore(){
+                axios.post("/get/my/score",{
+                    course_id:this.active
+                }).than((data)=>{
+                    console.log(data)
+                })
+            }
 
         },
         watch: {
             active: function (val) {
-              console.log(val)
+              this.retriveScore(val)
             }
         },
         mounted(){

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 Use App\Models\Courses;
+Use  App\Services\QuizService;
 class QuizController extends Controller
 {
     /**
@@ -82,5 +83,9 @@ class QuizController extends Controller
     public function destroy($id)
     {
         //
+    }
+    public function myscore(Request $request)
+    {
+        return QuizService::score($request->input("course_id"));
     }
 }

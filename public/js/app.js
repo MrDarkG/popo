@@ -3497,10 +3497,18 @@ __webpack_require__.r(__webpack_exports__);
       score: 0
     };
   },
-  methods: {},
+  methods: {
+    retriveScore: function retriveScore() {
+      axios.post("/get/my/score", {
+        course_id: this.active
+      }).than(function (data) {
+        console.log(data);
+      });
+    }
+  },
   watch: {
     active: function active(val) {
-      console.log(val);
+      this.retriveScore(val);
     }
   },
   mounted: function mounted() {
