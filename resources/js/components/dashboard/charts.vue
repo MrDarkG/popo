@@ -9,17 +9,17 @@
             <div class="d-flex flex-wrap flex-xxl-nowrap justify-content-center justify-content-md-start pt-4">
                 <div class="me-sm-10 me-0">
                     <ul class="nav flex-column nav-pills nav-pills-custom">
-                            <li class="nav-item mb-3" v-for="cat in cats" >
-                                <a class="nav-link  w-225px h-70px" data-bs-toggle="pill" id="kt_stats_widget_2_tab_" href="#kt_stats_widget_2_tab__content">
+                            <li class="nav-item mb-3" v-for="(cat,index) in cats" >
+                                <a :class="`nav-link ${index==0?'active':''}  w-225px h-70px`" data-bs-toggle="pill" id="kt_stats_widget_2_tab_" href="#kt_stats_widget_2_tab__content" @click="active=cat.id">
                                     <div class="nav-icon me-3">
-                                        <img alt="asd" :src="cat.courses.icons" class="default" />
-                                        <img alt="asd" :src="cat.courses.icons" class="active" />
+                                        <img alt="asd" :src="cat.courses.categories.icons" class="default" />
+                                        <img alt="asd" :src="cat.courses.categories.icons" class="active" />
                                     </div>
                                     <div class="ps-1">
                                         <span class="nav-text text-gray-600 fw-bolder fs-6">
                                             {{ cat.courses.title }}
                                         </span>
-                                        <span class="text-muted fw-bold d-block pt-1">1-6 კლასი</span>
+                                        <span class="text-muted fw-bold d-block pt-1">{{ cat.courses.categories.title }}</span>
                                     </div>
                                 </a>
                             </li>
@@ -27,7 +27,7 @@
                 </div>
                 <div class="tab-content flex-grow-0" style="width:400px;">
                     <custom-chart
-            
+                        :score="score"
                     >
                     </custom-chart>
                 </div>
@@ -42,7 +42,21 @@
         props:["cats"],
         data(){
             return {
+                active:0,
+                score:0
+            }
+        },
+        methods:{
 
+        },
+        watch: {
+            active: function (val) {
+              console.log(val)
+            }
+        },
+        mounted(){
+            if (this.cats.length>0) {
+                this.active=this.cats[0].id
             }
         }
     };

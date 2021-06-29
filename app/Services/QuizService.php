@@ -16,6 +16,6 @@ class QuizService
 	}
 	static public function mycourses()
 	{
-		return User_Courses::with(["courses"])->get();
+		return User_Courses::with(["courses"])->where("user_id",Auth::user()->id)->get();
 	}
 }

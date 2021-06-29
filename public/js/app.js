@@ -3430,6 +3430,7 @@ __webpack_require__.r(__webpack_exports__);
 
 Vue.use((vue_svg_gauge__WEBPACK_IMPORTED_MODULE_0___default()));
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: ["score"],
   data: function data() {
     return {
       radius: 80,
@@ -3491,7 +3492,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ["cats"],
   data: function data() {
-    return {};
+    return {
+      active: 0,
+      score: 0
+    };
+  },
+  methods: {},
+  watch: {
+    active: function active(val) {
+      console.log(val);
+    }
+  },
+  mounted: function mounted() {
+    if (this.cats.length > 0) {
+      this.active = this.cats[0].id;
+    }
   }
 });
 
@@ -39972,7 +39987,7 @@ var render = function() {
           attrs: {
             "start-angle": -110,
             "end-angle": 110,
-            value: _vm.value,
+            value: _vm.score,
             "separator-step": 20,
             min: 0,
             max: 100,
@@ -39994,7 +40009,7 @@ var render = function() {
             [
               _c("span", [
                 _vm._v("თქვენი ქულა არის"),
-                _c("b", [_vm._v(_vm._s(_vm.value))]),
+                _c("b", [_vm._v(_vm._s(_vm.score))]),
                 _vm._v(" !")
               ])
             ]
@@ -40043,28 +40058,42 @@ var render = function() {
             _c(
               "ul",
               { staticClass: "nav flex-column nav-pills nav-pills-custom" },
-              _vm._l(_vm.cats, function(cat) {
+              _vm._l(_vm.cats, function(cat, index) {
                 return _c("li", { staticClass: "nav-item mb-3" }, [
                   _c(
                     "a",
                     {
-                      staticClass: "nav-link  w-225px h-70px",
+                      class:
+                        "nav-link " +
+                        (index == 0 ? "active" : "") +
+                        "  w-225px h-70px",
                       attrs: {
                         "data-bs-toggle": "pill",
                         id: "kt_stats_widget_2_tab_",
                         href: "#kt_stats_widget_2_tab__content"
+                      },
+                      on: {
+                        click: function($event) {
+                          _vm.active = cat.id
+                        }
                       }
                     },
                     [
                       _c("div", { staticClass: "nav-icon me-3" }, [
                         _c("img", {
                           staticClass: "default",
-                          attrs: { alt: "asd", src: cat.courses.icons }
+                          attrs: {
+                            alt: "asd",
+                            src: cat.courses.categories.icons
+                          }
                         }),
                         _vm._v(" "),
                         _c("img", {
                           staticClass: "active",
-                          attrs: { alt: "asd", src: cat.courses.icons }
+                          attrs: {
+                            alt: "asd",
+                            src: cat.courses.categories.icons
+                          }
                         })
                       ]),
                       _vm._v(" "),
@@ -40086,7 +40115,7 @@ var render = function() {
                         _c(
                           "span",
                           { staticClass: "text-muted fw-bold d-block pt-1" },
-                          [_vm._v("1-6 კლასი")]
+                          [_vm._v(_vm._s(cat.courses.categories.title))]
                         )
                       ])
                     ]
@@ -40103,7 +40132,7 @@ var render = function() {
               staticClass: "tab-content flex-grow-0",
               staticStyle: { width: "400px" }
             },
-            [_c("custom-chart")],
+            [_c("custom-chart", { attrs: { score: _vm.score } })],
             1
           )
         ]

@@ -23,5 +23,8 @@ class Courses extends Model
     {
         return $this->hasMany(Course_task::class,"course_id","id")->with(["tasks"]);
     }
-    
+    public function categories()
+    {
+        return $this->belongsTo(Category::class,"category_id");
+    }
 }

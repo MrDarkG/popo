@@ -3,7 +3,7 @@
 	<VueSvgGauge
 	  :start-angle="-110"
 	  :end-angle="110"
-	  :value="value"
+	  :value="score"
 	  :separator-step="20"
 	  :min="0"
 	  :max="100"
@@ -12,7 +12,7 @@
 	  :inner-radius="radius"
 	>
 		<div class="inner-text d-flex align-items-end justify-content-center">
-    	<span>თქვენი ქულა არის<b>{{ value }}</b> !</span>
+    	<span>თქვენი ქულა არის<b>{{ score }}</b> !</span>
   	</div>
 	</VueSvgGauge>
 </div>
@@ -22,6 +22,7 @@ import VueSvgGauge from 'vue-svg-gauge'
 Vue.use(VueSvgGauge)
 
 export default{
+	props:["score"],
 	data(){
 		return {
 			radius:80,

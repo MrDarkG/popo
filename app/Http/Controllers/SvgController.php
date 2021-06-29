@@ -43,7 +43,7 @@ class SvgController extends Controller
             'courses' => $courses,
             "cats"=>$cat,
             "ages"=>$age,
-            "total_score"=>$total_score
+            "total_score"=>$total_score,
             "mycourses"=>$mycourses
         ]);
     }
