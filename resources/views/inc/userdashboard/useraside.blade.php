@@ -63,7 +63,7 @@
                                 <!--end::Item-->
                             </ul>
                             <!--end::Nav-->
-                        </div>
+                        </div> 
                         <!--end::Nav scroll-->
                     </div>
                     <!--end::Nav Wrapper-->
