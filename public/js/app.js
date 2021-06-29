@@ -3426,9 +3426,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 Vue.use((vue_svg_gauge__WEBPACK_IMPORTED_MODULE_0___default()));
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      radius: 80,
+      value: 60
+    };
+  }
+});
 
 /***/ }),
 
@@ -8249,7 +8257,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.inner-text {\r\n  height: 100%;\r\n  width: 100%;\n}\n.inner-text span {\r\n    max-width: 100px;\r\n    color: red;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.inner-text {\r\n  height: 100%;\r\n  width: 100%;\r\n  text-align: center;\n}\n.inner-text span {\r\n    max-width: 100px;\r\n    color: #5710b2;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -39834,25 +39842,33 @@ var render = function() {
           attrs: {
             "start-angle": -110,
             "end-angle": 110,
-            value: 3,
-            "separator-step": 1,
+            value: _vm.value,
+            "separator-step": 20,
             min: 0,
-            max: 4,
+            max: 100,
             "gauge-color": [
-              { offset: 0, color: "#347AB0" },
-              { offset: 100, color: "#8CDFAD" }
+              { offset: 0, color: "#5710B2" },
+              { offset: 100, color: "red" }
             ],
-            "scale-interval": 0.1
+            "scale-interval": 10,
+            "inner-radius": _vm.radius
           }
         },
         [
-          _c("div", { staticClass: "inner-text" }, [
-            _c("span", [
-              _vm._v("Let's make this "),
-              _c("b", [_vm._v("fun")]),
-              _vm._v(" !")
-            ])
-          ])
+          _c(
+            "div",
+            {
+              staticClass:
+                "inner-text d-flex align-items-end justify-content-center"
+            },
+            [
+              _c("span", [
+                _vm._v("თქვენი ქულა არის"),
+                _c("b", [_vm._v(_vm._s(_vm.value))]),
+                _vm._v(" !")
+              ])
+            ]
+          )
         ]
       )
     ],
