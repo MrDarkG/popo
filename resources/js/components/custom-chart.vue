@@ -4,11 +4,11 @@
 	  :start-angle="-110"
 	  :end-angle="110"
 	  :value="score"
-	  :separator-step="20"
+	  :separator-step="max_value/5"
 	  :min="0"
-	  :max="100"
+	  :max="max_value"
 	  :gauge-color="[{ offset: 0, color: '#5710B2'}, { offset: 100, color: 'red'}]"
-	  :scale-interval="10"
+	  :scale-interval="max_value/10"
 	  :inner-radius="radius"
 	>
 		<div class="inner-text d-flex align-items-end justify-content-center">
@@ -22,7 +22,7 @@ import VueSvgGauge from 'vue-svg-gauge'
 Vue.use(VueSvgGauge)
 
 export default{
-	props:["score"],
+	props:["score","max_value"],
 	data(){
 		return {
 			radius:80,
