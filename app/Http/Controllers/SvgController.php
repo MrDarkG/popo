@@ -32,8 +32,8 @@ class SvgController extends Controller
     }
     public function userArea()
     {
-        $mycourses=QuizService::mycourses();
         $total_score=UserServices::calculateStats();
+
         $courses=UserServices::myCourses();
         $age=Age::get();
         $character_parts = Character_part::where('gender_id',2)->with('category')->get();
@@ -43,8 +43,7 @@ class SvgController extends Controller
             'courses' => $courses,
             "cats"=>$cat,
             "ages"=>$age,
-            "total_score"=>$total_score,
-            "mycourses"=>$mycourses
+            "total_score"=>$total_score
         ]);
     }
     public function storekidsdata(StoreKidsRequest $request)
