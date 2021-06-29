@@ -32,7 +32,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::middleware(["auth"])->group(function(){
 
     Route::get("user-area", [App\Http\Controllers\SvgController::class, 'userArea'])->name("user_index");
-    Route::get("offers", [App\Http\Controllers\SvgController::class, 'offers']);
+    Route::get("offers", [App\Http\Controllers\SvgController::class, 'offers'])->name("offers");
     Route::post("/store/kids/data",[App\Http\Controllers\SvgController::class,"storekidsdata"])->name("storekidsdata");
     Route::post("/buy/course",[App\Http\Controllers\SvgController::class,"storecourse"])->name("buycourse");
     Route::post("/answer/question",[App\Http\Controllers\SvgController::class,"StoreAnswer"])->name("answerquestin");
