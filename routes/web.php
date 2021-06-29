@@ -47,3 +47,5 @@ Route::get("/sign-in/google/redirect", [App\Http\Controllers\Auth\LoginControlle
 
 Route::get("/sign-in/facebook",[App\Http\Controllers\Auth\LoginController::class, 'facebook']);
 Route::get("/sign-in/facebook/redirect",[App\Http\Controllers\Auth\LoginController::class, 'facebookRedirect']);
+
+Route::post('/change/character/outfit',[App\Http\Controllers\SvgController::class, 'offers'])

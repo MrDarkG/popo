@@ -13,13 +13,13 @@
 			</div>
 		</div>
 		<div class="d-flex flex-column align-items-center">
-			<div class="p-4" @[event]="animation()">
+			<div class="p-4" @[event]="animation();changeCharacterOutfit(1, false);">
 				<i class="fa fa-arrow-left" aria-hidden="true"></i>
 			</div>
-			<div class="p-4" @[event]="animation()">
+			<div class="p-4" @[event]="animation();changeCharacterOutfit(3, false);">
 				<i class="fa fa-arrow-left" aria-hidden="true"></i>
 			</div>
-			<div class="pl-4 pt-2" @[event]="animation()">
+			<div class="pl-4 pt-2" @[event]="animation();changeCharacterOutfit(2, false);">
 				<i class="fa fa-arrow-left" aria-hidden="true"> </i>
 			</div>
 		</div>
@@ -28,13 +28,13 @@
 			</g>
 		</svg>
 		<div class="d-flex flex-column align-items-center">
-			<div class="p-4" @[event]="animation()">
+			<div class="p-4" @[event]="animation();changeCharacterOutfit(1, true);">
 				<i class="fa fa-arrow-right" aria-hidden="true"></i>
 			</div>
-			<div class="p-4" @[event]="animation()">
+			<div class="p-4" @[event]="animation();changeCharacterOutfit(3, true);">
 				<i class="fa fa-arrow-right" aria-hidden="true"></i>
 			</div>
-			<div class="pl-4 pt-2" @[event]="animation()">
+			<div class="pl-4 pt-2" @[event]="animation();changeCharacterOutfit(2, true);">
 				<i class="fa fa-arrow-right" aria-hidden="true"></i>
 			</div>
 		</div>
@@ -64,6 +64,18 @@ export default{
 		},2000)
 	},
 	methods:{
+		changeCharacterOutfit(body_type_name, is_next){
+			axios.post('/change/character/outfit',{
+				body_type_name:body_type_name,
+				is_next:is_next,
+			}).then((response)=>{
+				for (let i = 0; i < this.svg_parts.length; i++) {
+					if(this.svg_parts[i].category[0].id === response.data.id){
+						this.svg_parts[i].content = response.data.content
+					}
+				}
+			})
+		},
 		animation(){
 			this.isChanging = true
 			let duration = 5000

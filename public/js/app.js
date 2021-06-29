@@ -3272,6 +3272,20 @@ __webpack_require__.r(__webpack_exports__);
     }, 2000);
   },
   methods: {
+    changeCharacterOutfit: function changeCharacterOutfit(body_type_name, is_next) {
+      var _this2 = this;
+
+      axios.post('/change/character/outfit', {
+        body_type_name: body_type_name,
+        is_next: is_next
+      }).then(function (response) {
+        for (var i = 0; i < _this2.svg_parts.length; i++) {
+          if (_this2.svg_parts[i].category[0].id === response.data.id) {
+            _this2.svg_parts[i].content = response.data.content;
+          }
+        }
+      });
+    },
     animation: function animation() {
       this.isChanging = true;
       var duration = 5000;
@@ -39643,7 +39657,8 @@ var render = function() {
             on: _vm._d({}, [
               _vm.event,
               function($event) {
-                return _vm.animation()
+                _vm.animation()
+                _vm.changeCharacterOutfit(1, false)
               }
             ])
           },
@@ -39662,7 +39677,8 @@ var render = function() {
             on: _vm._d({}, [
               _vm.event,
               function($event) {
-                return _vm.animation()
+                _vm.animation()
+                _vm.changeCharacterOutfit(3, false)
               }
             ])
           },
@@ -39681,7 +39697,8 @@ var render = function() {
             on: _vm._d({}, [
               _vm.event,
               function($event) {
-                return _vm.animation()
+                _vm.animation()
+                _vm.changeCharacterOutfit(2, false)
               }
             ])
           },
@@ -39714,7 +39731,8 @@ var render = function() {
             on: _vm._d({}, [
               _vm.event,
               function($event) {
-                return _vm.animation()
+                _vm.animation()
+                _vm.changeCharacterOutfit(1, true)
               }
             ])
           },
@@ -39733,7 +39751,8 @@ var render = function() {
             on: _vm._d({}, [
               _vm.event,
               function($event) {
-                return _vm.animation()
+                _vm.animation()
+                _vm.changeCharacterOutfit(3, true)
               }
             ])
           },
@@ -39752,7 +39771,8 @@ var render = function() {
             on: _vm._d({}, [
               _vm.event,
               function($event) {
-                return _vm.animation()
+                _vm.animation()
+                _vm.changeCharacterOutfit(2, true)
               }
             ])
           },

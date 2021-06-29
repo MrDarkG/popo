@@ -65,54 +65,22 @@
                                 <div class="d-flex flex-wrap flex-xxl-nowrap justify-content-center justify-content-md-start pt-4">
                                     <div class="me-sm-10 me-0">
                                         <ul class="nav flex-column nav-pills nav-pills-custom">
-                                            <li class="nav-item mb-3">
-                                                <a class="nav-link active w-225px h-70px" data-bs-toggle="pill" id="kt_stats_widget_2_tab_1" href="#kt_stats_widget_2_tab_1_content">
-                                                    <div class="nav-icon me-3">
-                                                        <img alt="" src="/start/assets/media/svg/logo/colored/parchment.svg" class="default" />
-                                                        <img alt="" src="/start/assets/media/svg/logo/colored/parchment.svg" class="active" />
-                                                    </div>
-                                                    <div class="ps-1">
-                                                        <span class="nav-text text-gray-600 fw-bolder fs-6">ისტორია</span>
-                                                        <span class="text-muted fw-bold d-block pt-1">5-6 კლასი</span>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li class="nav-item mb-3">
-                                                <a class="nav-link w-225px h-70px" data-bs-toggle="pill" id="kt_stats_widget_2_tab_2" href="#kt_stats_widget_2_tab_2_content">
-                                                    <div class="nav-icon me-3">
-                                                        <img alt="" src="/start/assets/media/svg/logo/colored/think.svg" class="default" />
-                                                        <img alt="" src="/start/assets/media/svg/logo/colored/think.svg" class="active" />
-                                                    </div>
-                                                    <div class="ps-1">
-                                                        <span class="nav-text text-gray-600 fw-bolder fs-6">მათემატიკა</span>
-                                                        <span class="text-muted fw-bold d-block pt-1">1-2 კლასი</span>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li class="nav-item mb-3">
-                                                <a class="nav-link w-225px h-70px" data-bs-toggle="pill" id="kt_stats_widget_2_tab_3" href="#kt_stats_widget_2_tab_3_content">
-                                                    <div class="nav-icon me-3">
-                                                        <img alt="" src="/start/assets/media/svg/logo/colored/planet-earth.svg" class="default" />
-                                                        <img alt="" src="/start/assets/media/svg/logo/colored/planet-earth.svg" class="active" />
-                                                    </div>
-                                                    <div class="ps-1">
-                                                        <span class="nav-text text-gray-600 fw-bolder fs-6">ბუნება</span>
-                                                        <span class="text-muted fw-bold d-block pt-1">2-3 კლასი</span>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li class="nav-item mb-5">
-                                                <a class="nav-link w-225px h-70px" data-bs-toggle="pill" id="kt_stats_widget_2_tab_4" href="#kt_stats_widget_2_tab_4_content">
-                                                    <div class="nav-icon me-3">
-                                                        <img alt="" src="/start/assets/media/svg/logo/colored/english-language.svg" class="default" />
-                                                        <img alt="" src="/start/assets/media/svg/logo/colored/english-language.svg" class="active" />
-                                                    </div>
-                                                    <div class="ps-1">
-                                                        <span class="nav-text text-gray-600 fw-bolder fs-6">ინგლისური</span>
-                                                        <span class="text-muted fw-bold d-block pt-1">3-4 კლასი</span>
-                                                    </div>
-                                                </a>
-                                            </li>
+                                            @foreach ($cats as $key => $categories)
+                                                <li class="nav-item mb-3">
+                                                    <a class="nav-link {{ $key==0?'active':'' }} w-225px h-70px" data-bs-toggle="pill" id="kt_stats_widget_2_tab_{{ $key+1 }}" href="#kt_stats_widget_2_tab_{{ $key+1 }}_content">
+                                                        <div class="nav-icon me-3">
+                                                            <img alt="" src="/start/assets/media/svg/logo/colored/{{ $categories->icons }}" class="default" />
+                                                            <img alt="" src="/start/assets/media/svg/logo/colored/{{ $categories->icons }}" class="active" />
+                                                        </div>
+                                                        <div class="ps-1">
+                                                            <span class="nav-text text-gray-600 fw-bolder fs-6">
+                                                                {{ $categories->title }}
+                                                            </span>
+                                                            <span class="text-muted fw-bold d-block pt-1">1-6 კლასი</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            @endforeach
                                         </ul>
                                     </div>
                                     <div class="tab-content flex-grow-0" style="width:400px;">
@@ -166,7 +134,7 @@
                                                 <input type="radio" class="btn-check" name="hobbie"  checked="checked" value="{{ $cat->id }}" id="kt_form_options_{{$cat->id}}" />
                                                 <label class="col btn btn-lg  btn-bg-light btn-color-gray-600 btn-active-light-primary   py-5 px-4 m-2 min-w-125px" for="kt_form_options_{{$cat->id}}">
                                                     <span class="svg-icon svg-icon-2x me-1">
-                                                        <img src="{{ asset($cat->icons) }}" style="width:100%">
+                                                        <img src="/start/assets/media/svg/logo/colored/{{$cat->icons}}" style="width:100%">
                                                     </span>
                                                     <span class="text-gray-800 fw-bold">{{ $cat->title }}</span>
                                                 </label>
