@@ -12,12 +12,12 @@
                             <li class="nav-item mb-3" v-for="cat in cats" >
                                 <a class="nav-link  w-225px h-70px" data-bs-toggle="pill" id="kt_stats_widget_2_tab_" href="#kt_stats_widget_2_tab__content">
                                     <div class="nav-icon me-3">
-                                        <img alt="asd" :src="cat.icons" class="default" />
-                                        <img alt="asd" :src="cat.icons" class="active" />
+                                        <img alt="asd" :src="cat.courses.icons" class="default" />
+                                        <img alt="asd" :src="cat.courses.icons" class="active" />
                                     </div>
                                     <div class="ps-1">
                                         <span class="nav-text text-gray-600 fw-bolder fs-6">
-                                            {{ cat.title }}
+                                            {{ cat.courses.title }}
                                         </span>
                                         <span class="text-muted fw-bold d-block pt-1">1-6 კლასი</span>
                                     </div>

@@ -55,7 +55,7 @@
                         </div>
                     </div>
                     <div class="col-xl-8">
-                        <my-charts :cats="{{ json_encode($cats) }}"></my-charts>
+                        <my-charts :cats="{{ json_encode($mycourses) }}"></my-charts>
                     </div>
                 </div>
 

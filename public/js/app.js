@@ -40059,12 +40059,12 @@ var render = function() {
                       _c("div", { staticClass: "nav-icon me-3" }, [
                         _c("img", {
                           staticClass: "default",
-                          attrs: { alt: "asd", src: cat.icons }
+                          attrs: { alt: "asd", src: cat.courses.icons }
                         }),
                         _vm._v(" "),
                         _c("img", {
                           staticClass: "active",
-                          attrs: { alt: "asd", src: cat.icons }
+                          attrs: { alt: "asd", src: cat.courses.icons }
                         })
                       ]),
                       _vm._v(" "),
@@ -40077,7 +40077,7 @@ var render = function() {
                           [
                             _vm._v(
                               "\n                                        " +
-                                _vm._s(cat.title) +
+                                _vm._s(cat.courses.title) +
                                 "\n                                    "
                             )
                           ]
