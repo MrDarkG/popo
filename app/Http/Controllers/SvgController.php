@@ -80,4 +80,23 @@ class SvgController extends Controller
         ]);
         return QuizService::checkIfAnswerIsCorrect($request->input("answer_id"));
     }
+    public function changeCharacterOutfit(Request $request)
+    {
+        $this->validate($request,[
+            'body_type_name'=>'required', 
+            'is_next'=>'required' 
+        ]);
+
+        return [
+            'id'=>1,
+            'content'=>'
+                <g id="tma">
+                    <path id="XMLID_487_" class="st0" d="M94.1,30.5c-4.4,6.7-12.8,4.3-21.4-1.4c-8.6-5.7-14-12.5-9.6-19.2c4.4-6.7,14.9-7.5,23.5-1.8
+                        C95.2,13.8,98.5,23.9,94.1,30.5z"/>
+                    <path id="XMLID_485_" class="st0" d="M18.8,60.8C14.5,60,3.3,32.2,24.1,14.3c20.8-18,54.7-7.4,57.9,6c0.9-0.1,7.3-0.5,12.1,9
+                        c4.3,8.6,6.9,41.8-11.9,47.6C63.5,82.6,18.8,60.8,18.8,60.8z"/>
+                </g>
+            '
+        ]; 
+    }
 }
