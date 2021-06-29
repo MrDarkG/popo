@@ -15,4 +15,4 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Admin\AdminController as AdminController;
 
-Route::get('/admin/subjects', [AdminController::class, 'subjects'])->name('subjects');
+Route::get('/admin/add/subjects', [AdminController::class, 'subjects'])->name('subjects');
