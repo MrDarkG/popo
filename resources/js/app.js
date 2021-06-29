@@ -24,6 +24,11 @@ Vue.component('character-edit', require('./components/character/character-edit.v
 Vue.component('play-quiz', require('./components/quiz/quiz.vue').default);
 Vue.component('custom-chart', require('./components/custom-chart.vue').default);
 Vue.component('my-charts', require('./components/dashboard/charts.vue').default);
+Vue.component('my-charts', require('./components/dashboard/charts.vue').default);
+
+//admin 
+Vue.component('add-subject', require('./components/admin/subjects/add.vue').default);
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

@@ -11,4 +11,8 @@ class AdminController extends Controller
 
         return view('layouts.master');
     }
+    public function subjects()
+    {
+        return view('admin.subjects.add');
+    }
 }

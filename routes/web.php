@@ -36,7 +36,6 @@ Route::middleware(["auth"])->group(function(){
     Route::post("/store/kids/data",[App\Http\Controllers\SvgController::class,"storekidsdata"])->name("storekidsdata");
     Route::post("/buy/course",[App\Http\Controllers\SvgController::class,"storecourse"])->name("buycourse");
     Route::post("/answer/question",[App\Http\Controllers\SvgController::class,"StoreAnswer"])->name("answerquestin");
-    Route::post("/get/my/score",[App\Http\Controllers\QuizController::class,"myscore"])->name("myscore");
 });
 
 
@@ -49,4 +48,4 @@ Route::get("/sign-in/google/redirect", [App\Http\Controllers\Auth\LoginControlle
 Route::get("/sign-in/facebook",[App\Http\Controllers\Auth\LoginController::class, 'facebook']);
 Route::get("/sign-in/facebook/redirect",[App\Http\Controllers\Auth\LoginController::class, 'facebookRedirect']);
 
-
+Route::post('/change/character/outfit',[App\Http\Controllers\SvgController::class, 'changeCharacterOutfit']);
