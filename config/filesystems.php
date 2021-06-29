@@ -41,6 +41,18 @@ return [
             'url' => env('APP_URL').'/storage',
             'visibility' => 'public',
         ],
+        'answers' => [
+            'driver' => 'local',
+            'root' => public_path('sounds/answers'),
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+        ],
+        'question' => [
+            'driver' => 'local',
+            'root' => public_path('sounds/questions'),
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+        ],
 
         's3' => [
             'driver' => 's3',

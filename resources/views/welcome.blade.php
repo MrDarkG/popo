@@ -506,9 +506,8 @@
                         </div>
                     </div>
                 </div>
-                <!--Team Member 02-->
                 <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-                    <div class="team-members team-member2">
+                    <div class="team-members team-member3">
                         <div class="team-member-overlay">
                             <ul class="social-list">
                                 <li><a href="#"><i class="fa fa-instagram"></i></a></li>
@@ -520,15 +519,15 @@
                         </div>
                         <div class="team-members-content text-center">
                             <a href="teacher-details1.html">
-                                <h6>ბატიაშვილი ვალერი</h6>
-                                <p>პროგრამისტი</p>
+                                <h6>თოფურია ნინო</h6>
+                                <p>მენტორი</p>
                             </a>
                         </div>
                     </div>
                 </div>
-                <!--Team Member 03-->
+                <!--Team Member 02-->
                 <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-                    <div class="team-members team-member3">
+                    <div class="team-members team-member2">
                         <div class="team-member-overlay">
                             <ul class="social-list">
                                 <li><a href="#"><i class="fa fa-instagram"></i></a></li>
@@ -540,12 +539,14 @@
                         </div>
                         <div class="team-members-content text-center">
                             <a href="teacher-details1.html">
-                                <h6>გურასპაშვილი სანდრო</h6>
-                                <p>დიზაინერი</p>
+                                <h6>ბატიაშვილი ვალერი</h6>
+                                <p>პროგრამისტი</p>
                             </a>
                         </div>
                     </div>
                 </div>
+                <!--Team Member 03-->
+                
             </div>
             <!--Lower Part Ends-->
         </div>

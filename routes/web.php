@@ -22,6 +22,10 @@ Route::get("/r",function(){
 });
 Auth::routes();
 
+
+Route::get("/sound/{word}/{filaname}",function($word,$filaname){
+    return App\Services\SoundService::getSound($word,$filaname);
+});
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
