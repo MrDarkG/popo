@@ -55,43 +55,7 @@
                         </div>
                     </div>
                     <div class="col-xl-8">
-                        <div class="card card-stretch mb-5 mb-xxl-8">
-                            <div class="card-header align-items-center border-0 mt-5">
-                                <h3 class="card-title align-items-start flex-column">
-                                    <span class="fw-bolder text-dark fs-3">შედეგები</span>
-                                </h3>
-                            </div>
-                            <div class="card-body pt-0">
-                                <div class="d-flex flex-wrap flex-xxl-nowrap justify-content-center justify-content-md-start pt-4">
-                                    <div class="me-sm-10 me-0">
-                                        <ul class="nav flex-column nav-pills nav-pills-custom">
-                                            @foreach ($cats as $key => $categories)
-                                                <li class="nav-item mb-3">
-                                                    <a class="nav-link {{ $key==0?'active':'' }} w-225px h-70px" data-bs-toggle="pill" id="kt_stats_widget_2_tab_{{ $key+1 }}" href="#kt_stats_widget_2_tab_{{ $key+1 }}_content">
-                                                        <div class="nav-icon me-3">
-                                                            <img alt="" src="/start/assets/media/svg/logo/colored/{{ $categories->icons }}" class="default" />
-                                                            <img alt="" src="/start/assets/media/svg/logo/colored/{{ $categories->icons }}" class="active" />
-                                                        </div>
-                                                        <div class="ps-1">
-                                                            <span class="nav-text text-gray-600 fw-bolder fs-6">
-                                                                {{ $categories->title }}
-                                                            </span>
-                                                            <span class="text-muted fw-bold d-block pt-1">1-6 კლასი</span>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                            @endforeach
-                                        </ul>
-                                    </div>
-                                    <div class="tab-content flex-grow-0" style="width:400px;">
-                                        <custom-chart
-                                
-                                        >
-                                        </custom-chart>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <my-charts :cats="{{ json_encode($cats) }}"></my-charts>
                     </div>
                 </div>
 
@@ -134,7 +98,7 @@
                                                 <input type="radio" class="btn-check" name="hobbie"  checked="checked" value="{{ $cat->id }}" id="kt_form_options_{{$cat->id}}" />
                                                 <label class="col btn btn-lg  btn-bg-light btn-color-gray-600 btn-active-light-primary   py-5 px-4 m-2 min-w-125px" for="kt_form_options_{{$cat->id}}">
                                                     <span class="svg-icon svg-icon-2x me-1">
-                                                        <img src="/start/assets/media/svg/logo/colored/{{$cat->icons}}" style="width:100%">
+                                                        <img src="{{$cat->icons}}" style="width:100%">
                                                     </span>
                                                     <span class="text-gray-800 fw-bold">{{ $cat->title }}</span>
                                                 </label>
