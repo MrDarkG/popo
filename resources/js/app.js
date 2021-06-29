@@ -22,6 +22,7 @@ window.Vue = require('vue').default;
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('character-edit', require('./components/character/character-edit.vue').default);
 Vue.component('play-quiz', require('./components/quiz/quiz.vue').default);
+Vue.component('custom-chart', require('./components/custom-chart.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

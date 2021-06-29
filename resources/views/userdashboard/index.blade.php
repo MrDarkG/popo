@@ -115,10 +115,11 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="tab-content flex-grow-1">
-                                        <div class="tab-pane fade show active" id="kt_stats_widget_2_tab_1_content">
-                                            <div id="kt_stats_widget_2_chart_1" style="height: 350px"></div>
-                                        </div>
+                                    <div class="tab-content flex-grow-0" style="width:400px;">
+                                        <custom-chart
+                                
+                                        >
+                                        </custom-chart>
                                     </div>
                                 </div>
                             </div>

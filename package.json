@@ -27,6 +27,7 @@
     "dependencies": {
         "@fortawesome/fontawesome-free": "^5.15.3",
         "animejs": "^3.2.1",
-        "startbootstrap-sb-admin-2": "^4.1.4"
+        "startbootstrap-sb-admin-2": "^4.1.4",
+        "vue-svg-gauge": "^1.2.1"
     }
 }
