@@ -3257,6 +3257,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ['categories'],
   data: function data() {
@@ -3273,19 +3280,38 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     setUploadedImage: function setUploadedImage(event) {
-      // let url = URL.createObjectURL(event.srcElement)
+      var _this = this;
+
       var file = event.srcElement.files[0];
-      var reader = new FileReader();
 
       if (file) {
+        var reader = new FileReader();
         reader.readAsDataURL(file);
+
+        reader.onload = function () {
+          _this.input.add.image_url = reader.result;
+        };
       }
     },
     addSubject: function addSubject() {
+      var _this2 = this;
+
       axios.post('/admin/add/subjects', {
         title: this.input.add.title,
         image: this.input.add.image_url
+      }).then(function (response) {
+        _this2.category.push({
+          title: response.data.title,
+          icons: response.data.icons
+        });
       });
+      this.image = '';
+      this.input = {
+        add: {
+          title: '',
+          image_url: ''
+        }
+      };
     },
     saveOnInput: function saveOnInput(event, category_id) {
       axios.post('/admin/edit/subjects', {
@@ -3294,13 +3320,13 @@ __webpack_require__.r(__webpack_exports__);
       });
     },
     deleteSubject: function deleteSubject(index, category_id) {
-      var _this = this;
+      var _this3 = this;
 
       if (confirm('Are you sure?')) {
         axios.post('/admin/delete/subjects', {
           category_id: category_id
         }).then(function () {
-          _this.categories.splice(index, 1);
+          _this3.categories.splice(index, 1);
         });
       }
     }
@@ -40309,6 +40335,8 @@ var render = function() {
   return _c("div", [
     _c("div", { staticClass: "card p-4" }, [
       _c("div", { staticClass: "form-group" }, [
+        _vm._m(0),
+        _vm._v(" "),
         _c("div", [
           _c("input", {
             directives: [
@@ -40333,7 +40361,7 @@ var render = function() {
           })
         ]),
         _vm._v(" "),
-        _c("div", [
+        _c("div", { staticClass: "mt-2" }, [
           _c("input", {
             attrs: {
               type: "file",
@@ -40345,7 +40373,7 @@ var render = function() {
           })
         ]),
         _vm._v(" "),
-        _c("div", [
+        _c("div", { staticClass: "mt-2" }, [
           _c(
             "button",
             { staticClass: "btn btn-success", on: { click: _vm.addSubject } },
@@ -40357,13 +40385,17 @@ var render = function() {
     _vm._v(" "),
     _c("div", { staticClass: "p-4 card" }, [
       _c("table", { staticClass: "table" }, [
-        _vm._m(0),
+        _vm._m(1),
         _vm._v(" "),
         _c(
           "tbody",
           _vm._l(_vm.category, function(cat, index) {
             return _c("tr", [
-              _c("th", { attrs: { scope: "row" } }, [_vm._v("1")]),
+              _c("th", { attrs: { scope: "row" } }, [
+                _vm._v(
+                  "\r\n\t\t\t\t  \t" + _vm._s(index + 1) + "\r\n\t\t\t\t  "
+                )
+              ]),
               _vm._v(" "),
               _c("td", [
                 _c("input", {
@@ -40407,6 +40439,14 @@ var render = function() {
   ])
 }
 var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("h3", [_vm._v("\r\n\t\t\t\t\tAdd Subject\r\n\t\t\t\t")])
+    ])
+  },
   function() {
     var _vm = this
     var _h = _vm.$createElement

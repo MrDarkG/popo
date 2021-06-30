@@ -44,14 +44,14 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
+           {{--  <li class="nav-item active">
                 <a class="nav-link" href="index.html">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
-            </li>
+            </li> --}}
 
             <!-- Divider -->
-            <hr class="sidebar-divider">
+            {{-- <hr class="sidebar-divider"> --}}
 
             <!-- Heading -->
             <div class="sidebar-heading">
@@ -59,22 +59,33 @@
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
+            {{-- <li class="nav-item">
                 <a class="nav-link" href="charts.html">
                     <i class="far fa-fw fa-chart-area"></i>
                     <span>Charts</span></a>
+            </li> --}}
+            <li class="nav-item">
+                <a class="nav-link" href="/admin/subjects">
+                    <i class="far fa-fw fa-chart-area"></i>
+                    <span>Subjects</span>
+                </a>
             </li>
-
+            <li class="nav-item">
+                <a class="nav-link" href="/admin/program">
+                    <i class="far fa-fw fa-chart-area"></i>
+                    <span>Program</span>
+                </a>
+            </li>
             <!-- Divider -->
-            <hr class="sidebar-divider">
+           {{--  <hr class="sidebar-divider">
 
             <!-- Heading -->
             <div class="sidebar-heading">
                 Addons
-            </div>
+            </div> --}}
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
+            {{-- <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
                     aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-fw fa-folder"></i>
@@ -92,7 +103,7 @@
                         <a class="collapse-item" href="blank.html">Blank Page</a>
                     </div>
                 </div>
-            </li>
+            </li> --}}
 
             
 

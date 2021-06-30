@@ -3,9 +3,14 @@
 	<div class="card p-4">
 		<div class="form-group">
 			<div>
-				<input type="text" class="form-control w-50" v-model="input.add.title">
+				<h3>
+					Add Subject
+				</h3>
 			</div>
 			<div>
+				<input type="text" class="form-control w-50" v-model="input.add.title">
+			</div>
+			<div class="mt-2">
 				<input type="file"
        				id="avatar" 
        				name="avatar"
@@ -13,7 +18,7 @@
        				@change="setUploadedImage"
    				>
 			</div>
-			<div>
+			<div class="mt-2">
 				<button class="btn btn-success" @click="addSubject">
 					Save
 				</button>
@@ -32,7 +37,9 @@
 			</thead>
 			<tbody>
 				<tr v-for="(cat ,index) in category">
-				  <th scope="row">1</th>
+				  <th scope="row">
+				  	{{ index+1 }}
+				  </th>
 				  <td>
 				  	<input :value="cat.title" class="w-50 form-control" @input="saveOnInput($event ,cat.id)" :placeholder="cat.title">
 				  </td>
@@ -67,20 +74,32 @@ export default{
 	},
 	methods:{
 		setUploadedImage(event){
-			// let url = URL.createObjectURL(event.srcElement)
 			const file = event.srcElement.files[0];
-
-		  	const reader = new FileReader();
-	
 		  	if (file) {
-		  	  reader.readAsDataURL(file)
+		  		let reader = new FileReader()
+			    reader.readAsDataURL(file)
+			    reader.onload = ()=> {
+			       this.input.add.image_url = reader.result
+		     	}
 		  	}
 		},
 		addSubject(){
 			axios.post('/admin/add/subjects',{
 				title:this.input.add.title,
 				image:this.input.add.image_url,
+			}).then((response)=>{
+				this.category.push({
+					title:response.data.title,
+					icons:response.data.icons,
+				})
 			})
+			this.image = ''
+			this.input={
+				add:{
+					title:'',
+					image_url:''
+				}
+			}
 		},
 		saveOnInput(event, category_id){
 			axios.post('/admin/edit/subjects',{

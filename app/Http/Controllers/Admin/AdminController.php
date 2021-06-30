@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 use App\Models\Category;
+use Auth;
 
 class AdminController extends Controller
 {
@@ -22,11 +24,20 @@ class AdminController extends Controller
     }
     public function addSubjects(Request $request)
     {
-        $path = $request->file('image')->getRealPath();
-        file_put_contents('/path/to/new/file_name', $my_blob);
+        $this->validate($request,[
+            'title'=>'required',
+            'image'=>'required'
+        ]);
 
-        Category::create([
+        $image_direction = '/images/'.uniqid().time().'.jpg';
+        $data = substr($request->image, strpos($request->image, ',') + 1);
+        $image = base64_decode($data);
 
+        Storage::disk('subjects')->put($image_direction, $image);
+
+        return Category::create([
+            'title'=>$request['title'],
+            'icons'=>'/subjects/'.$image_direction
         ]);
     }
     public function editSubjects(Request $request)
@@ -38,7 +49,6 @@ class AdminController extends Controller
     }
     public function deleteSubjects(Request $request)
     {
-        $categories=Category::where('id', $request->category_id)->delete();
-
+        Category::where('id', $request->category_id)->delete();
     }
 }
