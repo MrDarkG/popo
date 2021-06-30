@@ -36,7 +36,7 @@ class UserServices
 	}
 	static public function mykidsHobbies($value='')
 	{
-		return Kids::where("user_id",Auth::user()->id)->pluck("age");
+		return Kids::where("user_id",Auth::user()->id)->pluck("hobbie");
 	}
 	static public function checkMyMoney($value='')
 	{
