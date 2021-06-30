@@ -895,6 +895,8 @@ section {
     right: 30px;
     bottom: 20px;
     border-radius: 30px;
+    text-align: right;
+
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
     -ms-border-radius: 30px;
@@ -916,9 +918,9 @@ section {
 }
 
 .img-overlay {
-    background: rgba(0, 0, 0, 0.4);
+    /*background: rgba(0, 0, 0, 0.4);*/
     position: absolute;
-    width: 100%;
+    width: 80%;
     height: 100%;
     border-radius: 24px;
     top: 0;
@@ -5877,7 +5879,14 @@ form #subscribe:hover {
 }
 
 #about-left-img2 img {
-    width: 100%;
+    width: 60%;
+    text-align: right;
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.44); 
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.44);
+    border-radius: 14px;
+    background: white;
+    border-radius: 14px;
+    padding: 8px;
 }
 
 .comment-field-head h6 {

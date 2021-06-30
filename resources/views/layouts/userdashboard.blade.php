@@ -24,7 +24,7 @@
 <!--end::Head-->
 <!--begin::Body-->
 
-<body id="kt_body" class="header-fixed header-tablet-and-mobile-fixed aside-enabled aside-fixed aside-primary-enabled aside-secondary-disabled">
+<body id="kt_body" class="header-fixed header-tablet-and-mobile-fixed aside-enabled aside-fixed aside-primary-enabled aside-secondary-disabled" onload="menu()">
     <!--begin::Main-->
     <!--begin::Root-->
     <div class="d-flex flex-column flex-root">
@@ -73,6 +73,16 @@
     
     
     @yield("js")
+
+    <script type="text/javascript">
+        @if (isset($active))
+            
+            function menu(){
+                document.getElementById("{{ $active }}").classList.add("active");
+            }
+            document
+        @endif
+    </script>
     
     <noscript>
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FS8GGP" height="0" width="0" style="display:none;visibility:hidden"></iframe>

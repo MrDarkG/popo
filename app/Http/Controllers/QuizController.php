@@ -15,7 +15,7 @@ class QuizController extends Controller
      */
     public function index($id)
     {
-        $courses=Courses::with(["tasks"])->get();
+        return $courses=Courses::with(["tasks"])->get();
         return view("quiz.index",["tasks"=>$courses]);
     }
 

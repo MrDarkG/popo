@@ -1,4 +1,4 @@
-@extends('layouts.userdashboard')
+@extends('layouts.userdashboard',["active"=>"courses"])
 
 @section("css")
 <link rel="stylesheet" type="text/css" href="{{ asset('/start/offers.css') }}">

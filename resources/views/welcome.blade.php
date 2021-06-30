@@ -150,7 +150,7 @@
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
                     <div class="horizontal-heading">
                         <h6>ჩვენ შესახებ</h6>
-                        <h2>მოგესალმებით ბავშვთა სასწავლო<br> და გასართობ პორტალში, Popo.ge</h2>
+                        <h2>მოგესალმებით ბავშვთა სასწავლო<br> და გასართობ პორტალზე, Popo.ge</h2>
                     </div>
                 </div>
             </div>
@@ -163,16 +163,17 @@
                     <div id="about-left">
 
                         <div id="about-left-img" class="wow fadeInLeft animated">
-                            <img src="assets/img/about/about_us.jpg" class="img-fluid" alt="About Us image">
+                            <img src="assets/img/about/about-us.svg" class="img-fluid" alt="About Us image" style="height:100%">
                         </div>
+                        <a href="http://gau.edu.ge/" target="_blank">
+                            
+                            <div id="about-left-img2" class="wow fadeInRight animated">
 
-                        <div id="about-left-img2" class="wow fadeInRight animated">
-                            <img src="assets/img/about/2.png" class="img-fluid" alt="about-img">
-                            <div class="video-icon">
-                                <a href="https://www.youtube.com/embed/Kb8CW3axqRE" class="banner-video video-link" data-width="1200" data-height="1080"><img src="assets/img/banner/play-button.svg" alt="icon"></a>
+                                <img src="https://www.gau.edu.ge/storage/app/media/logo/gau-ka-2.png" class="img-fluid" alt="about-img">
+                                
+                                <div class="img-overlay"></div>
                             </div>
-                            <div class="img-overlay"></div>
-                        </div>
+                        </a>
 
                     </div>
                 </div>
@@ -181,21 +182,23 @@
                 <!--Lower Right Side-->
                 <div class="col-12 col-sm-12 col-md-5 col-lg-5">
                     <div class="about-para">
-                        <p>ჩვენი პლატფორმა მიზნად ისახავას დაეხმაროს ბავშვებს სწავლაში. მისი დახმარებით ბავშვებს შეუძლიათ ისწავლონ სკოლის საგნები და არა მარტო თამაშით. პორტალზე ამჟამად უკვე არსებობს კურსები რომელიც დაგვეხმარება შევისწავლოთ</p>
+                        <p>ეს საიტი შექმინლია აკადემიური ნაშრომისთვის, ქართულ-ამერიკული უნივერსიტეტის სტუდენტების, ვალერი ბატიაშვილისა და საბა ტორიკაშვილის მიერ 2021 წელს. გამოყენებულია ტექნოლოგიები:</p>
                     </div>
                     <!--About List-->
                     <div class="about-list">
                         <ul>
-                            <li><i class="fa fa-check-circle "></i> მათემატიკა</li>
-                            <li><i class="fa fa-check-circle "></i> ქართული</li>
-                            <li><i class="fa fa-check-circle "></i> ინგლისური</li>
-                            <li><i class="fa fa-check-circle "></i> ბუნება</li>
-                            <li><i class="fa fa-check-circle "></i> ხელოვნება</li>
+                            <li><i class="fa fa-check-circle "></i> MySql</li>
+                            <li><i class="fa fa-check-circle "></i> Larevel </li>
+                            <li><i class="fa fa-check-circle "></i> Vue.js</li>
+                            
+                            
+                            <li><i class="fa fa-check-circle "></i> Python</li>
+                            <li><i class="fa fa-check-circle "></i> Bootstrap</li>
                         </ul>
                     </div>
 
                     <div id="about-btn">
-                        <a class="btn btn-general btn-about smooth-scroll" href="about.html" title="Discover More" role="button">მეტის ნახვა</a>
+                        <a class="btn btn-general btn-about smooth-scroll" href="/register" title="Register" role="button">რეგისტრაცია</a>
                     </div>
                 </div>
                 <!--Lower Right Side Ends-->
@@ -426,7 +429,7 @@
                             <h5>50 ₾</h5>
                         </div>
                         <div class="pricing-items-content">
-                            <h5>40 კასლი</h5>
+                            <h5>40 გაკვეთილი</h5>
                             <ul>
                                 <li>მათემატიკა</li>
                                 <li>ქართული</li>
@@ -447,7 +450,7 @@
                             <h5>40 ₾</h5>
                         </div>
                         <div class="pricing-items-content">
-                            <h5>30 კლასი</h5>
+                            <h5>30 გაკვეთილი</h5>
                             <ul>
                                 <li>მათემატიკა</li>
                                 <li>ქართული</li>
@@ -489,17 +492,10 @@
                 <!--Team Member 01-->
                 <div class="col-12 col-sm-6 col-md-4 col-lg-4">
                     <div class="team-members team-member1">
-                        <div class="team-member-overlay">
-                            <ul class="social-list">
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                            </ul>
-                            <img src="assets/img/team/team_01.jpg" class="img-fluid" alt="team member">
-                        </div>
+                        
+                        <img src="assets/img/team/torika.png" class="img-fluid" alt="team member">
                         <div class="team-members-content text-center">
-                            <a href="teacher-details1.html">
+                            <a href="#">
                                 <h6>ტორიკაშვილი საბა</h6>
                                 <p>პროგრამისტი</p>
                             </a>
@@ -508,15 +504,9 @@
                 </div>
                 <div class="col-12 col-sm-6 col-md-4 col-lg-4">
                     <div class="team-members team-member3">
-                        <div class="team-member-overlay">
-                            <ul class="social-list">
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                            </ul>
-                            <img src="assets/img/team/team_02.jpg" class="img-fluid" alt="team member">
-                        </div>
+                        
+                        <img src="assets/img/team/topuria.png" class="img-fluid" alt="team member">
+                        
                         <div class="team-members-content text-center">
                             <a href="teacher-details1.html">
                                 <h6>თოფურია ნინო</h6>
@@ -528,17 +518,10 @@
                 <!--Team Member 02-->
                 <div class="col-12 col-sm-6 col-md-4 col-lg-4">
                     <div class="team-members team-member2">
-                        <div class="team-member-overlay">
-                            <ul class="social-list">
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                            </ul>
-                            <img src="assets/img/team/3.png" class="img-fluid" alt="team member">
-                        </div>
+                            
+                            <img src="assets/img/team/vako.png" class="img-fluid" alt="team member">
                         <div class="team-members-content text-center">
-                            <a href="teacher-details1.html">
+                            <a href="#">
                                 <h6>ბატიაშვილი ვალერი</h6>
                                 <p>პროგრამისტი</p>
                             </a>
@@ -557,60 +540,27 @@
             <div class="container">
                 <div id="contact-content">
                     <div class="row">
-                        <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-6">
                             <div class="contact-content1">
                                 <div class="contact-content-head">
                                     <a href="index.html"><img src="assets/img/contact/logo.svg" alt="Popo Logo" style="height: 60px;"></a>
                                 </div>
                                 <div class="contact-content1-body">
-                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium. Lorem ipsum dolor sit amet consectetur adipisicing</p>
+                                    <p>გამომოგვიწერთ და მიიღეთ ყოველდღიური სიაახლეები და ახალ ახალი გაკვეთილები ჩვენი საიტისგან</p>
                                 </div>
                                 <div class="contact-content1-foot">
                                     <form action="#">
                                         <input type="text" id="email" name="email" placeholder="Email" required>
-                                        <input type="submit" id="subscribe" value="Subscribe">
+                                        <input type="submit" id="subscribe" value="გამოგვიწერეთ">
                                     </form>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-sm-6 col-md-6 col-lg-4">
-                            <div class="contact-content2">
-                                <div class="contact-content1-head">
-                                    <h6>OUR GALLARY</h6>
-                                    <img src="assets/img/icons/Underline-1.png" alt="underliine img">
-                                </div>
-                                <div class="contact-content2-body">
-                                    <div class="contact-item">
-                                        <div class="row">
-                                            <div class="col-4 col-sm-4 col-md-4 col-lg-4">
-                                                <a href="assets/img/contact/gallery-img7.jpg">
-                                                    <img src="assets/img/contact/footer_img7.jpg" class="img-fluid"
-                                                        alt="Gallary image 7">
-                                                </a>
-                                            </div>
-                                            <!-- contact Items 08 -->
-                                            <div class="col-4 col-sm-4 col-md-4 col-lg-4">
-                                                <a href="assets/img/contact/gallery-img8.jpg">
-                                                    <img src="assets/img/contact/footer_img8.jpg" class="img-fluid"
-                                                        alt="Gallary image 8">
-                                                </a>
-                                            </div>
-                                            <!-- contact Items 09 -->
-                                            <div class="col-4 col-sm-4 col-md-4 col-lg-4">
-                                                <a href="assets/img/contact/gallery-img9.jpg">
-                                                    <img src="assets/img/contact/footer_img9.jpg" class="img-fluid"
-                                                        alt="Gallary image 9">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                        
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-6">
                             <div class="contact-content4">
                                 <div class="contact-content1-head">
-                                    <h6>LOCATION</h6>
+                                    <h6>საკონტაქტო ინფორმაცია</h6>
                                     <img src="assets/img/icons/Underline-1.png" alt="underline image">
                                 </div>
                                 <div class="contact-content4-body">
@@ -640,7 +590,11 @@
                         </div>
                         <div class="col-12 col-sm-12 col-md-6 col-lg-6">
                             <div class="footer-main-right">
-                                <p><a href="#!"><span>Sitemap -</span></a> <a href="#!"><span>Terms of Service -</span></a> <a href="#!"><span>Privacy Policy</span></a></p>
+                                <p>
+                                    <a href="#!"><span>Sitemap -</span></a>
+                                    <a href="/terms"><span>Terms of Service -</span></a> 
+                                    <a href="/privacy"><span>Privacy Policy</span></a>
+                                </p>
                             </div>
                         </div>
                     </div>
