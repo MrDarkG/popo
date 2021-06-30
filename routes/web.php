@@ -49,3 +49,11 @@ Route::get("/sign-in/facebook",[App\Http\Controllers\Auth\LoginController::class
 Route::get("/sign-in/facebook/redirect",[App\Http\Controllers\Auth\LoginController::class, 'facebookRedirect']);
 
 Route::post('/change/character/outfit',[App\Http\Controllers\SvgController::class, 'changeCharacterOutfit']);
+
+
+Route::get("privacy",function(){
+    return view("privacy");
+});
+Route::get("terms",function(){
+    return view("terms");
+});
