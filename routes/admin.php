@@ -15,4 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Admin\AdminController as AdminController;
 
-Route::get('/admin/add/subjects', [AdminController::class, 'subjects'])->name('subjects');
+Route::get('/admin/subjects', [AdminController::class, 'subjects'])->name('subjects');
+Route::post('/admin/add/subjects', [AdminController::class, 'addSubjects'])->name('addSubjects');
+Route::post('/admin/edit/subjects', [AdminController::class, 'editSubjects'])->name('editSubjects');
+Route::post('/admin/delete/subjects', [AdminController::class, 'deleteSubjects'])->name('deleteSubjects');

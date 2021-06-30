@@ -3210,7 +3210,112 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: ['categories'],
+  data: function data() {
+    return {
+      category: this.categories,
+      image: '',
+      input: {
+        add: {
+          title: '',
+          image_url: ''
+        }
+      }
+    };
+  },
+  methods: {
+    setUploadedImage: function setUploadedImage(event) {
+      // let url = URL.createObjectURL(event.srcElement)
+      var file = event.srcElement.files[0];
+      var reader = new FileReader();
+      reader.addEventListener("load", function () {
+        // convert image file to base64 string
+        preview.src = reader.result;
+      }, false);
+
+      if (file) {
+        reader.readAsDataURL(file);
+      }
+
+      console.log(event);
+      console.log(event.srcElement);
+    },
+    addSubject: function addSubject() {
+      axios.post('/admin/add/subjects', {
+        title: this.input.add.title,
+        image: this.input.add.image_url
+      });
+    },
+    saveOnInput: function saveOnInput(event, category_id) {
+      axios.post('/admin/edit/subjects', {
+        category_id: category_id,
+        title: event.srcElement.value
+      });
+    },
+    deleteSubject: function deleteSubject(index, category_id) {
+      var _this = this;
+
+      if (confirm('Are you sure?')) {
+        axios.post('/admin/delete/subjects', {
+          category_id: category_id
+        }).then(function () {
+          _this.categories.splice(index, 1);
+        });
+      }
+    }
+  }
+});
 
 /***/ }),
 
@@ -39906,9 +40011,128 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "p-2" }, [_vm._v("\r\n\tadd subj\r\n")])
+  return _c("div", [
+    _c("div", { staticClass: "card p-4" }, [
+      _c("div", { staticClass: "form-group" }, [
+        _c("div", [
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.input.add.title,
+                expression: "input.add.title"
+              }
+            ],
+            staticClass: "form-control w-50",
+            attrs: { type: "text" },
+            domProps: { value: _vm.input.add.title },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.$set(_vm.input.add, "title", $event.target.value)
+              }
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c("div", [
+          _c("input", {
+            attrs: {
+              type: "file",
+              id: "avatar",
+              name: "avatar",
+              accept: "image/png, image/jpeg"
+            },
+            on: { change: _vm.setUploadedImage }
+          })
+        ]),
+        _vm._v(" "),
+        _vm.image !== ""
+          ? _c("div", [_vm._v("\r\n\t\t\t\timg\r\n\t\t\t")])
+          : _vm._e(),
+        _vm._v(" "),
+        _c("div", [
+          _c(
+            "button",
+            { staticClass: "btn btn-success", on: { click: _vm.addSubject } },
+            [_vm._v("\r\n\t\t\t\t\tSave\r\n\t\t\t\t")]
+          )
+        ])
+      ])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "p-4 card" }, [
+      _c("table", { staticClass: "table" }, [
+        _vm._m(0),
+        _vm._v(" "),
+        _c(
+          "tbody",
+          _vm._l(_vm.category, function(cat, index) {
+            return _c("tr", [
+              _c("th", { attrs: { scope: "row" } }, [_vm._v("1")]),
+              _vm._v(" "),
+              _c("td", [
+                _c("input", {
+                  staticClass: "w-50 form-control",
+                  attrs: { placeholder: cat.title },
+                  domProps: { value: cat.title },
+                  on: {
+                    input: function($event) {
+                      return _vm.saveOnInput($event, cat.id)
+                    }
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("td", [
+                _c("img", {
+                  attrs: { height: "50", src: cat.icons, alt: "image" }
+                })
+              ]),
+              _vm._v(" "),
+              _c("td", [
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-danger",
+                    on: {
+                      click: function($event) {
+                        return _vm.deleteSubject(index, cat.id)
+                      }
+                    }
+                  },
+                  [_c("i", { staticClass: "fa fa-trash" })]
+                )
+              ])
+            ])
+          }),
+          0
+        )
+      ])
+    ])
+  ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("#")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Title")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Image")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } })
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
