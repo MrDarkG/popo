@@ -13,9 +13,6 @@
        				@change="setUploadedImage"
    				>
 			</div>
-			<div v-if="image!==''">
-				<img :src="" id="image" alt="">
-			</div>
 			<div>
 				<button class="btn btn-success" @click="addSubject">
 					Save
