@@ -36,6 +36,7 @@ Route::middleware(["auth"])->group(function(){
     Route::post("/store/kids/data",[App\Http\Controllers\SvgController::class,"storekidsdata"])->name("storekidsdata");
     Route::post("/buy/course",[App\Http\Controllers\SvgController::class,"storecourse"])->name("buycourse");
     Route::post("/answer/question",[App\Http\Controllers\SvgController::class,"StoreAnswer"])->name("answerquestin");
+    Route::post("get/my/score",[App\Http\Controllers\QuizController::class,"myscore"])->name("myscore");
 });
 
 
