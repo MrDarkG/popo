@@ -2,6 +2,6 @@
 
 @section('content')
     <play-quiz
-        :tasks="{{ json_encode($tasks[0]->tasks[0]->tasks) }}"
+        :tasks="{{ json_encode($tasks->tasks[0]->tasks) }}"
     ></play-quiz>
 @endsection
