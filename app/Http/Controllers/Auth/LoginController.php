@@ -58,9 +58,7 @@ class LoginController extends Controller
         ],[
             "email"=>$user->email,
             "name"=>$user->name?$user->name:$user->nickname,
-            "company"=>"0",
             "password"=>Hash::make(Str::random(24)),
-            "email_verified_at"=>Carbon::now()
         ]);
         Auth::login($user,true);
         return redirect()->route("home");
@@ -83,7 +81,6 @@ class LoginController extends Controller
             "email"=>$user->email,
             "name"=>$user->name?$user->name:$user->nickname,
             "password"=>Hash::make(Str::random(24)),
-            "company"=>"0",
         ]);
         Auth::login($user,true);
         
